@@ -1,8 +1,11 @@
+import '../App.css'
+
+
 function Navbar() {
 
     return (
       <>
-        <div>
+        <div className='navBar'>
               <ul id="nav">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">About</a></li>

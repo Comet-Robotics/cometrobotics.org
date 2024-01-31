@@ -1,13 +1,14 @@
 import './App.css'
 import Navbar from './components/navbar'
+import Hero from './components/hero'
 
 function App() {
   return (
     <>
+    <div>
     <Navbar/>
-      <div>
-        <h2>We are Comet Robotics,<br/> the premiere robotics club at UTDallas </h2>
-      </div>
+    <Hero/>
+    </div>
     </>
   )
 }
