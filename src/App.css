@@ -1,18 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200;300;400;500;600;700;800;900&display=swap');
 
-#root {
-  margin: 0 auto;
-  text-align: center;
+
+main {
   display: flex;
   flex-direction: column;
 }
 
-* {
-  box-sizing: border-box !important;
-}
-
 :root {
   --primary: #BF1E2E;
+  --text: #d9d9d9;
+  --text-dark: #1e1e1e;
 }
 
 
@@ -34,17 +31,36 @@
   flex-direction: column;
   justify-content: flex-end;
   text-align: left;
-  color: #fff;
+  color: var(--text);
   font-family: 'Unbounded', sans-serif;
-  align-self:flex-start;
+  align-self: flex-start;
 }
 
-/* .heroContent a {
-  font-family: 'Unbounded', sans-serif;
-  align-self:flex-start;
-  color: #fff;
+.heroContent h1 {
+  max-width: 60rem;
+}
+
+.heroContent a {
+  color: var(--text);
   text-decoration: none;
   border-style: solid;
-  border-radius: 20px;
-  padding: 10px;
-} */
+  border-radius: 999px;
+  padding: 0.75rem 1.25rem;
+  background-color: transparent;
+  width: fit-content;
+}
+
+.heroContent a:hover {
+  background-color: var(--text);
+  color: var(--text-dark);
+  border-color: var(--text);
+}
+
+a {
+  text-decoration: none;
+
+}
+
+a:visited {
+  color: inherit;
+}

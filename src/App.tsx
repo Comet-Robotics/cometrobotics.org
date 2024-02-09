@@ -1,4 +1,3 @@
-import './reset.css'
 import './App.css'
 import Navbar from './components/navbar'
 import Hero from './components/hero'
