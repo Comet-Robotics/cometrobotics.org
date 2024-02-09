@@ -10,7 +10,9 @@ function Hero() {
             }}>
 
                     <h1 >We are Comet Robotics,<br /> the premiere robotics club at <br />UT Dallas.</h1>
-                    <a>scroll down to learn more 👇</a>
+                    <a>scroll down to learn more<span style={{
+                        marginLeft: '1rem',
+                    }}>&darr;</span></a>
 
             </div>
         </div>
