@@ -1,41 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200;300;400;500;600;700;800;900&display=swap');
 
 #root {
-  max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
-
-#nav {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-	float: left;
-	padding: 0;
-	list-style: none; 
-  z-index: 5;
+* {
+  box-sizing: border-box !important;
 }
-#nav li {
-	float: left; }
 
-#nav li a {
-		display: block;
-		padding: 8px 15px;
-		text-decoration: none;
-		font-weight: bold;
-		color: #069;
-		border-right: 1px solid #ccc; }
+:root {
+  --primary: #BF1E2E;
+}
 
-#nav li a {
-		display: block;
-		padding: 8px 15px;
-		text-decoration: none;
-		font-weight: bold;
-		color: #069;
-		border-right: 1px solid #ccc; }
 
 #heroVideo {
   width: 100%;
@@ -44,16 +23,11 @@
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 0;
+  z-index: -1;
 }
 
 .heroContent {
-  width: 100%;
-  height: 100%;
-  position: absolute;
   top: 0;
-  right: 0;
-  bottom: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.5);
   display: flex;
@@ -61,16 +35,11 @@
   justify-content: flex-end;
   text-align: left;
   color: #fff;
-}
-
-.heroContent div {
-  margin-left: 4rem;
-  margin-bottom: 8rem;
   font-family: 'Unbounded', sans-serif;
   align-self:flex-start;
 }
 
-.heroContent a {
+/* .heroContent a {
   font-family: 'Unbounded', sans-serif;
   align-self:flex-start;
   color: #fff;
@@ -78,4 +47,4 @@
   border-style: solid;
   border-radius: 20px;
   padding: 10px;
-}
+} */
