@@ -39,13 +39,14 @@ function Navbar() {
         }}
       >
         {links.map((link) => (
-          <Link to={link.href}>{link.name}</Link>
+          <Link key={`link-${link.name}`} to={link.href}>{link.name}</Link>
         ))}
 
         <a
           style={{
             backgroundColor: "var(--primary)",
             padding: "0.5rem 1rem",
+            color: 'white',
             borderRadius: "999px",
           }}
           href="https://discord.gg/dTGwav3PVM"

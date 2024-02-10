@@ -7,7 +7,6 @@ function App() {
     <main>
       <Navbar/>
       <Hero/>
-      <Hero/>
     </main>
   )
 }
