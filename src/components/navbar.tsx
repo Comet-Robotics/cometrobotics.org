@@ -46,6 +46,7 @@ function Navbar() {
           style={{
             backgroundColor: "var(--primary)",
             padding: "0.5rem 1rem",
+            color: 'white',
             borderRadius: "999px",
           }}
           href="https://discord.gg/dTGwav3PVM"
