@@ -48,7 +48,7 @@ function Navbar() {
             padding: "0.5rem 1rem",
             borderRadius: "999px",
           }}
-          href="#"
+          href="https://discord.gg/dTGwav3PVM"
         >
           Join
         </a>
