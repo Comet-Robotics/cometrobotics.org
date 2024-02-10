@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200;300;400;500;600;700;800;900&display=swap');
+
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+:root {
+  --primary: #BF1E2E;
+  --text: #d9d9d9;
+  --text-dark: #1e1e1e;
+}
+
+
+#heroVideo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.heroContent {
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  text-align: left;
+  color: var(--text);
+  font-family: 'Unbounded', sans-serif;
+  align-self: flex-start;
+}
+
+.heroContent h1 {
+  max-width: 60rem;
+}
+
+.heroContent a {
+  color: var(--text);
+  text-decoration: none;
+  border-style: solid;
+  border-radius: 999px;
+  padding: 0.75rem 1.25rem;
+  background-color: transparent;
+  width: fit-content;
+}
+
+.heroContent a:hover {
+  background-color: var(--text);
+  color: var(--text-dark);
+  border-color: var(--text);
+}
+
+a {
+  text-decoration: none;
+
+}
+
+a:visited {
+  color: inherit;
+}
