@@ -39,7 +39,7 @@ function Navbar() {
         }}
       >
         {links.map((link) => (
-          <Link to={link.href}>{link.name}</Link>
+          <Link key={`link-${link.name}`} to={link.href}>{link.name}</Link>
         ))}
 
         <a
