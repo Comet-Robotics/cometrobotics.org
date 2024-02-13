@@ -29,16 +29,16 @@ const sponsorLinks: LinkWithIconType[] = [
         href: 'https://www.bettercnc.com/',
         icon: '/sponsors/bettercnc.png'
     },
-    {
-        name: 'Fingertech Robotics',
-        href: 'https://www.fingertechrobotics.com/',
-        icon: '/sponsors/fingertech.png'
-    },
-    {
-        name: 'SendCutSend',
-        href: 'https://sendcutsend.com/',
-        icon: '/sponsors/sendcutsend.png'
-    },
+    // {
+    //     name: 'Fingertech Robotics',
+    //     href: 'https://www.fingertechrobotics.com/',
+    //     icon: '/sponsors/fingertech.png'
+    // },
+    // {
+    //     name: 'SendCutSend',
+    //     href: 'https://sendcutsend.com/',
+    //     icon: '/sponsors/sendcutsend.png'
+    // },
     {
         name: 'Repeat Robotics',
         href: 'https://www.repeat-robotics.com/',
@@ -47,12 +47,12 @@ const sponsorLinks: LinkWithIconType[] = [
 ]
 
 const clubEmail = "cometrobotics@utdallas.edu"
-
+const discordInvite = 'https://discord.gg/dTGwav3PVM'
 
 const footerLinks: LinkType[] = [
     {
         name: 'Discord',
-        href: '#'
+        href: discordInvite
     },
     {
         name: 'Wiki',
@@ -72,4 +72,4 @@ const footerLinks: LinkType[] = [
     }
 ]
 
-export { mainNavLinks, HOME_LINK, footerLinks, socialLinks, clubEmail, sponsorLinks };
+export { mainNavLinks, HOME_LINK, footerLinks, socialLinks, clubEmail, sponsorLinks, discordInvite };
