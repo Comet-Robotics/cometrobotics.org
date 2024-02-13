@@ -1,12 +1,5 @@
 ---
-type LinkType = { name: string; href: string }
-const HOME_LINK: LinkType = { name: "Home", href: "#" };
-const links: LinkType[] = [
-  HOME_LINK,
-  { name: "About", href: "#" },
-  { name: "Projects", href: "#" },
-  { name: "Contact", href: "#" },
-];
+import { HOME_LINK, mainNavLinks } from "../data";
 ---
 
 <div
@@ -40,7 +33,7 @@ const links: LinkType[] = [
       alignItems: "center",
     }}
   >
-    {links.map((link) => (
+    {mainNavLinks.map((link) => (
       <a key={`link-${link.name}`} href={link.href}>{link.name}</a>
     ))}
 
