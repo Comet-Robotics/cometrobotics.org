@@ -1,7 +1,9 @@
-import { Link } from "react-router-dom";
+import { Link as RouterLink } from "react-router-dom";
 
-const links: { name: string; href: string }[] = [
-  { name: "Home", href: "#" },
+type LinkType = { name: string; href: string }
+const HOME_LINK: LinkType = { name: "Home", href: "#" };
+const links: LinkType[] = [
+  HOME_LINK,
   { name: "About", href: "#" },
   { name: "Projects", href: "#" },
   { name: "Contact", href: "#" },
@@ -25,12 +27,14 @@ function Navbar() {
           "linear-gradient(180deg, rgba(0, 0, 0, 0.67) 0%, rgba(0, 0, 0, 0.00) 100%)",
       }}
     >
-      <img
-        src="/wordmark.png"
-        style={{
-          width: "150px",
-        }}
-      />
+      <RouterLink to={HOME_LINK.href}>
+        <img
+          src="/wordmark.png"
+          style={{
+            width: "150px",
+          }}
+        />
+      </RouterLink>
       <nav
         style={{
           display: "flex",
@@ -39,7 +43,7 @@ function Navbar() {
         }}
       >
         {links.map((link) => (
-          <Link key={`link-${link.name}`} to={link.href}>{link.name}</Link>
+          <RouterLink key={`link-${link.name}`} to={link.href}>{link.name}</RouterLink>
         ))}
 
         <a
