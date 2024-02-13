@@ -1,5 +1,5 @@
 type LinkType = { name: string; href: string }
-type LinkWithIconType = { name: string; href: string; icon: string }
+type LinkWithIconType = LinkType & { icon: string }
 const HOME_LINK: LinkType = { name: "Home", href: "#" };
 
 const mainNavLinks: LinkType[] = [
@@ -12,15 +12,13 @@ const mainNavLinks: LinkType[] = [
 
 const socialLinks: LinkWithIconType[] = [
     { name: "GitHub", href: 'https://github.com/Comet-Robotics', icon: '/socials/github.png' },
-    { name: "Instagram", href: 'https://www.instagram.com/cometrobotics/', icon: '/socials/instagram.png' },
-    { name: "Facebook", href: 'https://www.facebook.com/cometrobotics', icon: '/socials/facebook.png' },
-    { name: "LinkedIn", href: 'https://www.linkedin.com/company/cometrobotics/', icon: '/socials/linkedin.png' },
-    { name: "YouTube", href: 'https://www.youtube.com/channel/UCQ1Jn4e8oZj6QrKtG7ZP7Yg', icon: '/socials/youtube.png' },
+    { name: "Instagram", href: 'https://www.instagram.com/comet_robotics_utd/', icon: '/socials/instagram.png' },
+    // { name: "Facebook", href: 'https://www.facebook.com/utdcombatrobotics', icon: '/socials/facebook.png' },
+    { name: "LinkedIn", href: 'https://www.linkedin.com/company/comet-robotics-utd/', icon: '/socials/linkedin.png' },
+    { name: "YouTube", href: 'https://www.youtube.com/@CometRoboticsUTD', icon: '/socials/youtube.png' },
 ]
 
 const clubEmail = "cometrobotics@utdallas.edu"
-
-
 
 
 const footerLinks: LinkType[] = [
