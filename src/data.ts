@@ -18,6 +18,34 @@ const socialLinks: LinkWithIconType[] = [
     { name: "YouTube", href: 'https://www.youtube.com/@CometRoboticsUTD', icon: '/socials/youtube.png' },
 ]
 
+const sponsorLinks: LinkWithIconType[] = [
+	{
+		name: 'SolidWorks',
+        href: 'https://www.solidworks.com/',
+        icon: '/sponsors/solidworks.png'
+	},
+    {
+        name: 'BetterCNC',
+        href: 'https://www.bettercnc.com/',
+        icon: '/sponsors/bettercnc.png'
+    },
+    {
+        name: 'Fingertech Robotics',
+        href: 'https://www.fingertechrobotics.com/',
+        icon: '/sponsors/fingertech.png'
+    },
+    {
+        name: 'SendCutSend',
+        href: 'https://sendcutsend.com/',
+        icon: '/sponsors/sendcutsend.png'
+    },
+    {
+        name: 'Repeat Robotics',
+        href: 'https://www.repeat-robotics.com/',
+        icon: '/sponsors/repeat-robotics.png'
+    }
+]
+
 const clubEmail = "cometrobotics@utdallas.edu"
 
 
@@ -44,4 +72,4 @@ const footerLinks: LinkType[] = [
     }
 ]
 
-export { mainNavLinks, HOME_LINK, footerLinks, socialLinks, clubEmail };
+export { mainNavLinks, HOME_LINK, footerLinks, socialLinks, clubEmail, sponsorLinks };
