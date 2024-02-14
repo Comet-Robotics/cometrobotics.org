@@ -4,9 +4,9 @@ const HOME_LINK: LinkType = { name: "Home", href: "#" };
 
 const mainNavLinks: LinkType[] = [
   HOME_LINK,
-  { name: "About", href: "#" },
-  { name: "Projects", href: "#" },
-  { name: "Contact", href: "#" },
+//   { name: "About", href: "#" },
+//   { name: "Projects", href: "#" },
+//   { name: "Contact", href: "#" },
 ];
 
 
