@@ -2,20 +2,13 @@
 import '../styles/reset.css'
 import '../styles/index.css'
 import '../styles/App.css'
-import Hero from '../home/hero.astro'
+import Hero from '../components/home/hero.astro'
 import BaseLayout from '../layouts/base.astro'
+import Summary from '../components/home/summary.astro'
 ---
 
 <BaseLayout>
 	<Hero/>
-	<div style="display: flex; max-width: 75rem; width: 100%; align-items: center; justify-content: space-between; margin: 5rem auto; padding: 0rem 3rem; gap: 3rem">
-		<div style="display: flex; font-size: 1.125rem; flex-direction: column;">
-
-			<p>We are a group of robot enthusiasts with the goal of promoting robotics at UT Dallas and in the surrounding area through outreach, projects and workshops.</p>
-			<br/>
-			<p>CRUTD focuses on supporting this goal with 2 divisions: combat robotics and competitive robotics.</p>
-		</div>
-			<img src="/home/IMG_4798.jpg" style="width: 50%; height:100%; border-radius: 1rem;"/>
-	</div>
+	<Summary/>
 </BaseLayout>
 
