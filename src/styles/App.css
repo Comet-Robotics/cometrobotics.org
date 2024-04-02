@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200;300;400;500;600;700;800;900&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Unbounded:wght@200;300;400;500;600;700;800;900&display=swap");
 
 main {
   display: flex;
@@ -7,11 +6,10 @@ main {
 }
 
 :root {
-  --primary: #BF1E2E;
+  --primary: #bf1e2e;
   --text: #d9d9d9;
   --text-dark: #1e1e1e;
 }
-
 
 #heroVideo {
   width: 100%;
@@ -32,7 +30,7 @@ main {
   justify-content: flex-end;
   text-align: left;
   color: var(--text);
-  font-family: 'Unbounded', sans-serif;
+  font-family: "Unbounded", sans-serif;
   align-self: flex-start;
 }
 
@@ -58,9 +56,12 @@ main {
 
 a {
   text-decoration: none;
-
 }
 
 a:visited {
   color: inherit;
+}
+
+html {
+  scroll-behavior: smooth;
 }

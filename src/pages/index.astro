@@ -1,30 +1,34 @@
 ---
-import '../styles/reset.css'
-import '../styles/index.css'
-import '../styles/App.css'
-import Hero from '../components/home/hero.astro'
-import BaseLayout from '../layouts/base.astro'
-import Summary from '../components/home/summary.astro'
+import "../styles/reset.css";
+import "../styles/index.css";
+import "../styles/App.css";
+import Hero from "../components/home/hero.astro";
+import BaseLayout from "../layouts/base.astro";
+import Summary from "../components/home/summary.astro";
+import Division from "../components/home/division.astro";
 ---
 
 <BaseLayout>
-	<Hero/>
-	<Summary/>
-	<div style={{position: 'relative', backgroundImage: "url('/home/plants-with-sparks.jpg')", height: '80vh',backgroundSize:'cover', backgroundRepeat:'no-repeat', backgroundPosition: '40% 10%'}}>
-		<div style={{position: 'absolute', bottom: 0, right: 0, width:'100%',maxWidth:'18rem', backgroundColor: 'var(--primary)', padding: '2rem', gap:'1rem'}} >
-			<h4>
-				Combat Robotics
-			</h4>
-			<p>
-				Combat robotics is all about sparks, fire and spilling robot guts. The excitement around the sport is perfect for spreading awareness of robotics. Our combat division also promises something for everyone, with entry level programs and lots of upward mobility.
-			</p>
-		</div>
-	</div>
-	<div style={{padding: '0 5rem', margin: '5rem 0', flexDirection: 'column', display: 'flex'}}>
-		<h2>Originally started with &lsquo;The Blender&rsquo;, our 120lb world championship winning Battlebot, combat robotics at UT Dallas has history going back to 2004. Since the clubs' revival in 2021, we have expanded to dozens of 1lb, 3lb, and 12lb weight class projects.</h2>
-		<div style={{display: 'flex', alignItems: 'center', justifyItems: 'center', height: '18rem'}}>
-			<!-- TODO: images here -->
-		</div>
-	</div>
+  <Hero />
+  <Summary />
+  <Division
+    backgroundImg="url('/home/plants-with-sparks.jpg')"
+    backgroundPosition="40% 10%"
+    divisionName="Combat Robotics"
+    divisionDescription="Combat robotics is all about sparks, fire and spilling robot guts. The excitement around the sport is perfect for spreading awareness of robotics. Our combat division also promises something for everyone, with entry level programs and lots of upward mobility."
+    divisionOverview="Originally started with ’The Blender‘, our 120lb world championship winning Battlebot, combat robotics at UT Dallas has history going back to 2004. Since the clubs’ revival in 2021, we have expanded to dozens of 1lb, 3lb, and 12lb weight class projects."
+    images={["home/spiderbite.png", "home/impulse.png"]}
+    learnMoreHref="#"
+  />
+  <!-- TODO: update competitive images -->
+  <Division
+    backgroundImg="url('/home/plants-with-sparks.jpg')"
+    backgroundPosition="40% 10%"
+    divisionName="Competitive Robotics"
+    divisionDescription="Spearheaded by our VEX U competition team, competitive robotics has multiple larger teamwork-oriented projects and teams. Competitive robotics challenges students in fast paced engineering environments and builds on the hard and soft skills learned in student's coursework."
+    divisionOverview=""
+    images={["home/spiderbite.png", "home/impulse.png"]}
+    learnMoreHref="#"
+  />
+  <!-- TODO: join component -->
 </BaseLayout>
-
