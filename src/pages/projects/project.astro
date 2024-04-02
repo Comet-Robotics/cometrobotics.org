@@ -1,0 +1,38 @@
+---
+import '../../styles/reset.css'
+import '../../styles/index.css'
+import '../../styles/App.css'
+import BaseLayout from '../../layouts/base.astro'
+import Join from '../../components/join.astro'
+---
+
+<BaseLayout>
+	<div style={{backgroundColor:"#bf1e2e", marginTop:"120px", position:"relative", paddings:"15px"}}>
+		<div className:"projectHero" style={{display:"flex", margin: "auto", width: "85%" }}>
+            <div>
+                <h2>Blender</h2>
+                <span>
+                    Blender is a 120lb full body spinner, featuring a titanium shell with hardened steel impactors.
+                </span>
+            </div>
+            <img src="/projects/blender/blender.webp" alt="Blender" style="width: 40%;"/>
+        </div>
+        <div style={{width: "85%", margin: "auto" ,backgroundColor: "#D9D9D9", color:"black", borderRadius:"20px", padding: "20px"}}>
+            <h2>History</h2>
+            <span>
+                Blender was created in 2004 by a group of students at Richardson High School. In 2007 Blender won BotsIQ. In 2009 Blender won the Battle Bots High School Champsionship. In 2011 students from Richardson High School brought the Blender Project to UTD, where it competed in 2013, 2015, 2017 Robogames.
+            </span>
+            <div style="display: flex;">
+                <img src="/projects/blender/blender1.png" alt="Blender" style="width: 20%;"/>
+                <img src="/projects/blender/blender2.jpg" alt="Blender" style="width: 20%;"/>
+                <img src="/projects/blender/blender3.jpeg" alt="Blender" style="width: 20%;"/>
+                <img src="/projects/blender/blender4.jpeg" alt="Blender" style="width: 20%;"/>
+            </div>
+            <span>
+                After losing a match against the Brazilian robot Touro, Blender was brought back home in April 2017. While the team was trying to figure out what went wrong during the mathc, Blender caught on fire. After this, Blender was abananoned and the UT Dallas Battlebots team dissolved after all of the members graduated.
+            </span>
+        </div>
+	</div>
+    <Join />
+</BaseLayout>
+
