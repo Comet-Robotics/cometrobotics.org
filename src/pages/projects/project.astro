@@ -1,38 +1,129 @@
 ---
-import '../../styles/reset.css'
-import '../../styles/index.css'
-import '../../styles/App.css'
-import BaseLayout from '../../layouts/base.astro'
-import Join from '../../components/join.astro'
+import "../../styles/reset.css";
+import "../../styles/index.css";
+import "../../styles/App.css";
+import BaseLayout from "../../layouts/base.astro";
+import Join from "../../components/join.astro";
+
+interface Stat {
+    name: string;
+    value: string;
+    icon: string;
+}
+
+let projectTitle: string = "Blender";
+let shortDescription: string =
+  "Blender is a 120lb full body spinner, featuring a titanium shell with hardened steel impactors.";
+let images: string[] = [
+  "https://news.utdallas.edu/news/files/2021/03/battlebots-team-1000-2015-07.jpg",
+  "https://news.utdallas.edu/news/files/2021/03/blender-action-680-2015-07.jpg",
+  "https://dmn-dallas-news-prod.cdn.arcpublishing.com/resizer/v2/3ZNCABYO4ISX72FQN6UQHOW7FQ.jpg?auth=8db4747323e3d062d21d4dc246eee5b38faef779b4bf95c2131a5822d7419b28&width=1660&quality=40",
+];
+let stats: Stat[] = [
+    {
+        name: "Top Driving Speed",
+        value: "15mph",
+        icon: "/statsGraphics/double-arrow-right.svg",
+    },
+    {
+        name: "Top Spin Speed",
+        value: "120mph",
+        icon: "/statsGraphics/rotate-arrow.svg",
+    },
+    {
+        name: "Shell Weight",
+        value: "70lbs",
+        icon: "/statsGraphics/weight.svg",
+    }
+];
 ---
 
 <BaseLayout>
-	<div style={{backgroundColor:"#bf1e2e", marginTop:"120px", position:"relative", paddings:"15px"}}>
-		<div className:"projectHero" style={{display:"flex", margin: "auto", width: "85%" }}>
-            <div>
-                <h2>Blender</h2>
-                <span>
-                    Blender is a 120lb full body spinner, featuring a titanium shell with hardened steel impactors.
-                </span>
-            </div>
-            <img src="/projects/blender/blender.webp" alt="Blender" style="width: 40%;"/>
+  <div
+    style={{
+      backgroundColor: "#bf1e2e",
+      marginTop: "120px",
+      position: "relative",
+      padding: "20px",
+    }}
+  >
+    <div style={{ display: "flex", margin: "auto", width: "85%", alignItems:"center"}}>
+      <div style={{flex: "0 0 40%"}}>
+        <h1 style={{ fontFamily: "Unbounded" }}>{projectTitle}</h1>
+        <br />
+        <span
+          style={{ fontFamily: "Unbounded", fontSize: "2em", opacity: "90%" }}
+        >
+          {shortDescription}
+        </span>
+        <div style={{display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gridTemplateRows:"repeat(2, 1fr)", gap:"20px", margin:"20px"}}>
+            {stats.map((stat) => (
+        <div>
+            <img src={stat.icon} alt={stat.name} style={{height: "30px", width: "30px"}}/>
+            <h2 style={{fontFamily: "Unbounded"}}>{stat.name}</h2>
+            <span style={{fontFamily: "Unbounded", fontSize:"1.2em"}}>{stat.value}</span>
+        </div> 
+            ))}
         </div>
-        <div style={{width: "85%", margin: "auto" ,backgroundColor: "#D9D9D9", color:"black", borderRadius:"20px", padding: "20px"}}>
-            <h2>History</h2>
-            <span>
-                Blender was created in 2004 by a group of students at Richardson High School. In 2007 Blender won BotsIQ. In 2009 Blender won the Battle Bots High School Champsionship. In 2011 students from Richardson High School brought the Blender Project to UTD, where it competed in 2013, 2015, 2017 Robogames.
-            </span>
-            <div style="display: flex;">
-                <img src="/projects/blender/blender1.png" alt="Blender" style="width: 20%;"/>
-                <img src="/projects/blender/blender2.jpg" alt="Blender" style="width: 20%;"/>
-                <img src="/projects/blender/blender3.jpeg" alt="Blender" style="width: 20%;"/>
-                <img src="/projects/blender/blender4.jpeg" alt="Blender" style="width: 20%;"/>
-            </div>
-            <span>
-                After losing a match against the Brazilian robot Touro, Blender was brought back home in April 2017. While the team was trying to figure out what went wrong during the mathc, Blender caught on fire. After this, Blender was abananoned and the UT Dallas Battlebots team dissolved after all of the members graduated.
-            </span>
-        </div>
-	</div>
-    <Join />
+      </div>
+      <div style={{flex:"1", display:"flex", justifyContent:"center"}}>
+        <img
+        src="/projects/blender/blender.webp"
+        alt="Blender"
+        style={{ height: "auto", objectFit: "cover", borderRadius: "20px"}}
+      />
+      </div>
+    </div>
+    <div
+      style={{
+        width: "85%",
+        margin: "auto",
+        backgroundColor: "#D9D9D9",
+        color: "black",
+        borderRadius: "20px",
+        padding: "20px",
+      }}
+    >
+      <h2>History</h2>
+      <span>
+        Blender was created in 2004 by a group of students at Richardson High
+        School. In 2007 Blender won BotsIQ. In 2009 Blender won the Battle Bots
+        High School Champsionship. In 2011 students from Richardson High School
+        brought the Blender Project to UTD, where it competed in 2013, 2015,
+        2017 Robogames.
+      </span>
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "1fr 1fr 1fr",
+          justifyItems: "center",
+          height: "20rem",
+          width: "100%",
+          gap: "1rem",
+        }}
+      >
+        {
+          images.map((img) => (
+            <img
+              src={img}
+              style={{
+                objectFit: "cover",
+                width: "100%",
+                height: "18rem",
+                borderRadius: "1rem",
+              }}
+            />
+          ))
+        }
+      </div>
+      <span>
+        After losing a match against the Brazilian robot Touro, Blender was
+        brought back home in April 2017. While the team was trying to figure out
+        what went wrong during the mathc, Blender caught on fire. After this,
+        Blender was abananoned and the UT Dallas Battlebots team dissolved after
+        all of the members graduated.
+      </span>
+    </div>
+  </div>
+  <Join />
 </BaseLayout>
-
