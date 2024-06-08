@@ -1,202 +1,201 @@
 .main-container {
-    background-color: #bf1e2e;
-    position: relative;
-    padding: 20px;
-    padding-top: 120px;
-  }
-  
+  background-color: #bf1e2e;
+  position: relative;
+  padding: 20px;
+  padding-top: 120px;
+}
+
+.content-container {
+  display: flex;
+  margin: auto;
+  width: 85%;
+  align-items: center;
+  max-width: 1600px;
+  flex-wrap: wrap; /* Added to allow wrapping */
+}
+
+.description {
+  flex: 0 0 40%;
+  z-index: 1; /* Ensure description stays above other elements */
+}
+
+.title {
+  font-family: 'Unbounded';
+}
+
+.short-description {
+  font-family: 'Unbounded';
+  font-size: 2em;
+  opacity: 90%;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 20px;
+  margin: 20px;
+}
+
+.stats img {
+  height: 30px;
+  width: 30px;
+}
+
+.stats h2 {
+  font-family: 'Unbounded';
+}
+
+.stats span {
+  font-family: 'Unbounded';
+  font-size: 1.2em;
+}
+
+.image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  z-index: 0; /* Ensure image container stays below description */
+}
+
+.main-image {
+  height: auto;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.history-section {
+  width: 85%;
+  margin: auto;
+  background-color: #d9d9d9;
+  color: black;
+  border-radius: 20px;
+  padding: 20px;
+  max-width: 1600px;
+}
+
+.history-title {
+  font-family: 'Mashine';
+  font-weight: 600;
+  color: #bf1e2e;
+}
+
+.history-text {
+  padding-top: 20px;
+  font-size: 1.3em;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+  height: auto;
+  width: 100%;
+  gap: 1rem;
+  box-sizing: border-box;
+}
+
+.history-image {
+  object-fit: cover;
+  width: 100%;
+  height: 18rem;
+  border-radius: 1rem;
+  max-width: 100%;
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
   .content-container {
-    display: flex;
-    margin: auto;
-    width: 85%;
-    align-items: center;
-    max-width: 1600px;
-    flex-wrap: wrap; /* Added to allow wrapping */
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
   }
-  
+
   .description {
-    flex: 0 0 40%;
-    z-index: 1; /* Ensure description stays above other elements */
+    width: 100%;
+    margin-bottom: 20px;
   }
-  
-  .title {
-    font-family: "Unbounded";
-  }
-  
-  .short-description {
-    font-family: "Unbounded";
-    font-size: 2em;
-    opacity: 90%;
-  }
-  
+
   .stats {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(2, 1fr);
-    gap: 20px;
-    margin: 20px;
+    width: 100%;
   }
-  
-  .stats img {
-    height: 30px;
-    width: 30px;
+
+  .image-grid {
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
   }
-  
-  .stats h2 {
-    font-family: "Unbounded";
+
+  .short-description {
+    font-size: 1.8em;
   }
-  
-  .stats span {
-    font-family: "Unbounded";
+
+  .history-section {
+    width: 100%;
+  }
+
+  .history-text {
     font-size: 1.2em;
   }
-  
-  .image-container {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    z-index: 0; /* Ensure image container stays below description */
+}
+
+@media (max-width: 768px) {
+  .short-description {
+    font-size: 1.5em;
   }
-  
-  .main-image {
-    height: auto;
-    object-fit: cover;
-    border-radius: 20px;
-  }
-  
-  .history-section {
-    width: 85%;
-    margin: auto;
-    background-color: #d9d9d9;
-    color: black;
-    border-radius: 20px;
-    padding: 20px;
-    max-width: 1600px;
-  }
-  
-  .history-title {
-    font-family: "Mashine";
-    font-weight: 600;
-    color: #bf1e2e;
-  }
-  
+
   .history-text {
-    padding-top: 20px;
-    font-size: 1.3em;
+    font-size: 1.1em;
   }
-  
+
+  .stats {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    width: 100%;
+  }
+
   .image-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    justify-items: center;
-    height: auto;
+    grid-template-columns: 1fr;
     width: 100%;
-    gap: 1rem;
-    box-sizing: border-box;
   }
-  
+
+  .history-section {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-container {
+    padding: 0px;
+    padding-top: 120px;
+  }
+
+  .short-description {
+    font-size: 1.2em;
+  }
+
+  .history-text {
+    font-size: 1em;
+  }
+
+  .stats {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    width: 100%;
+  }
+
+  .image-grid {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+
+  .history-section {
+    width: 100%;
+  }
+
   .history-image {
-    object-fit: cover;
-    width: 100%;
-    height: 18rem;
-    border-radius: 1rem;
-    max-width: 100%;
+    height: auto;
+    max-height: 18rem;
   }
-  
-  /* Media Queries */
-  @media (max-width: 1200px) {
-    .content-container {
-      flex-direction: column;
-      align-items: flex-start;
-      width: 100%;
-    }
-  
-    .description {
-      width: 100%;
-      margin-bottom: 20px;
-    }
-  
-    .stats {
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: repeat(2, 1fr);
-      width: 100%;
-    }
-  
-    .image-grid {
-      grid-template-columns: 1fr 1fr;
-      width: 100%;
-    }
-  
-    .short-description {
-      font-size: 1.8em;
-    }
-  
-    .history-section {
-      width: 100%;
-    }
-  
-    .history-text {
-      font-size: 1.2em;
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .short-description {
-      font-size: 1.5em;
-    }
-  
-    .history-text {
-      font-size: 1.1em;
-    }
-  
-    .stats {
-      grid-template-columns: 1fr;
-      grid-template-rows: repeat(3, 1fr);
-      width: 100%;
-    }
-  
-    .image-grid {
-      grid-template-columns: 1fr;
-      width: 100%;
-    }
-  
-    .history-section {
-      width: 100%;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .main-container {
-        padding: 0px;
-      padding-top: 120px;
-    }
-  
-    .short-description {
-      font-size: 1.2em;
-    }
-  
-    .history-text {
-      font-size: 1em;
-    }
-  
-    .stats {
-      grid-template-columns: 1fr;
-      grid-template-rows: repeat(3, 1fr);
-      width: 100%;
-    }
-  
-    .image-grid {
-      grid-template-columns: 1fr;
-      width: 100%;
-    }
-  
-    .history-section {
-      width: 100%;
-    }
-  
-    .history-image {
-      height: auto;
-      max-height: 18rem;
-    }
-  }
-  
+}

@@ -1,42 +1,42 @@
 ---
-import "../../styles/reset.css";
-import "../../styles/index.css";
-import "../../styles/App.css";
-import "../../styles/project.css";
-import BaseLayout from "../../layouts/base.astro";
-import Join from "../../components/join.astro";
+import '../../styles/reset.css'
+import '../../styles/index.css'
+import '../../styles/App.css'
+import '../../styles/project.css'
+import BaseLayout from '../../layouts/base.astro'
+import Join from '../../components/join.astro'
 
 interface Stat {
-  name: string;
-  value: string;
-  icon: string;
+  name: string
+  value: string
+  icon: string
 }
 
-let projectTitle: string = "Blender";
+let projectTitle: string = 'Blender'
 let shortDescription: string =
-  "Blender is a 120lb full body spinner, featuring a titanium shell with hardened steel impactors.";
+  'Blender is a 120lb full body spinner, featuring a titanium shell with hardened steel impactors.'
 let images: string[] = [
-  "https://news.utdallas.edu/news/files/2021/03/battlebots-team-1000-2015-07.jpg",
-  "https://news.utdallas.edu/news/files/2021/03/blender-action-680-2015-07.jpg",
-  "https://dmn-dallas-news-prod.cdn.arcpublishing.com/resizer/v2/3ZNCABYO4ISX72FQN6UQHOW7FQ.jpg?auth=8db4747323e3d062d21d4dc246eee5b38faef779b4bf95c2131a5822d7419b28&width=1660&quality=40",
-];
+  'https://news.utdallas.edu/news/files/2021/03/battlebots-team-1000-2015-07.jpg',
+  'https://news.utdallas.edu/news/files/2021/03/blender-action-680-2015-07.jpg',
+  'https://dmn-dallas-news-prod.cdn.arcpublishing.com/resizer/v2/3ZNCABYO4ISX72FQN6UQHOW7FQ.jpg?auth=8db4747323e3d062d21d4dc246eee5b38faef779b4bf95c2131a5822d7419b28&width=1660&quality=40',
+]
 let stats: Stat[] = [
   {
-    name: "Top Driving Speed",
-    value: "15mph",
-    icon: "/statsGraphics/double-arrow-right.svg",
+    name: 'Top Driving Speed',
+    value: '15mph',
+    icon: '/statsGraphics/double-arrow-right.svg',
   },
   {
-    name: "Top Spin Speed",
-    value: "120mph",
-    icon: "/statsGraphics/rotate-arrow.svg",
+    name: 'Top Spin Speed',
+    value: '120mph',
+    icon: '/statsGraphics/rotate-arrow.svg',
   },
   {
-    name: "Shell Weight",
-    value: "70lbs",
-    icon: "/statsGraphics/weight.svg",
+    name: 'Shell Weight',
+    value: '70lbs',
+    icon: '/statsGraphics/weight.svg',
   },
-];
+]
 ---
 
 <BaseLayout>

@@ -1,42 +1,43 @@
 ---
-import { socialLinks, clubEmail, footerLinks, sponsorLinks } from "../data";
+import { socialLinks, clubEmail, footerLinks, sponsorLinks } from '../data'
 ---
 
-<footer style="display: flex; flex-direction: column; gap: 1rem; align-items: center; padding: 3rem 5rem; width: 100%; background-color: var(--text-dark);">
-    <style>
-        .sponsor:hover {
-            opacity: 100%;
-        }
-        .sponsor {
-            opacity: 75%;
-            width: 100px;
-        }
-    </style>
-<img src="/logo-light.png">
+<footer
+  style="display: flex; flex-direction: column; gap: 1rem; align-items: center; padding: 3rem 5rem; width: 100%; background-color: var(--text-dark);"
+>
+  <style>
+    .sponsor:hover {
+      opacity: 100%;
+    }
+    .sponsor {
+      opacity: 75%;
+      width: 100px;
+    }
+  </style>
+  <img src="/logo-light.png" />
 
-<div style="display: flex; gap: 1rem;">
-    {socialLinks.map((link) => 
-        <a href={ link.href }>
-            <img src={ link.icon } alt={link.name + ' logo'}/>
+  <div style="display: flex; gap: 1rem;">
+    {
+      socialLinks.map((link) => (
+        <a href={link.href}>
+          <img src={link.icon} alt={link.name + ' logo'} />
         </a>
-    )}
-</div>
-<div style="display: flex; gap: 1rem;">
-    {footerLinks.map((link) => 
-        <a href={ link.href }>
-            {link.name}
-        </a>
-    )}
-</div>
+      ))
+    }
+  </div>
+  <div style="display: flex; gap: 1rem;">
+    {footerLinks.map((link) => <a href={link.href}>{link.name}</a>)}
+  </div>
 
-<a href={`mailto:${clubEmail}`}>{clubEmail}</a>
-<p>Supported by</p>
-<div style="display: flex; gap: 1rem; align-items: center;">
-    {sponsorLinks.map((link) => 
-        <a href={ link.href } class="sponsor">
-            <img src={ link.icon } alt={link.name + ' logo'}/>
+  <a href={`mailto:${clubEmail}`}>{clubEmail}</a>
+  <p>Supported by</p>
+  <div style="display: flex; gap: 1rem; align-items: center;">
+    {
+      sponsorLinks.map((link) => (
+        <a href={link.href} class="sponsor">
+          <img src={link.icon} alt={link.name + ' logo'} />
         </a>
-    )}
-</div>
-
+      ))
+    }
+  </div>
 </footer>

@@ -1,9 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Unbounded:wght@200;300;400;500;600;700;800;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200;300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 @font-face {
   font-family: 'Mashine';
-  src: url('MashineBold.woff2') format('woff2'),
-      url('MashineBold.woff') format('woff');
+  src:
+    url('MashineBold.woff2') format('woff2'),
+    url('MashineBold.woff') format('woff');
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -11,13 +12,13 @@
 
 @font-face {
   font-family: 'Mashine';
-  src: url('MashineSemiBold.woff2') format('woff2'),
-      url('MashineSemiBold.woff') format('woff');
+  src:
+    url('MashineSemiBold.woff2') format('woff2'),
+    url('MashineSemiBold.woff') format('woff');
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
-
 
 main {
   display: flex;
@@ -49,7 +50,7 @@ main {
   justify-content: flex-end;
   text-align: left;
   color: var(--text);
-  font-family: "Unbounded", sans-serif;
+  font-family: 'Unbounded', sans-serif;
   align-self: flex-start;
 }
 
