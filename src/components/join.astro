@@ -1,5 +1,6 @@
 ---
 import '../styles/App.css'
+import { discordInvite, makerspaceMap } from '../data';
 ---
 
 <div style={{backgroundColor:"#D9D9D9", color:"black" ,padding:"30px"}}>
@@ -9,18 +10,18 @@ import '../styles/App.css'
             To become a member, come to a meeting and talk to a project lead or officer about how you can join a team. Our general meetings are on <strong>Mondays at 7pm</strong> at the <strong>UTDesign Makerspace.</strong>
         </span>
         <div style={{display:"flex", padding:"15px"}}>
-            <div style={{backgroundColor:"#1e1e1e" ,color:"white", margin:"10px", padding:"10px", borderRadius:"10px"}}>
+            <a href={discordInvite} style={{backgroundColor:"#1e1e1e" ,color:"white", margin:"10px", padding:"10px", borderRadius:"10px"}}>
                 <h3>Join the Discord</h3>
                 <span>
                     Discord is the primary method of communcaiton for the club - join for updates on meeting times, projects, and more.
                 </span>
-            </div>
-            <div style={{backgroundColor:"#1e1e1e" ,color:"white", margin:"10px", padding:"10px", borderRadius:"10px"}}>
+            </a>
+            <a href={makerspaceMap} style={{backgroundColor:"#1e1e1e" ,color:"white", margin:"10px", padding:"10px", borderRadius:"10px"}}>
                 <h3>Find the Makerspace</h3>
                 <span>
                     Our meeting are hosted at the UTDesign Makerspace, located on the 2nd floor of the Synergy Park North building (SPN 2.220).
                 </span>
-            </div>
+            </a>
         </div>
     </div>
 </div>

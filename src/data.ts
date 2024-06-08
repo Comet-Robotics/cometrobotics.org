@@ -49,6 +49,8 @@ const sponsorLinks: LinkWithIconType[] = [
 const clubEmail = "cometrobotics@utdallas.edu"
 const discordInvite = 'https://discord.gg/dTGwav3PVM'
 
+const makerspaceMap = 'https://g.page/utdesign-makerspace?share'
+
 const footerLinks: LinkType[] = [
     {
         name: 'Discord',
@@ -60,7 +62,7 @@ const footerLinks: LinkType[] = [
     },
     {
         name: 'Source Code',
-        href: 'https://github.com/Comet-Robotics/website'
+        href: 'https://github.com/Comet-Robotics/cometrobotics.org'
     },
     {
         name: 'SharePoint',
