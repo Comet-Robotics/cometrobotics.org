@@ -1,6 +1,6 @@
 interface LinkType { name: string, href: string }
 type LinkWithIconType = LinkType & { icon: string }
-const HOME_LINK: LinkType = { name: 'Home', href: '#' }
+const HOME_LINK: LinkType = { name: 'Home', href: '/' }
 
 const mainNavLinks: LinkType[] = [
   HOME_LINK,
