@@ -3,8 +3,8 @@
 @font-face {
   font-family: 'Mashine';
   src:
-    url('MashineBold.woff2') format('woff2'),
-    url('MashineBold.woff') format('woff');
+    url('/fonts/MashineBold.woff2') format('woff2'),
+    url('/fonts/MashineBold.woff') format('woff');
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -13,8 +13,8 @@
 @font-face {
   font-family: 'Mashine';
   src:
-    url('MashineSemiBold.woff2') format('woff2'),
-    url('MashineSemiBold.woff') format('woff');
+    url('/fonts/MashineSemiBold.woff2') format('woff2'),
+    url('/fonts/MashineSemiBold.woff') format('woff');
   font-weight: 600;
   font-style: normal;
   font-display: swap;
