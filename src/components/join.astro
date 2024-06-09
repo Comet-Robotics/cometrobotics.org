@@ -2,19 +2,19 @@
 import { discordInvite, makerspaceMap } from '../data'
 
 interface Props {
-  theme: 'light' | 'dark';
+  theme: 'light' | 'dark'
 }
 
-const { theme } = Astro.props;
+const { theme } = Astro.props
 
-let bgColor = '#D9D9D9';
-let txtColor = 'black';
-let borderStyle = 'none';
+let bgColor = '#D9D9D9'
+let txtColor = 'black'
+let borderStyle = 'none'
 
 if (theme === 'dark') {
-  bgColor = '#1e1e1e';
-  txtColor = 'white';
-  borderStyle = 'solid';
+  bgColor = '#1e1e1e'
+  txtColor = 'white'
+  borderStyle = 'solid'
 }
 ---
 

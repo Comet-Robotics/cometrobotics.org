@@ -6,26 +6,35 @@ import BaseLayout from '../layouts/base.astro'
 import Join from '../components/join.astro'
 import { linksPageLinks } from '../data'
 ---
-<BaseLayout>
-    <div class="main-container" style="padding-top: 120px; display: flex; background: linear-gradient(#230508 70%, var(--text-dark));">
-        <div class="links-container" style=" margin: auto; max-width: 30em; width: 100%">
-            <div style=" width: 100%; padding: 20px; border-radius: 25px; border-style: solid; margin: 30px; border-color: #380D0D; background-color: #250F0F;">
-                <h2>Email</h2>
-                <p>
-                    For general inquiries, reach out to our leadership team via email.
-                </p>
-                <a>cometrobotics@utdallas.edu</a>
+
+<BaseLayout title="Links">
+  <div
+    class="main-container"
+    style="padding-top: 120px; display: flex; background: linear-gradient(#230508 70%, var(--text-dark));"
+  >
+    <div
+      class="links-container"
+      style=" margin: auto; max-width: 30em; width: 100%"
+    >
+      <div
+        style=" width: 100%; padding: 20px; border-radius: 25px; border-style: solid; margin: 30px; border-color: #380D0D; background-color: #250F0F;"
+      >
+        <h2>Email</h2>
+        <p>
+          For general inquiries, reach out to our leadership team via email.
+        </p>
+        <a>cometrobotics@utdallas.edu</a>
+      </div>
+      {
+        linksPageLinks.map((link) => (
+          <a href={link.href}>
+            <div style=" width: 100%; padding: 20px; border-radius: 25px; border-style: solid; margin: 30px;">
+              <h2>{link.name}</h2>
             </div>
-            {
-            linksPageLinks.map((link) => (
-                <a href={link.href}>
-                    <div style=" width: 100%; padding: 20px; border-radius: 25px; border-style: solid; margin: 30px;">
-                        <h2>{link.name}</h2>
-                </div>
-                </a>
-            ))
-            }
-        </div>
+          </a>
+        ))
+      }
     </div>
-  <Join theme='dark'/>
+  </div>
+  <Join theme="dark" />
 </BaseLayout>
