@@ -20,11 +20,11 @@
 }
 
 .title {
-  font-family: Unbounded, sans-serif;
+  font-family: 'Unbounded Variable', sans-serif;
 }
 
 .short-description {
-  font-family: Unbounded, sans-serif;
+  font-family: 'Unbounded Variable', sans-serif;
   font-size: 2em;
   opacity: 90%;
 }
@@ -43,11 +43,11 @@
 }
 
 .stats h2 {
-  font-family: Unbounded, sans-serif;
+  font-family: 'Unbounded Variable', sans-serif;
 }
 
 .stats span {
-  font-family: Unbounded, sans-serif;
+  font-family: 'Unbounded Variable', sans-serif;
   font-size: 1.2em;
 }
 
@@ -141,7 +141,6 @@
 }
 
 @media (max-width: 768px) {
-
   .main-container {
     padding: 0px;
     padding-top: 120px;

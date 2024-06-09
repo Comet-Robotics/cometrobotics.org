@@ -31,7 +31,7 @@ import { HOME_LINK, discordInvite, mainNavLinks } from '../data'
       display: 'flex',
       gap: '2rem',
       alignItems: 'center',
-      fontFamily: 'Mashine, sans-serif',
+      fontFamily: "'Mashine', sans-serif",
     }}
   >
     {mainNavLinks.map((link) => <a href={link.href}>{link.name}</a>)}
@@ -41,9 +41,10 @@ import { HOME_LINK, discordInvite, mainNavLinks } from '../data'
         padding: '0.5rem 1rem',
         color: 'white',
         borderRadius: '999px',
-        fontFamily: 'Mashine, sans-serif',
+        fontFamily: "'Mashine', sans-serif",
       }}
       href={discordInvite}
+      target="_blank"
     >
       Join
     </a>

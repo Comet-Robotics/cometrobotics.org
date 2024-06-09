@@ -1,7 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200;300;400;500;600;700;800;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 @font-face {
-  font-family: Mashine;
+  font-family: 'Mashine';
   src:
     url('/fonts/MashineBold.woff2') format('woff2'),
     url('/fonts/MashineBold.woff') format('woff');
@@ -11,7 +9,7 @@
 }
 
 @font-face {
-  font-family: Mashine;
+  font-family: 'Mashine';
   src:
     url('/fonts/MashineSemiBold.woff2') format('woff2'),
     url('/fonts/MashineSemiBold.woff') format('woff');
@@ -50,7 +48,7 @@ main {
   justify-content: flex-end;
   text-align: left;
   color: var(--text);
-  font-family: Unbounded, sans-serif;
+  font-family: 'Unbounded Variable', sans-serif;
   align-self: flex-start;
 }
 

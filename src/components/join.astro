@@ -1,5 +1,4 @@
 ---
-import '../styles/App.css'
 import { discordInvite, makerspaceMap } from '../data'
 
 interface Props {
@@ -31,6 +30,7 @@ if (theme === 'dark') {
     <div style={{ display: 'flex', padding: '15px' }}>
       <a
         href={discordInvite}
+        target="_blank"
         style={{
           backgroundColor: '#1e1e1e',
           color: 'white',
@@ -49,6 +49,7 @@ if (theme === 'dark') {
       </a>
       <a
         href={makerspaceMap}
+        target="_blank"
         style={{
           backgroundColor: '#1e1e1e',
           color: 'white',
@@ -61,7 +62,7 @@ if (theme === 'dark') {
       >
         <h3>Find the Makerspace</h3>
         <span>
-          Our meeting are hosted at the UTDesign Makerspace, located on the 2nd
+          Our meetings are hosted at the UTDesign Makerspace, located on the 2nd
           floor of the Synergy Park North building (SPN 2.220).
         </span>
       </a>
