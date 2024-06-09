@@ -12,14 +12,14 @@ const termSchema = z.object({
 })
 
 const projectSchema = z.object({
-    projectTitle: z.string(),
-    shortDescription: z.string(),
-    deprecated: z.boolean().default(false),
-    stats: z.array(statSchema),
-    startSeason: termSchema,
-    endSeason: termSchema.optional(),
-    mainImage: z.object({ src: z.string().url(), alt: z.string() }),
-  })
+  projectTitle: z.string(),
+  shortDescription: z.string(),
+  deprecated: z.boolean().default(false),
+  stats: z.array(statSchema),
+  startSeason: termSchema,
+  endSeason: termSchema.optional(),
+  mainImage: z.object({ src: z.string().url(), alt: z.string() }),
+})
 
 const projectCollection = defineCollection({
   type: 'content',
@@ -27,5 +27,5 @@ const projectCollection = defineCollection({
 })
 
 export const collections = {
-  'projects': projectCollection,
+  projects: projectCollection,
 }
