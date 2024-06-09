@@ -1,0 +1,53 @@
+---
+import '../../styles/project.css'
+import BaseLayout from '../../layouts/base.astro'
+import Join from '../../components/join.astro'
+import { getCollection } from 'astro:content'
+
+export async function getStaticPaths() {
+  const projectEntries = await getCollection('projects')
+  console.log({ projectEntries })
+  return projectEntries.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }))
+}
+const { entry } = Astro.props
+const { Content } = await entry.render()
+---
+
+<BaseLayout>
+  <div class="main-container">
+    <div class="content-container">
+      <div class="description">
+        <h1 class="title">{entry.projectTitle}</h1>
+        <br />
+        <span class="short-description">
+          {entry.shortDescription}
+        </span>
+        <div class="stats">
+          {
+            entry.stats.map((stat) => (
+              <div>
+                <img src={stat.icon} alt={stat.name} class="stat-icon" />
+                <h2 class="stat-name">{stat.name}</h2>
+                <span class="stat-value">{stat.value}</span>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+      <div class="image-container">
+        <img
+          src={entry.mainImage.src}
+          alt={entry.mainImage.alt}
+          class="main-image"
+        />
+      </div>
+    </div>
+    <div class="history-section">
+      <Content />
+    </div>
+  </div>
+  <Join />
+</BaseLayout>
