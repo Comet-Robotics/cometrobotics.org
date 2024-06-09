@@ -31,16 +31,17 @@ import { HOME_LINK, discordInvite, mainNavLinks } from '../data'
       display: 'flex',
       gap: '2rem',
       alignItems: 'center',
+      fontFamily: 'Mashine, sans-serif',
     }}
   >
     {mainNavLinks.map((link) => <a href={link.href}>{link.name}</a>)}
-
     <a
       style={{
         backgroundColor: 'var(--primary)',
         padding: '0.5rem 1rem',
         color: 'white',
         borderRadius: '999px',
+        fontFamily: 'Mashine, sans-serif',
       }}
       href={discordInvite}
     >
