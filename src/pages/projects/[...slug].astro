@@ -5,8 +5,10 @@ import Join from '../../components/join.astro'
 import { getCollection } from 'astro:content'
 
 export async function getStaticPaths() {
-  const projectEntries = await getCollection('projects')
-  console.log({ projectEntries })
+  const projectEntries = await getCollection('projects', ({ data }) => {
+    return import.meta.env.PROD ? data.draft !== true : true
+  })
+
   return projectEntries.map((entry) => ({
     params: { slug: entry.slug },
     props: { entry },

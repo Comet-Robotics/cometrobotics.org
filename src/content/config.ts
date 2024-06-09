@@ -14,6 +14,7 @@ const projectCollection = defineCollection({
     deprecated: z.boolean().default(false),
     stats: z.array(statSchema),
     mainImage: z.object({ src: z.string(), alt: z.string() }),
+    draft: z.boolean().default(false)
   }),
 })
 
