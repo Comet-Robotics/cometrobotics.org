@@ -17,17 +17,24 @@ if (theme === 'dark') {
   borderStyle = 'solid'
 }
 ---
+<style>
+  @media (max-width: 480px) {
+    .join-content {
+      flex-direction: column;
+    }
+  }
+</style>
 
 <div style={{ backgroundColor: bgColor, color: txtColor, padding: '30px' }}>
   <div style={{ maxWidth: '100em', margin: 'auto' }}>
-    <h2>Join</h2>
+    <h2 style="font-family: Mashine, sans-serif; color: var(--primary);">Join</h2>
     <span>
       To become a member, come to a meeting and talk to a project manager or
       officer about how you can join a team. Our general meetings are on <strong
         >Mondays at 7pm</strong
       > at the <strong>UTDesign Makerspace.</strong>
     </span>
-    <div style={{ display: 'flex', padding: '15px' }}>
+    <div class="join-content" style={{ display: 'flex', padding: '15px' }}>
       <a
         href={discordInvite}
         target="_blank"
