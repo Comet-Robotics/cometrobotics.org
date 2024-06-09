@@ -49,7 +49,7 @@ const clubEmail = 'cometrobotics@utdallas.edu'
 const discordInvite = 'https://discord.gg/dTGwav3PVM'
 
 const makerspaceMap = 'https://g.page/utdesign-makerspace?share'
-
+const websiteRepo = 'https://github.com/Comet-Robotics/cometrobotics.org'
 const footerLinks: LinkType[] = [
   {
     name: 'Discord',
@@ -61,7 +61,7 @@ const footerLinks: LinkType[] = [
   },
   {
     name: 'Source Code',
-    href: 'https://github.com/Comet-Robotics/cometrobotics.org',
+    href: websiteRepo,
   },
   {
     name: 'SharePoint',
@@ -73,4 +73,4 @@ const footerLinks: LinkType[] = [
   },
 ]
 
-export { mainNavLinks, HOME_LINK, footerLinks, socialLinks, clubEmail, sponsorLinks, discordInvite, makerspaceMap }
+export { mainNavLinks, HOME_LINK, footerLinks, socialLinks, clubEmail, sponsorLinks, discordInvite, makerspaceMap, websiteRepo }
