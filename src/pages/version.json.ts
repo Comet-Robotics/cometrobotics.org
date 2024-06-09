@@ -1,17 +1,14 @@
-import childProcess from "child_process";
- 
+import childProcess from 'node:child_process'
+
 // obtain Git commit hash
 const hash = childProcess
-  .execSync("git rev-parse --short HEAD")
+  .execSync('git rev-parse --short HEAD')
   .toString()
-  .trim();
- 
-// obtain release version
-import { version } from "../../../package.json";
- 
-export async function GET({ params, request }) {
+  .trim()
+
+export async function GET() {
   const versionMetadata = {
     hash,
-    version,
-  };
-  return new Response(JSON.stringify(versionMetadata));
+  }
+  return new Response(JSON.stringify(versionMetadata))
+}
