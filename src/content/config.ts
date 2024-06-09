@@ -6,11 +6,6 @@ const statSchema = z.object({
   icon: z.string(),
 })
 
-const termSchema = z.object({
-  season: z.enum(['Spring', 'Summer', 'Fall']),
-  year: z.number(),
-})
-
 const projectCollection = defineCollection({
   type: 'content',
   schema: z.object({
@@ -18,8 +13,6 @@ const projectCollection = defineCollection({
     shortDescription: z.string(),
     deprecated: z.boolean().default(false),
     stats: z.array(statSchema),
-    startSeason: termSchema.optional(),
-    endSeason: termSchema.optional(),
     mainImage: z.object({ src: z.string(), alt: z.string() }),
   }),
 })
