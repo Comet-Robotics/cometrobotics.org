@@ -20,14 +20,14 @@ const { Content } = await entry.render()
   <div class="main-container">
     <div class="content-container">
       <div class="description">
-        <h1 class="title">{entry.projectTitle}</h1>
+        <h1 class="title">{entry.data.projectTitle}</h1>
         <br />
         <span class="short-description">
-          {entry.shortDescription}
+          {entry.data.shortDescription}
         </span>
         <div class="stats">
           {
-            entry.stats.map((stat) => (
+            entry.data.stats.map((stat) => (
               <div>
                 <img src={stat.icon} alt={stat.name} class="stat-icon" />
                 <h2 class="stat-name">{stat.name}</h2>
@@ -39,8 +39,8 @@ const { Content } = await entry.render()
       </div>
       <div class="image-container">
         <img
-          src={entry.mainImage.src}
-          alt={entry.mainImage.alt}
+          src={entry.data.mainImage.src}
+          alt={entry.data.mainImage.alt}
           class="main-image"
         />
       </div>

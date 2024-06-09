@@ -1,26 +1,27 @@
 ---
-projectTitle: 'Blender'
+projectTitle: Blender
 shortDescription: 'Blender is a 120lb full body spinner, featuring a titanium shell with hardened steel impactors.'
 stats:
-  - name: 'Top Driving Speed',
-    value: '15mph',
-    icon: '/statsGraphics/double-arrow-right.svg',
-  - name: 'Top Spin Speed',
-    value: '120mph',
-    icon: '/statsGraphics/rotate-arrow.svg',
-  - name: 'Shell Weight',
-    value: '70lbs',
-    icon: '/statsGraphics/weight.svg',
+- name: Top Driving Speed
+  value: 15mph
+  icon: /statsGraphics/double-arrow-right.svg
+- name: Top Spin Speed
+  value: 120mph
+  icon: /statsGraphics/rotate-arrow.svg
+- name: Shell Weight
+  value: 70lbs
+  icon: /statsGraphics/weight.svg
 startDate:
   season: Fall
   year: 0000
-endDate: 
+endDate:
   season: Fall
   year: 0000
 deprecated: true
 mainImage:
-  src: "/projects/blender/blender.webp"
-  alt: "Blender"
+  src: /projects/blender/blender.webp
+  alt: Blender
+
 ---
 export const images = [
   'https://news.utdallas.edu/news/files/2021/03/battlebots-team-1000-2015-07.jpg',
@@ -37,7 +38,7 @@ export const images = [
   2017 Robogames.
 </p>
 <div class="image-grid">
-  {images.map((img) => <img src={img} class="history-image" />)}
+  {images.map((img) => <img src={img} />)}
 </div>
 <p class="history-text">
   After losing a match against the Brazilian robot Touro, Blender was
