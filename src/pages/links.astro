@@ -4,7 +4,7 @@ import '../styles/index.css'
 import '../styles/App.css'
 import BaseLayout from '../layouts/base.astro'
 import Join from '../components/join.astro'
-import { linksPageLinks } from '../data'
+import { clubEmail, linksPageLinks } from '../data'
 ---
 
 <BaseLayout title="Links">
@@ -14,21 +14,22 @@ import { linksPageLinks } from '../data'
   >
     <div
       class="links-container"
-      style=" margin: auto; max-width: 30em; width: 100%"
+      style="margin: auto; max-width: 30em; width: 100%; display: flex; flex-direction: column; gap: 2em; padding: 0 2em;"
     >
+    <a href={`mailto:${clubEmail}`}>
       <div
-        style=" width: 100%; padding: 20px; border-radius: 25px; border-style: solid; margin: 30px; border-color: #380D0D; background-color: #250F0F;"
+        style="width: 100%; padding: 20px; border-radius: 25px; border-style: solid; border-color: #380D0D; background-color: #250F0F;"
       >
         <h2>Email</h2>
         <p>
-          For general inquiries, reach out to our leadership team via email.
+          For general inquiries, reach out to our leadership team via email &rarr; {clubEmail}.
         </p>
-        <a>cometrobotics@utdallas.edu</a>
       </div>
+      </a>
       {
         linksPageLinks.map((link) => (
-          <a href={link.href}>
-            <div style=" width: 100%; padding: 20px; border-radius: 25px; border-style: solid; margin: 30px;">
+          <a target="_blank" href={link.href}>
+            <div style="width: 100%; padding: 20px; border-radius: 25px; border-style: solid;">
               <h2>{link.name}</h2>
             </div>
           </a>
