@@ -55,7 +55,7 @@
   flex: 1;
   display: flex;
   justify-content: center;
-  z-index: 0; /* Ensure image container stays below description */
+  z-index: 0;
 }
 
 .main-image {
@@ -76,13 +76,13 @@
 
 .history-title {
   font-family: 'Mashine';
-  font-weight: 600;
+  font-weight: bold;
   color: #bf1e2e;
 }
 
 .history-text {
   padding-top: 20px;
-  font-size: 1.3em;
+  font-size: 1.2em;
 }
 
 .image-grid {
@@ -141,6 +141,16 @@
 }
 
 @media (max-width: 768px) {
+
+  .main-container {
+    padding: 0px;
+    padding-top: 120px;
+  }
+
+  .content-container {
+    padding: 20px;
+  }
+
   .short-description {
     font-size: 1.5em;
   }
@@ -162,6 +172,7 @@
 
   .history-section {
     width: 100%;
+    border-radius: 0px;
   }
 }
 
