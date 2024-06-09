@@ -2,7 +2,7 @@ import { defineCollection, z } from 'astro:content'
 
 const statSchema = z.object({
   name: z.string(),
-  value: z.number(),
+  value: z.string(),
   icon: z.string(),
 })
 
@@ -11,19 +11,17 @@ const termSchema = z.object({
   year: z.number(),
 })
 
-const projectSchema = z.object({
-  projectTitle: z.string(),
-  shortDescription: z.string(),
-  deprecated: z.boolean().default(false),
-  stats: z.array(statSchema),
-  startSeason: termSchema,
-  endSeason: termSchema.optional(),
-  mainImage: z.object({ src: z.string().url(), alt: z.string() }),
-})
-
 const projectCollection = defineCollection({
   type: 'content',
-  schema: projectSchema,
+  schema: z.object({
+    projectTitle: z.string(),
+    shortDescription: z.string(),
+    deprecated: z.boolean().default(false),
+    stats: z.array(statSchema),
+    startSeason: termSchema.optional(),
+    endSeason: termSchema.optional(),
+    mainImage: z.object({ src: z.string(), alt: z.string() }),
+  }),
 })
 
 export const collections = {
