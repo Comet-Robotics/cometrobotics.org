@@ -1,9 +1,25 @@
 ---
 import '../styles/App.css'
 import { discordInvite, makerspaceMap } from '../data'
+
+interface Props {
+  theme: 'light' | 'dark';
+}
+
+const { theme } = Astro.props;
+
+let bgColor = '#D9D9D9';
+let txtColor = 'black';
+let borderStyle = 'none';
+
+if (theme === 'dark') {
+  bgColor = '#1e1e1e';
+  txtColor = 'white';
+  borderStyle = 'solid';
+}
 ---
 
-<div style={{ backgroundColor: '#D9D9D9', color: 'black', padding: '30px' }}>
+<div style={{ backgroundColor: bgColor, color: txtColor, padding: '30px' }}>
   <div style={{ maxWidth: '100em', margin: 'auto' }}>
     <h2>Join</h2>
     <span>
@@ -20,7 +36,9 @@ import { discordInvite, makerspaceMap } from '../data'
           color: 'white',
           margin: '10px',
           padding: '10px',
+          borderStyle: borderStyle,
           borderRadius: '10px',
+          borderColor: txtColor,
         }}
       >
         <h3>Join the Discord</h3>
@@ -36,7 +54,9 @@ import { discordInvite, makerspaceMap } from '../data'
           color: 'white',
           margin: '10px',
           padding: '10px',
+          borderStyle: borderStyle,
           borderRadius: '10px',
+          borderColor: txtColor,
         }}
       >
         <h3>Find the Makerspace</h3>

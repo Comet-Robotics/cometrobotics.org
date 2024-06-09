@@ -73,4 +73,27 @@ const footerLinks: LinkType[] = [
   },
 ]
 
-export { mainNavLinks, HOME_LINK, footerLinks, socialLinks, clubEmail, sponsorLinks, discordInvite, makerspaceMap }
+const linksPageLinks: LinkType[] = [
+  {
+    name: 'Discord',
+    href: discordInvite,
+  },
+  {
+    name: 'Instagram',
+    href: 'https://www.instagram.com/comet_robotics_utd/',
+  },
+  {
+    name: 'LinkedIn',
+    href: 'https://www.linkedin.com/company/comet-robotics-utd/',
+  },
+  {
+    name: 'YouTube',
+    href: 'https://www.youtube.com/@CometRoboticsUTD',
+  },
+  {
+    name: 'Github',
+    href: 'https://github.com/Comet-Robotics/',
+  },
+]
+
+export { mainNavLinks, HOME_LINK, footerLinks, socialLinks, clubEmail, sponsorLinks, discordInvite, makerspaceMap, linksPageLinks }
