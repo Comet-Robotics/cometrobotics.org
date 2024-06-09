@@ -50,7 +50,7 @@ main {
   justify-content: flex-end;
   text-align: left;
   color: var(--text);
-  font-family: 'Unbounded', sans-serif;
+  font-family: Unbounded, sans-serif;
   align-self: flex-start;
 }
 
