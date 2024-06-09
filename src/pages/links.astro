@@ -18,7 +18,7 @@ import { clubEmail, linksPageLinks } from '../data'
     >
     <a href={`mailto:${clubEmail}`}>
       <div
-        style="width: 100%; padding: 20px; border-radius: 25px; border-style: solid; border-color: #380D0D; background-color: #250F0F;"
+        style="width: 100%; padding: 20px; border-radius: 25px; border-style: solid; border-color: #380D0D; background-color: #250F0F; color: white;"
       >
         <h2>Email</h2>
         <p>
@@ -29,7 +29,7 @@ import { clubEmail, linksPageLinks } from '../data'
       {
         linksPageLinks.map((link) => (
           <a target="_blank" href={link.href}>
-            <div style="width: 100%; padding: 20px; border-radius: 25px; border-style: solid;">
+            <div style="width: 100%; padding: 20px; border-radius: 25px; border-style: solid; color: white; border-color: white;">
               <h2>{link.name}</h2>
             </div>
           </a>
