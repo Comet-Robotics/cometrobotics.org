@@ -20,17 +20,21 @@ import { clubEmail, linksPageLinks } from '../data'
       <div
         style="width: 100%; padding: 20px; border-radius: 25px; border-style: solid; border-color: #380D0D; background-color: #250F0F; color: white;"
       >
-        <h2>Email</h2>
+        <h2 style="  font-family: 'Unbounded Variable', sans-serif;">Email &rarr;</h2>
         <p>
-          For general inquiries, reach out to our leadership team via email &rarr; {clubEmail}.
+          For general inquiries, reach out to our leadership team via email.
+        </p>
+        <p style="text-decoration: underline;">
+          {clubEmail}
         </p>
       </div>
       </a>
       {
         linksPageLinks.map((link) => (
           <a target="_blank" href={link.href}>
-            <div style="width: 100%; padding: 20px; border-radius: 25px; border-style: solid; color: white; border-color: white;">
+            <div style="width: 100%; padding: 20px; border-radius: 25px; border-style: solid; color: white; border-color: white; font-family: 'Unbounded Variable', sans-serif; display: flex; justify-content: space-between;">
               <h2>{link.name}</h2>
+              <h2>&rarr;</h2>
             </div>
           </a>
         ))
