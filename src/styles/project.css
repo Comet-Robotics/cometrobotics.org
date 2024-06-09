@@ -20,11 +20,11 @@
 }
 
 .title {
-  font-family: Unbounded, sans-serif;
+  font-family: 'Unbounded', sans-serif;
 }
 
 .short-description {
-  font-family: Unbounded, sans-serif;
+  font-family: 'Unbounded', sans-serif;
   font-size: 2em;
   opacity: 90%;
 }
@@ -43,11 +43,11 @@
 }
 
 .stats h2 {
-  font-family: Unbounded, sans-serif;
+  font-family: 'Unbounded', sans-serif;
 }
 
 .stats span {
-  font-family: Unbounded, sans-serif;
+  font-family: 'Unbounded', sans-serif;
   font-size: 1.2em;
 }
 
