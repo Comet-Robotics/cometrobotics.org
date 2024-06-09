@@ -83,3 +83,10 @@ a:visited {
 html {
   scroll-behavior: smooth;
 }
+
+
+@media (max-width: 480px) {
+  .heroContent h1 {
+    font-size: 2.5rem;
+  }
+}
