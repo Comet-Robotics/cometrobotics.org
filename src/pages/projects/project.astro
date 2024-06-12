@@ -84,12 +84,29 @@ let stats: Stat[] = [
         Blender was abandoned and the UT Dallas Battlebots team dissolved after
         all of the members graduated.
       </p>
-      <model-viewer style="width: 100%; height: 800px;"src="/3dModels/impulse3d.glb"
-              ios-src="/3dModels/impulse3d.usdz"
-              alt="A 3D model of an astronaut"
-              ar
-              auto-rotate
-              camera-controls></model-viewer>
+    </div>
+    <div class="card-section">
+      <div class="card">
+        <h1 class="card-title">3D Viewer</h1>
+        <div class="model-viewer">
+          <model-viewer
+            src="/public/3dModels/testrobot.glb"
+            alt="Blender 3D Model"
+            auto-rotate
+            background-color="#f5f5f5"
+            rotation-per-second="60deg"></model-viewer>
+        </div>
+      </div>
+      <div class="card">
+        <h1 class="card-title">Credits</h1>
+        <p class="card-text">
+          Blender was designed to be a full body spinner. The robot featured a
+          titanium shell with hardened steel impactors. The robot was powered by
+          a 24V battery and was controlled by a custom-built controller. The
+          robot was capable of reaching speeds of up to 15mph and had a top spin
+          speed of 120mph.
+        </p>
+      </div>
     </div>
   </div>
   <Join theme='dark'/>

@@ -81,7 +81,6 @@
 }
 
 .history-text {
-  padding-top: 20px;
   font-size: 1.2em;
 }
 
@@ -93,6 +92,7 @@
   width: 100%;
   gap: 1rem;
   box-sizing: border-box;
+  margin: 10px 0;
 }
 
 .image-grid > img {
@@ -101,6 +101,38 @@
   height: 18rem;
   border-radius: 1rem;
   max-width: 100%;
+}
+
+.card-section {
+  display: grid;
+  max-width: 100em;
+  margin: auto;
+  margin-top: 20px;
+  grid-gap: 20px;
+  grid-template-columns: repeat(2, 2fr);
+}
+
+.card {
+  background-color: #d9d9d9;
+  padding: 20px;
+  border-radius: 20px;
+  color: black;
+}
+
+.card h1 {
+  font-family: 'Mashine', sans-serif;
+  color: var(--primary);
+}
+.model-viewer {
+  color: white;
+  display: flex;
+  background-color: var(--text-dark);
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  height: 200px;
+  width: 300px;
+  margin: auto;
 }
 
 /* Media Queries */
