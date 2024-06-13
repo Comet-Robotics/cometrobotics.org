@@ -1,0 +1,39 @@
+---
+import '../styles/reset.css'
+import '../styles/index.css'
+import '../styles/App.css'
+import BaseLayout from '../layouts/base.astro'
+import Join from '../components/join.astro'
+---
+
+<BaseLayout title="About">
+  <div
+    class="main-container"
+    style="padding-top: 120px; display: flex; background: linear-gradient(#230508 70%, var(--text-dark)); flex-direction: column;"
+  >
+    <div
+      style="display: flex; flex-direction:column; margin: auto; align-items: center;"
+    >
+      <h1 style="font-family: Unbounded;">About</h1>
+      <h3 style="font-family: Unbounded; opacity: 80%;">
+        More about the club and it's history
+      </h3>
+    </div>
+    <div
+      class="about-container"
+      style="margin: auto; margin-top: 5em;max-width: 100em; width: 100%; display: flex; flex-direction: column; gap: 2em; padding: 2em 2em; background-color: white; border-radius: 1em;"
+    >
+      <h1 style="color: var(--primary); font-family: Mashine;">Our Mission</h1>
+      <p style="color: black;">
+        Comet Robotics, a student-led organization at the University of Texas at
+        Dallas, is a group of students who are passionate about robotics and
+        engineering. We design, build, and compete with robots in various
+        competitions. Our goal is to provide students with the opportunity to
+        learn and apply engineering concepts in a hands-on environment. We
+        welcome students from all backgrounds and experience levels to join us
+        in our mission to promote STEM education and robotics in our community.
+      </p>
+    </div>
+    <Join theme="dark" />
+  </div>
+</BaseLayout>
