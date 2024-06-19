@@ -4,9 +4,9 @@ const HOME_LINK: LinkType = { name: 'Home', href: '/' }
 
 const mainNavLinks: LinkType[] = [
   HOME_LINK,
-//   { name: "About", href: "#" },
+  { name: "About", href: "/about" },
 //   { name: "Projects", href: "#" },
-//   { name: "Contact", href: "#" },
+  { name: "Contact", href: "/links" },
 ]
 
 const socialLinks: LinkWithIconType[] = [
