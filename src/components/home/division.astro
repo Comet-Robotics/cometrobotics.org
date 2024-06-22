@@ -40,10 +40,12 @@ const {
       maxWidth: '20rem',
       backgroundColor: 'var(--primary)',
       padding: '2rem',
-      gap: '1rem',
+      display: 'flex',
+      flexDirection: 'column',
+      gap: '0.25rem',
     }}
   >
-    <h4 style="font-family: 'Unbounded Variable', sans-serif;">{divisionName}</h4>
+    <h4 class="font-unbounded">{divisionName}</h4>
     <p>
       {divisionDescription}
     </p>
@@ -55,21 +57,23 @@ const {
     margin: '5rem 0',
     flexDirection: 'column',
     display: 'flex',
-    gap: '2rem',
+    gap: '2rem'
   }}
 >
-  <h2>
+  <h2 style={{
+    fontWeight: '400',
+    color: '#D9D9D9',
+  }}>
     {divisionOverview}
   </h2>
   <div
     style={{
-      display: 'grid',
-      gridTemplateColumns: '1fr 1fr 1fr',
+      display: 'flex',
       justifyItems: 'center',
-      height: '20rem',
       width: '100%',
       gap: '1rem',
     }}
+    class="mobile-column"
   >
     {
       images.map((img) => (
