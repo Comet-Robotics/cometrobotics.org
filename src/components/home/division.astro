@@ -21,6 +21,11 @@ const {
 } = Astro.props
 ---
 
+<style>
+  a:any-link {
+    color: var(--text);
+  }
+</style>
 <div
   style={{
     position: 'relative',
@@ -90,6 +95,7 @@ const {
     }
     <a
       href={learnMoreHref}
+      class="font-mashine"
       style={{
         borderRadius: '1rem',
         border: '2px solid #D9D9D9',

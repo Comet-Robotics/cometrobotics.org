@@ -21,6 +21,11 @@
 .font-unbounded {
   font-family: 'Unbounded Variable', sans-serif;
 }
+
+
+.font-mashine {
+  font-family: 'Mashine', sans-serif;
+}
 @media (max-width: 480px) {
 .mobile-column {
   flex-direction: column;
