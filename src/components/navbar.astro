@@ -2,6 +2,11 @@
 import { HOME_LINK, discordInvite, mainNavLinks } from '../data'
 ---
 
+<style>
+  nav > a:any-link {
+    color: var(--text); 
+  }
+</style>
 <div
   style={{
     position: 'fixed',
@@ -12,7 +17,6 @@ import { HOME_LINK, discordInvite, mainNavLinks } from '../data'
     justifyContent: 'space-between',
     alignItems: 'center',
     zIndex: 100,
-    color: 'var(--text)',
     padding: '2rem 4rem',
     background:
       'linear-gradient(180deg, rgba(0, 0, 0, 0.67) 0%, rgba(0, 0, 0, 0.00) 100%)',
@@ -39,7 +43,6 @@ import { HOME_LINK, discordInvite, mainNavLinks } from '../data'
       style={{
         backgroundColor: 'var(--primary)',
         padding: '0.5rem 1rem',
-        color: 'white',
         borderRadius: '999px',
         fontFamily: "'Mashine', sans-serif",
       }}
