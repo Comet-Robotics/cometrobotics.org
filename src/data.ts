@@ -5,13 +5,15 @@ const HOME_LINK: LinkType = { name: 'Home', href: '/' }
 const mainNavLinks: LinkType[] = [
   HOME_LINK,
   { name: "About", href: "/about" },
-//   { name: "Projects", href: "#" },
+  // { name: "Projects", href: "#" },
   { name: "Contact", href: "/links" },
 ]
 
+const instagramURL = 'https://www.instagram.com/comet_robotics_utd/'
+
 const socialLinks: LinkWithIconType[] = [
   { name: 'GitHub', href: 'https://github.com/Comet-Robotics', icon: '/socials/github.png' },
-  { name: 'Instagram', href: 'https://www.instagram.com/comet_robotics_utd/', icon: '/socials/instagram.png' },
+  { name: 'Instagram', href: instagramURL, icon: '/socials/instagram.png' },
   // { name: "Facebook", href: 'https://www.facebook.com/utdcombatrobotics', icon: '/socials/facebook.png' },
   { name: 'LinkedIn', href: 'https://www.linkedin.com/company/comet-robotics-utd/', icon: '/socials/linkedin.png' },
   { name: 'YouTube', href: 'https://www.youtube.com/@CometRoboticsUTD', icon: '/socials/youtube.png' },
@@ -91,9 +93,9 @@ const linksPageLinks: LinkType[] = [
     href: 'https://www.youtube.com/@CometRoboticsUTD',
   },
   {
-    name: 'Github',
+    name: 'GitHub',
     href: 'https://github.com/Comet-Robotics/',
   },
 ]
 
-export { mainNavLinks, HOME_LINK, footerLinks, socialLinks, clubEmail, sponsorLinks, discordInvite, makerspaceMap, websiteRepo, linksPageLinks }
+export { mainNavLinks, HOME_LINK, footerLinks, socialLinks, clubEmail, sponsorLinks, discordInvite, makerspaceMap, websiteRepo, linksPageLinks, instagramURL }
