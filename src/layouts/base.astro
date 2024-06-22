@@ -1,4 +1,5 @@
 ---
+import { SEOMetadata } from 'astro-seo-metadata'
 import '@fontsource-variable/unbounded'
 import '@fontsource-variable/open-sans'
 import '../styles/reset.css'
@@ -12,23 +13,30 @@ interface Props {
   title: string
 }
 
+const site = 'Comet Robotics at UT Dallas'
 const { title } = Astro.props
 ---
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <!-- TODO: proper meta tags -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Comet Robotics at UT Dallas{title ? ` | ${title}` : ''}</title>
-    <link rel="sitemap" href="/sitemap-index.xml" />
+
+    <SEOMetadata
+      siteName={site}
+      title={title ?? site}
+      description={'We are a group of robot enthusiasts with the goal of promoting robotics at UT Dallas and in the surrounding area through outreach, projects and workshops.'}
+      favicon={'/favicon.svg'}
+      author={site}
+      astroSitemap={true}
+      canonicalUrl={Astro.url.toString()}
+      type={'website'}
+      astroGenerator={true}
+    />
   </head>
   <Navbar />
   <main>
     <slot />
     <Footer />
   </main>
-
-
 </html>
