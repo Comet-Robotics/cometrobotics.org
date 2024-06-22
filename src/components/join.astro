@@ -9,13 +9,25 @@ const { theme } = Astro.props
 
 let bgColor = '#D9D9D9'
 let txtColor = 'black'
-let borderStyle = 'none'
+
 
 if (theme === 'dark') {
   bgColor = '#1e1e1e'
   txtColor = 'white'
-  borderStyle = 'solid'
 }
+
+const options: {title: string, description: string, url: string}[] = [
+  {
+    title: 'Join the Discord',
+    description: 'Discord is the primary method of communication for the club - join for updates on meeting times, projects, and more.',
+    url: discordInvite,
+  },
+  {
+    title: 'Find the Makerspace',
+    description: 'Our meetings are hosted at the UTDesign Makerspace, located on the 2nd floor of the Synergy Park North building (SPN 2.220).',
+    url: makerspaceMap,
+  },
+]
 ---
 <style>
   @media (max-width: 480px) {
@@ -23,56 +35,51 @@ if (theme === 'dark') {
       flex-direction: column;
     }
   }
+
+  a {
+    transition-duration: 0.1s;
+    transition-property: transform;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  a:hover {
+    transform: scale(0.925);
+  }
 </style>
 
-<div style={{ backgroundColor: bgColor, color: txtColor, padding: '30px' }}>
-  <div style={{ maxWidth: '100em', margin: 'auto' }}>
-    <h2 style="font-family: Mashine, sans-serif; color: var(--primary);">Join</h2>
-    <span>
+<div style={{ backgroundColor: bgColor, color: txtColor, padding: '4rem 3rem', gap: '2rem', display:'flex', flexDirection: 'column' }}>
+
+    <h2 style="font-family: Mashine, sans-serif; color: var(--primary); font-size: 3rem; line-height: 1;">Join</h2>
+    <p style={{
+      fontSize: '1.25rem'
+    }}>
       To become a member, come to a meeting and talk to a project manager or
       officer about how you can join a team. Our general meetings are on <strong
         >Mondays at 7pm</strong
       > at the <strong>UTDesign Makerspace.</strong>
-    </span>
-    <div class="join-content" style={{ display: 'flex', padding: '15px' }}>
-      <a
-        href={discordInvite}
+    </p>
+    <div class="join-content" style={{ display: 'flex', gap: '2rem' }}>
+      {options.map(({url, title, description}) => (
+       <a
+        href={url}
         target="_blank"
+        rel="noreferrer"
         style={{
           backgroundColor: '#1e1e1e',
           color: 'white',
-          margin: '10px',
-          padding: '10px',
-          borderStyle: borderStyle,
-          borderRadius: '10px',
+          padding: '1.5rem',
+          borderStyle: 'solid',
+          borderRadius: '1.33rem',
           borderColor: txtColor,
+          boxShadow: '0px 4px 4px 0px rgba(0, 0, 0, 0.25)'
         }}
       >
-        <h3>Join the Discord</h3>
+        <h3 class="font-unbounded">{title}</h3>
         <span>
-          Discord is the primary method of communication for the club - join for
-          updates on meeting times, projects, and more.
+          {description}
         </span>
-      </a>
-      <a
-        href={makerspaceMap}
-        target="_blank"
-        style={{
-          backgroundColor: '#1e1e1e',
-          color: 'white',
-          margin: '10px',
-          padding: '10px',
-          borderStyle: borderStyle,
-          borderRadius: '10px',
-          borderColor: txtColor,
-        }}
-      >
-        <h3>Find the Makerspace</h3>
-        <span>
-          Our meetings are hosted at the UTDesign Makerspace, located on the 2nd
-          floor of the Synergy Park North building (SPN 2.220).
-        </span>
-      </a>
+      </a>))}
+      
     </div>
-  </div>
+
 </div>
