@@ -99,7 +99,13 @@ function getImageDataURLFromAstroPublicDir(imagePath) {
   return `https://cometrobotics.org/${imagePath}`
 
   // TODO: figure out why this causes image generation to hang. satori docs indicate that it should be possible to use data URIs in this way, and I've tested that the generated data URIs are valid and render an image as expected.
+
+  // update: did some more testing, looks like its not even an issue with satori, something between the generated html string and whatever intermediate processing og image gen library does to it is causing satori-html to hang when converting the html to a VNode tree for satori. specifically, it uses ultrahtml to parse? the html, and that is hanging... so we aren't even getting to the point of generating the image...
+  // might just leave this like this for now. its not the end of the world that we have to fetch these images from the live site. its definitely slower than reading images locally, but since we just take the hit once at build time its not a big deal and i have more important things to do lol
+
+
   const fileExt = imagePath.split('.').pop()
+  console.log({fileExt})
   const file = fs.readFileSync(`./public/${imagePath}`)
   const base64 = Buffer.from(file).toString('base64')
   return `data:image/${fileExt};base64,${base64}`
@@ -117,14 +123,13 @@ function template({ page }) {
 
   return html` <!--  -->
     <div style=${styles.container}>
-      <img src="${getImageDataURLFromAstroPublicDir('home/vexgroup.png')}" style="width: 100%; height: 100%; object-fit: cover;"/>
+      <img src="${getImageDataURLFromAstroPublicDir('DSC02011.jpg')}" style="width: 100%; height: 100%; object-fit: cover;"/>
     </div>
     <div style=${styles.wrap}>
       <img style=${wordmarkStyles} src="${getImageDataURLFromAstroPublicDir('wordmark.png')}"/>
       ${title ? html`<div style=${styles.title}>${title.trim()}</div>` : ''}
     </div>
   `
-  };
-  // <img src="${getImageDataURLFromAstroPublicDir('DSC02011.jpg')}" style="width: 100%; height: 100%; object-fit: cover;"/>
+};
 
 export { template }
