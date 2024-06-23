@@ -13,6 +13,9 @@ interface Props {
   title: string
 }
 
+const {url} = Astro
+const ogImage = url.origin + '/og/' + (url.pathname === '/' ? 'index.png' : url.pathname)
+
 const site = 'Comet Robotics at UT Dallas'
 const { title } = Astro.props
 ---
@@ -21,7 +24,8 @@ const { title } = Astro.props
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <meta name="theme-color" content="#bf1e2e" />
+    <meta name="color-scheme" content="dark">
     <SEOMetadata
       siteName={site}
       title={title ?? site}
@@ -31,6 +35,7 @@ const { title } = Astro.props
       astroSitemap={true}
       canonicalUrl={Astro.url.toString()}
       type={'website'}
+      image={ogImage}
       astroGenerator={true}
     />
   </head>
