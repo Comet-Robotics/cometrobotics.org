@@ -14,7 +14,7 @@ interface Props {
 }
 
 const {url} = Astro
-const ogImage = url.origin + '/og' + (url.pathname === '/' ? '/index' : url.pathname) + '.png'
+let ogImage = (url.origin + '/og' + (url.pathname === '/' ? '/index' : url.pathname)).replace(/\/$/, '') + '.png'
 
 const site = 'Comet Robotics at UT Dallas'
 const { title } = Astro.props
