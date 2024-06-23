@@ -1,4 +1,5 @@
 import fsPromises from 'node:fs/promises'
+import fs from 'node:fs'
 import { Buffer } from 'node:buffer'
 
 import { html, styled } from 'og-images-generator'
@@ -50,17 +51,19 @@ export const renderOptions = {
     width: 2048,
     height: 1170,
   },
+  resvg: {
+    loadSystemFonts: false
+  }
 }
 
-const styles = {
 
+const styles = {
   container: styled.div`
 		height: 100%;
 		width: 100%;
 		display: flex;
 		filter: contrast(1.7) saturate(0);
 	`,
-
   wrap: styled.div`
 		position: absolute;
 		top: 0;
@@ -74,33 +77,54 @@ const styles = {
 		color: #ffffff;
 		display: flex;
 		align-items: center;
-    	justify-content: center;
+    justify-content: center;
 		font-size: 120px;
 		font-family: 'Unbounded Variable', sans-serif;
 	`,
+  title: styled.div`
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  `
+}
+
+
+/*
+  * @param {string} imagePath
+  * @returns {string}
+  */
+function getImageDataURLFromAstroPublicDir(imagePath) {
+  return `https://cometrobotics.org/${imagePath}`
+
+  // TODO: figure out why this causes image generation to hang. satori docs indicate that it should be possible to use data URIs in this way, and I've tested that the generated data URIs are valid and render an image as expected.
+  const fileExt = imagePath.split('.').pop()
+  const file = fs.readFileSync(`./public/${imagePath}`)
+  const base64 = Buffer.from(file).toString('base64')
+  return `data:image/${fileExt};base64,${base64}`
 }
 
 /** @type {import('og-images-generator').Template} */
 function template({ page }) {
-  let title = page.meta.tags['og:title']
+  let title = page.meta.tags['og:title'] ?? ''
 
   if (['Home', 'Comet Robotics', 'Comet Robotics at UT Dallas'].includes(title)) {
     title = ''
   }
 
-  const wordmarkSize = title ? styled.div`width: 445px;` : styled.div`width: 1250px;`
-  const wordmark = wordmarkSize
-  const titleStyles = styled.div`height: 100%;display:flex;align-items:center;justify-content:center;text-align:center;`
-  const titleDiv = title ? html`<div style=${titleStyles}>${title.trim()}</div>` : ''
+  const wordmarkStyles = title ? styled.div`width: 445px;` : styled.div`width: 1250px;`
 
   return html` <!--  -->
-	<div style=${styles.container}>
-		<img src="https://cometrobotics.org/home/vexgroup.png" style="width: 100%; height: 100%; object-fit: cover;"/>
-	</div>
-	<div style=${styles.wrap}>
-		<img style=${wordmark} src="https://cometrobotics.org/wordmark.png"/>
-		${titleDiv}
-	</div>`
-};
+    <div style=${styles.container}>
+      <img src="${getImageDataURLFromAstroPublicDir('home/vexgroup.png')}" style="width: 100%; height: 100%; object-fit: cover;"/>
+    </div>
+    <div style=${styles.wrap}>
+      <img style=${wordmarkStyles} src="${getImageDataURLFromAstroPublicDir('wordmark.png')}"/>
+      ${title ? html`<div style=${styles.title}>${title.trim()}</div>` : ''}
+    </div>
+  `
+  };
+  // <img src="${getImageDataURLFromAstroPublicDir('DSC02011.jpg')}" style="width: 100%; height: 100%; object-fit: cover;"/>
 
 export { template }
