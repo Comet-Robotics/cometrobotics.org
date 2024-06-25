@@ -17,7 +17,7 @@ const hash = childProcess
 ---
 
 <footer
-  style="display: flex; flex-direction: column; gap: 1rem; align-items: center; padding: 3rem 5rem; width: 100%; background-color: var(--text-dark);"
+  style="display: flex; flex-direction: column; gap: 1rem; align-items: center; padding: 3rem 5rem; width: 100%; background-color: var(--text-dark); font-size:0.8rem;" class="font-unbounded"
 >
   <style>
     .sponsor:hover {
@@ -30,17 +30,30 @@ const hash = childProcess
       transition-property: opacity;
       transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     }
+
+    .social {
+      width: 1.125rem;
+    }
+
+    .social:hover {
+      opacity: 75%;
+      transition-duration: 0.1s;
+      transition-property: opacity;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .cr {
+      width: 5rem;
+    }
   </style>
-  <img src="/logo-light.png" />
+  <img src="/logo-light.png" class="cr"/>
 
   <div style="display: flex; gap: 1rem;">
-    {
-      socialLinks.map((link) => (
-        <a href={link.href}>
-          <img src={link.icon} alt={link.name + ' logo'} />
-        </a>
-      ))
-    }
+    {socialLinks.map((link) => (
+      <a href={link.href} class="social">
+        <img src={link.icon} alt={link.name + ' logo'} />
+      </a>
+    ))}
   </div>
   <div style="display: flex; gap: 1rem;">
     {footerLinks.map((link) => <a href={link.href}>{link.name}</a>)}
