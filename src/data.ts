@@ -4,9 +4,9 @@ const HOME_LINK: LinkType = { name: 'Home', href: '/' }
 
 const mainNavLinks: LinkType[] = [
   HOME_LINK,
-  { name: "About", href: "/about" },
+  { name: 'About', href: '/about' },
   // { name: "Projects", href: "#" },
-  { name: "Contact", href: "/links" },
+  { name: 'Contact', href: '/links' },
 ]
 
 const instagramURL = 'https://www.instagram.com/comet_robotics_utd/'
@@ -98,4 +98,42 @@ const linksPageLinks: LinkType[] = [
   },
 ]
 
-export { mainNavLinks, HOME_LINK, footerLinks, socialLinks, clubEmail, sponsorLinks, discordInvite, makerspaceMap, websiteRepo, linksPageLinks, instagramURL }
+const competitiveTeams = [
+  {
+    name: 'ChessBots',
+    href: '#',
+  },
+  {
+    name: 'Solis Rover Project',
+    href: '#',
+  },
+  {
+    name: 'VexU',
+    href: '#',
+  },
+  {
+    name: 'SumoBots',
+    href: '#',
+  },
+]
+
+const combatTeams = [
+  {
+    name: 'Blender',
+    href: '#',
+  },
+  {
+    name: '3lb Impulse',
+    href: '#',
+  },
+  {
+    name: 'Blended Donut',
+    href: '#',
+  },
+  {
+    name: 'Proxima Centauri',
+    href: '#',
+  },
+]
+
+export { mainNavLinks, HOME_LINK, footerLinks, socialLinks, clubEmail, sponsorLinks, discordInvite, makerspaceMap, websiteRepo, linksPageLinks, instagramURL, competitiveTeams, combatTeams }
