@@ -18,9 +18,10 @@ let ogImage = (url.origin + '/og' + (url.pathname === '/' ? '/index' : url.pathn
 
 const site = 'Comet Robotics at UT Dallas'
 const { title } = Astro.props
+import { ViewTransitions } from 'astro:transitions';
 ---
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" transition:animate="none">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -38,6 +39,7 @@ const { title } = Astro.props
       image={ogImage}
       astroGenerator={true}
     />
+    <ViewTransitions />
   </head>
   <Navbar />
   <main>
