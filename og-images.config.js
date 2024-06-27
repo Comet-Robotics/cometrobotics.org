@@ -30,7 +30,8 @@ async function getTtfFont(family, axes, value) {
   return await fetch(ttfUrl).then(res => res.arrayBuffer())
 }
 
-const UNBOUNDED_TTF = 'node_modules/.astro/unbounded.ttf'
+const UNBOUNDED_TTF_DIR = 'node_modules/.astro'
+const UNBOUNDED_TTF = `${UNBOUNDED_TTF_DIR}/unbounded.ttf`
 
 let fontBuffer
 
@@ -41,6 +42,7 @@ catch (e) {
   console.error('Failed to read Unbounded font from file, fetching from Google Fonts')
   const arrayBuffer = await getTtfFont('Unbounded', ['wght'], [900])
   fontBuffer = Buffer.from(arrayBuffer)
+  await fsPromises.mkdir(UNBOUNDED_TTF_DIR, { recursive: true })
   await fsPromises.writeFile(UNBOUNDED_TTF, fontBuffer)
 }
 
