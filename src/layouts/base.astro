@@ -6,7 +6,7 @@ import '../styles/reset.css'
 import '../styles/index.css'
 import '../styles/App.css'
 
-import Navbar from '../components/navbar.astro'
+import Navbar from '../components/navbar'
 import Footer from '../components/footer.astro'
 
 interface Props {
@@ -41,7 +41,7 @@ import { ViewTransitions } from 'astro:transitions';
     />
     <ViewTransitions />
   </head>
-  <Navbar />
+  <Navbar client:load transition:persist />
   <main>
     <slot />
     <Footer />
