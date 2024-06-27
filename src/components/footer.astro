@@ -44,12 +44,12 @@ const hash = childProcess
     }
 
   </style>
-  <img src="/logo-light.png" style="width: 5rem;"/>
+  <img loading="lazy" src="/logo-light.png" style="width: 5rem;"/>
 
   <div style="display: flex; gap: 1rem;">
     {socialLinks.map((link) => (
       <a href={link.href} class="social">
-        <img src={link.icon} alt={link.name + ' logo'} />
+        <img loading="lazy" src={link.icon} alt={link.name + ' logo'} />
       </a>
     ))}
   </div>
@@ -63,7 +63,7 @@ const hash = childProcess
     {
       sponsorLinks.map((link) => (
         <a href={link.href} class="sponsor">
-          <img src={link.icon} alt={link.name + ' logo'} />
+          <img loading="lazy" src={link.icon} alt={link.name + ' logo'} />
         </a>
       ))
     }
