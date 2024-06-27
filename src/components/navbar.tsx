@@ -6,6 +6,10 @@ import useMedia from '../utils/useMediaQuery'
 const menuBg = 'var(--text-dark)'
 const gradBg = 'linear-gradient(180deg, rgba(0, 0, 0, 0.67) 0%, rgba(0, 0, 0, 0.00) 100%)'
 const styles = `
+  .nav-links > a:any-link {
+    color: var(--text);
+  }
+  
   .menubar {
     background: ${gradBg};
   }
@@ -14,16 +18,16 @@ const styles = `
     background: ${menuBg};
   }
   
-  summary > svg {
+  .menubar > details > summary > svg {
     width: 32px;
     height: 32px;
   }
   
-  summary {
+  .menubar > details > summary {
     list-style: none;
   }
   
-  summary::-webkit-details-marker {
+  .menubar > details > summary::-webkit-details-marker {
     display: none;
   }`
 function Navbar() {
@@ -126,6 +130,7 @@ function NavLinks(props: { mobile: boolean }) {
   const { mobile } = props
   return (
     <nav
+      className='nav-links'
       style={{
         display: 'flex',
         flexDirection: mobile ? 'column' : 'row',
