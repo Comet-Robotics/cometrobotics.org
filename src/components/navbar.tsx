@@ -1,31 +1,41 @@
-import { useEffect, useRef, useState } from 'react'
+import {useEffect, useRef} from 'react'
 import { HOME_LINK, discordInvite, instagramURL, mainNavLinks } from '../data'
 import useMedia from '../utils/useMediaQuery'
 
 const menuBg = 'var(--text-dark)'
 const gradBg = 'linear-gradient(180deg, rgba(0, 0, 0, 0.67) 0%, rgba(0, 0, 0, 0.00) 100%)'
-
+const styles = `
+  .menubar {
+    background: ${gradBg};
+  }
+  
+  .menubar:has(details[open]) {
+    background: ${menuBg};
+  }
+  
+  summary {
+    list-style: none;
+  }
+  
+  summary::-webkit-details-marker {
+    display: none;
+  }`
 function Navbar() {
   const mobile = useMedia('(max-width: 800px)', true)
   const detailsRef = useRef<HTMLDetailsElement>(null)
-  const [detailsOpen, _setDetailsOpen] = useState(false)
   useEffect(() => {
-    if (!detailsRef.current || !mobile) {
-      return
-    }
-
-    const el = detailsRef.current
-
-    const cb = () => {
-      _setDetailsOpen(el.open)
-    }
-    el.addEventListener('toggle', cb)
+    const listener = () => {
+        if (!mobile || !detailsRef.current) {
+          return;
+        }
+        detailsRef.current.open = false;
+      }
+    document.addEventListener('astro:page-load', listener);
     return () => {
-      el.removeEventListener('toggle', cb)
+      document.removeEventListener('astro:page-load', listener);
     }
   }, [detailsRef, mobile])
   return (
-
     <div
       style={{
         position: 'fixed',
@@ -69,15 +79,15 @@ function Navbar() {
           for club updates!
         </p>
       </div>
+      <style dangerouslySetInnerHTML={{__html: styles}}/>
       <div
+        className="menubar"
         style={{
           width: '100%',
           display: 'flex',
           justifyContent: 'space-between',
           alignItems: 'center',
           padding: '2rem 4rem',
-          background:
-              detailsOpen ? menuBg : gradBg,
         }}
       >
         <a href={HOME_LINK.href}>
