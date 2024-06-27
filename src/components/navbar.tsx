@@ -90,7 +90,7 @@ function Navbar() {
         </a>
         {mobile
           ? (
-            <details ref={detailsRef} style={{ display: 'flex', gap: '2rem' }}>
+            <details ref={detailsRef}>
               {/* TODO: hamburger icon */}
               <summary style={{ cursor: 'pointer' }}>Menu</summary>
               <NavLinks mobile={mobile} />
