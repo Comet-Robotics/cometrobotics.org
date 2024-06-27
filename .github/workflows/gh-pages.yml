@@ -27,6 +27,16 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Cache Astro Build Assets
+        id: astro
+        uses: actions/cache@v4
+        with:
+          path: node_modules/.astro
+          key: ${{ runner.os }}-astro
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Install modules

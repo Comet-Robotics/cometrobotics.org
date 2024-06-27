@@ -30,7 +30,7 @@ async function getTtfFont(family, axes, value) {
   return await fetch(ttfUrl).then(res => res.arrayBuffer())
 }
 
-const UNBOUNDED_TTF = 'node_modules/unbounded.ttf'
+const UNBOUNDED_TTF = 'node_modules/.astro/unbounded.ttf'
 
 let fontBuffer
 
