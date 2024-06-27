@@ -19,6 +19,7 @@
     "@astrojs/sitemap": "^3.1.6",
     "@fontsource-variable/open-sans": "^5.0.29",
     "@fontsource-variable/unbounded": "^5.0.20",
+    "@heroicons/react": "^2.1.4",
     "@types/react": "^18.2.55",
     "@types/react-dom": "^18.2.19",
     "astro": "^4.11.0",

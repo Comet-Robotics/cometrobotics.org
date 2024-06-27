@@ -1,4 +1,5 @@
-import {useEffect, useRef} from 'react'
+import { Bars3Icon } from '@heroicons/react/24/solid'
+import { useEffect, useRef } from 'react'
 import { HOME_LINK, discordInvite, instagramURL, mainNavLinks } from '../data'
 import useMedia from '../utils/useMediaQuery'
 
@@ -13,6 +14,11 @@ const styles = `
     background: ${menuBg};
   }
   
+  summary > svg {
+    width: 32px;
+    height: 32px;
+  }
+  
   summary {
     list-style: none;
   }
@@ -25,14 +31,14 @@ function Navbar() {
   const detailsRef = useRef<HTMLDetailsElement>(null)
   useEffect(() => {
     const listener = () => {
-        if (!mobile || !detailsRef.current) {
-          return;
-        }
-        detailsRef.current.open = false;
+      if (!mobile || !detailsRef.current) {
+        return
       }
-    document.addEventListener('astro:page-load', listener);
+      detailsRef.current.open = false
+    }
+    document.addEventListener('astro:page-load', listener)
     return () => {
-      document.removeEventListener('astro:page-load', listener);
+      document.removeEventListener('astro:page-load', listener)
     }
   }, [detailsRef, mobile])
   return (
@@ -102,7 +108,9 @@ function Navbar() {
           ? (
             <details ref={detailsRef}>
               {/* TODO: hamburger icon */}
-              <summary style={{ cursor: 'pointer' }}>Menu</summary>
+              <summary style={{ cursor: 'pointer' }}>
+                <Bars3Icon/>
+              </summary>
               <NavLinks mobile={mobile} />
             </details>
             ) : (
