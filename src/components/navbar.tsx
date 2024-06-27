@@ -6,7 +6,7 @@ const menuBg = 'var(--text-dark)'
 const gradBg = 'linear-gradient(180deg, rgba(0, 0, 0, 0.67) 0%, rgba(0, 0, 0, 0.00) 100%)'
 
 function Navbar() {
-  const mobile = useMedia('(max-width: 800px)')
+  const mobile = useMedia('(max-width: 800px)', true)
   const detailsRef = useRef<HTMLDetailsElement>(null)
   const [detailsOpen, _setDetailsOpen] = useState(false)
   useEffect(() => {
@@ -118,7 +118,7 @@ function NavLinks(props: { mobile: boolean }) {
         left: mobile ? 0 : 'inherit',
         zIndex: mobile ? 90 : 'inherit',
         width: mobile ? '100vw' : 'min-content',
-        height: mobile ? '100vh' : 'inherit',
+        height: mobile ? 'calc(100vh - 200px)' : 'inherit',
         alignItems: 'center',
         fontFamily: '\'Mashine\', sans-serif',
       }}
