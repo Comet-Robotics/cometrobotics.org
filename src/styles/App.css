@@ -98,8 +98,8 @@ html {
 }
 
 
-@media (max-width: 480px) {
-  .heroContent h1 {
-    font-size: 2.5rem;
+@media (max-width: 800px) {
+  html {
+    font-size: 0.75rem !important;
   }
 }
