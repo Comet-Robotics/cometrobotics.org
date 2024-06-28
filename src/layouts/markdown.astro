@@ -24,8 +24,8 @@ const { title, subtitle } = Astro.props.frontmatter || Astro.props;
     <div
       style="display: flex; flex-direction:column; margin: auto; align-items: center;"
     >
-      <h1 style="font-family: Unbounded;">{title}</h1>
-      <h3 style="font-family: Unbounded; opacity: 80%;">
+      <h1 class="font-unbounded">{title}</h1>
+      <h3 class="font-unbounded" style="opacity: 80%;">
         {subtitle}
       </h3>
     </div>

@@ -21,6 +21,10 @@ const hash = childProcess
   transition:persist
 >
   <style>
+    a:any-link {
+      color: var(--text);
+    }
+    
     .sponsor:hover {
       opacity: 100%;
     }
@@ -33,7 +37,7 @@ const hash = childProcess
     }
 
     .social {
-      width: 1.125rem;
+      width: 2rem;
     }
 
     .social:hover {
@@ -46,14 +50,14 @@ const hash = childProcess
   </style>
   <img loading="lazy" src="/logo-light.png" style="width: 5rem;"/>
 
-  <div style="display: flex; gap: 1rem;">
+  <div style="display: flex; gap: 2rem; padding: 1rem;">
     {socialLinks.map((link) => (
       <a href={link.href} class="social">
         <img loading="lazy" src={link.icon} alt={link.name + ' logo'} />
       </a>
     ))}
   </div>
-  <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;">
+  <div style="display: flex; gap: 0.5rem 1rem; flex-wrap: wrap; justify-content: center;">
     {footerLinks.map((link) => <a href={link.href}>{link.name}</a>)}
   </div>
 
