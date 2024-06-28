@@ -1,0 +1,50 @@
+---
+import '../styles/reset.css'
+import '../styles/index.css'
+import '../styles/App.css'
+import BaseLayout from '../layouts/base.astro'
+import Join from '../components/join.astro'
+
+import type { MarkdownLayoutProps } from 'astro';
+
+type Props = MarkdownLayoutProps<{
+  // Define frontmatter props here
+  title: string;
+  subtitle: string;
+}>;
+
+const { title, subtitle } = Astro.props.frontmatter || Astro.props;
+---
+
+<BaseLayout title={title}>
+  <div
+    class="main-container"
+    style="padding-top: 120px; display: flex; background: linear-gradient(#230508 70%, var(--text-dark)); flex-direction: column;"
+  >
+    <div
+      style="display: flex; flex-direction:column; margin: auto; align-items: center;"
+    >
+      <h1 style="font-family: Unbounded;">{title}</h1>
+      <h3 style="font-family: Unbounded; opacity: 80%;">
+        {subtitle}
+      </h3>
+    </div>
+    <div
+      class="md-container"
+      style="margin: auto; margin-top: 5em;max-width: 100em; width: 100%; display: flex; flex-direction: column; gap: 2em; padding: 2em 2em; background-color: white; border-radius: 1em;"
+    >
+    <style is:global>
+      .md-container > h1 {
+        color: var(--primary); 
+        font-family: 'Mashine', sans-serif;
+      }
+      
+      .md-container > p, .md-container > h2, .md-container > h3, .md-container > h4, .md-container > h5, .md-container > h6 {
+        color: var(--text-dark);
+      }
+    </style>
+      <slot />
+    </div>
+    <Join theme="dark" />
+  </div>
+</BaseLayout>
