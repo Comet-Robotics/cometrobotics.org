@@ -16,7 +16,7 @@ import { clubEmail, linksPageLinks } from '../data'
       class="links-container"
       style="margin: auto; max-width: 30em; width: 100%; display: flex; flex-direction: column; gap: 2em; padding: 4em 2em;"
     >
-    <a href={`mailto:${clubEmail}`}>
+    <a class="no-decoration" href={`mailto:${clubEmail}`}>
       <div
         style="width: 100%; padding: 20px; border-radius: 25px; border-style: solid; border-color: #380D0D; background-color: #250F0F; color: white;"
       >
@@ -28,10 +28,10 @@ import { clubEmail, linksPageLinks } from '../data'
           {clubEmail}
         </p>
       </div>
-      </a>
+      </a >
       {
         linksPageLinks.map((link) => (
-          <a target="_blank" href={link.href}>
+          <a class="no-decoration" target="_blank" href={link.href}>
             <div style="width: 100%; padding: 20px; border-radius: 25px; border-style: solid; color: white; border-color: white; font-family: 'Unbounded Variable', sans-serif; display: flex; justify-content: space-between;">
               <h2>{link.name}</h2>
               <h2>&rarr;</h2>

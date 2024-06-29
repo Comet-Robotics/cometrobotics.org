@@ -85,11 +85,8 @@ main {
   border-color: var(--text);
 }
 
-a {
-  text-decoration: none;
-}
 
-a:visited {
+a:visited, a:-any-link {
   color: inherit;
 }
 
@@ -102,4 +99,8 @@ html {
   html {
     font-size: 0.75rem !important;
   }
+}
+
+.no-decoration {
+  text-decoration: none;
 }
