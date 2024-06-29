@@ -1,0 +1,22 @@
+---
+import '../styles/reset.css'
+import '../styles/index.css'
+import '../styles/App.css'
+import BaseLayout from '../layouts/base.astro'
+---
+
+<BaseLayout title="About">
+  <div
+    class="main-container"
+    style="padding-top: 120px; display: flex; background: linear-gradient(#230508 70%, var(--text-dark)); flex-direction: column; height: 80vh;"
+  >
+    <div
+      style="display: flex; flex-direction:column; margin: auto; align-items: center; justify-content: center; text-align: center; color: white; font-family: Unbounded;"
+    >
+      <h1 style="font-family: Unbounded;">Uh Oh! You shouldn't be here!</h1>
+      <a style="font-family: Unbounded; opacity: 80%;" href="/">
+        Click here to go home.
+      </a>
+    </div>
+  </div>
+</BaseLayout>
