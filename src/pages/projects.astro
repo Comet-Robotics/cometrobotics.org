@@ -5,6 +5,7 @@ import '../styles/App.css'
 import BaseLayout from '../layouts/base.astro'
 import Join from '../components/join.astro'
 import { competitiveTeams, combatTeams } from '../data'
+import ProjectCard from '../components/projectCard.astro'
 ---
 
 <BaseLayout title="Projects">
@@ -24,17 +25,11 @@ import { competitiveTeams, combatTeams } from '../data'
         <h2>Competitive Robotics</h2>
         <div
           class="grid-container"
-          style="display: grid; grid-template-columns: repeat(4, 1fr); grid-template-rows: repeat(2, 1fr); gap: 20px;"
+          style="display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(2, 1fr); gap: 20px;"
         >
           {
             competitiveTeams.map((team) => (
-              <div
-                class="project-card"
-                style="background-image: url('image-url-1'); background-size: cover; background-position: center;"
-              >
-                <p>{team.name}</p>
-                <a href={team.href}>Click me!</a>
-              </div>
+              <ProjectCard imagesrc={team.image} headerText={team.name} />
             ))
           }
         </div>
@@ -44,17 +39,11 @@ import { competitiveTeams, combatTeams } from '../data'
         <h2>Combat Robotics</h2>
         <div
           class="grid-container"
-          style="display: grid; grid-template-columns: repeat(4, 1fr); grid-template-rows: repeat(2, 1fr); gap: 20px;"
+          style="display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(2, 1fr); gap: 20px;"
         >
           {
             combatTeams.map((team) => (
-              <div
-                class="project-card"
-                style="background-image: url('image-url-1'); background-size: cover; background-position: center;"
-              >
-                <p>{team.name}</p>
-                <a href={team.href}>Click me!</a>
-              </div>
+              <ProjectCard imagesrc={team.image} headerText={team.name} />
             ))
           }
         </div>

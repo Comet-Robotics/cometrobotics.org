@@ -1,0 +1,35 @@
+---
+interface Props {
+  imagesrc: string
+  headerText: string
+}
+
+const { imagesrc, headerText } = Astro.props
+---
+
+<div
+  style={{
+    width: '300px',
+    height: '200px',
+    borderRadius: '8px',
+    overflow: 'hidden',
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    backgroundImage: `url(${imagesrc})`,
+    position: 'relative',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'flex-end',
+  }}
+>
+  <div
+    style={{
+      width: '100%',
+      backgroundColor: 'rgba(0, 0, 0, 0.7)',
+      color: 'white',
+      padding: '10px',
+    }}
+  >
+    <h4 style={{ margin: 0 }}>{headerText}</h4>
+  </div>
+</div>

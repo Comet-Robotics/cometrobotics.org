@@ -102,18 +102,24 @@ const competitiveTeams = [
   {
     name: 'ChessBots',
     href: '#',
+    image: 'https://www.sparkchess.com/cms/media/articles/air-hockey-and-chess-5.jpg',
   },
   {
     name: 'Solis Rover Project',
     href: '#',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/NASA_Mars_Rover.jpg/1200px-NASA_Mars_Rover.jpg',
   },
   {
     name: 'VexU',
     href: '#',
+    image: 'https://cdn.rit.edu/images/news/2021-04/MMET-RIT.jpg',
+
   },
   {
     name: 'SumoBots',
     href: '#',
+    image: 'https://miro.medium.com/v2/resize:fit:1142/1*2K3r7ymva8yJDwkvtU1LLg.png',
+
   },
 ]
 
@@ -121,18 +127,26 @@ const combatTeams = [
   {
     name: 'Blender',
     href: '#',
+    image: 'https://www.sparkchess.com/cms/media/articles/air-hockey-and-chess-5.jpg',
+
   },
   {
     name: '3lb Impulse',
     href: '#',
+    image: 'https://www.sparkchess.com/cms/media/articles/air-hockey-and-chess-5.jpg',
+
   },
   {
     name: 'Blended Donut',
     href: '#',
+    image: 'https://www.sparkchess.com/cms/media/articles/air-hockey-and-chess-5.jpg',
+
   },
   {
     name: 'Proxima Centauri',
     href: '#',
+    image: 'https://www.sparkchess.com/cms/media/articles/air-hockey-and-chess-5.jpg',
+
   },
 ]
 
