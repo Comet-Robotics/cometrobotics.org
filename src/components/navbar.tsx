@@ -8,15 +8,7 @@ const gradBg = 'linear-gradient(180deg, rgba(0, 0, 0, 0.67) 0%, rgba(0, 0, 0, 0.
 const styles = `
   .nav-links > a:any-link {
     color: var(--text);
-  }
-  
-  .menubar:before {
-    content: '';
-    z-index: -10;
-    position: absolute;
-    inset: 0;
-    backdrop-filter: blur(8px);
-    -webkit-mask: linear-gradient(0deg, transparent, black 50%);
+    filter: drop-shadow(0 10px 8px rgb(0 0 0 / 0.3)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.4));
   }
   
   .menubar {
@@ -66,7 +58,7 @@ function Navbar() {
         zIndex: 100,
       }}
     >
-      <style dangerouslySetInnerHTML={{ __html: styles }} />
+      <style dangerouslySetInnerHTML={{__html: styles}}/>
       <div
         className="menubar"
         style={{
