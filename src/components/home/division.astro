@@ -63,12 +63,16 @@ const {
     gap: '2rem'
   }}
 >
-  <h2 style={{
-    fontWeight: '400',
-    color: '#D9D9D9',
-  }}>
-    {divisionOverview}
-  </h2>
+
+    {divisionOverview.split("\n").map(text => (
+      <h2 style={{
+        fontWeight: '400',
+        color: '#D9D9D9',
+      }}>
+        {text}
+      </h2>
+  ))}
+  
   <div
     style={{
       display: 'flex',
@@ -92,4 +96,11 @@ const {
       ))
     }
   </div>
+  
+  <h2 style={{
+    fontWeight: '400',
+    color: '#D9D9D9',
+  }}>
+    Learn more about projects from the {divisionName} division on our <a href="/projects">Projects</a> page!
+  </h2>
 </div>

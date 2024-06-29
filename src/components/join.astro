@@ -19,7 +19,7 @@ if (theme === 'dark') {
 const options: {title: string, description: string, url: string}[] = [
   {
     title: 'Join the Discord',
-    description: 'Discord is the primary method of communication for the club - join for updates on meeting times, projects, and more.',
+    description: 'Our Discord is the primary communication method for the club - join for updates on meeting times, projects, and more.',
     url: discordInvite,
   },
   {
@@ -43,7 +43,7 @@ const options: {title: string, description: string, url: string}[] = [
   }
 
   a:hover {
-    transform: scale(0.925);
+    transform: scale(1.05);
   }
 </style>
 
@@ -53,14 +53,14 @@ const options: {title: string, description: string, url: string}[] = [
     <p style={{
       fontSize: '1.25rem'
     }}>
-      To become a member, come to a meeting and talk to a project manager or
-      officer about how you can join a team. Our general meetings are on <strong
-        >Mondays at 7pm</strong
+      Interested in getting involved in a project team? Come to a meeting and talk to a project manager or officer about how you can join. Our general meetings are on <strong
+        >Mondays at 7pm*</strong
       > at the <strong>UTDesign Makerspace.</strong>
     </p>
     <div class="join-content" style={{ display: 'flex', gap: '2rem' }}>
       {options.map(({url, title, description}) => (
        <a
+        class="no-decoration"
         href={url}
         target="_blank"
         rel="noreferrer"
@@ -81,5 +81,7 @@ const options: {title: string, description: string, url: string}[] = [
       </a>))}
       
     </div>
+    
+    <small id="meeting-footnote" style="font-family: 'Open Sans Variable', sans-serif; font-size: 1rem;">* We only officially meet when UT Dallas is in session during the fall and spring semesters, but many of us frequently meet at the Makerspace during breaks as well - join the <a href={discordInvite} rel="noreferrer" target="_blank">Discord</a> for updates.</small>
 
 </div>
