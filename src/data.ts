@@ -5,7 +5,7 @@ const HOME_LINK: LinkType = { name: 'Home', href: '/' }
 const mainNavLinks: LinkType[] = [
   HOME_LINK,
   { name: 'About', href: '/about' },
-  // { name: "Projects", href: "#" },
+  // { name: "Projects", href: "/projects" },
   { name: 'Contact', href: '/links' },
 ]
 
@@ -30,21 +30,84 @@ const sponsorLinks: LinkWithIconType[] = [
     href: 'https://www.bettercnc.com/',
     icon: '/sponsors/bettercnc.png',
   },
-  // {
-  //     name: 'Fingertech Robotics',
-  //     href: 'https://www.fingertechrobotics.com/',
-  //     icon: '/sponsors/fingertech.png'
-  // },
-  // {
-  //     name: 'SendCutSend',
-  //     href: 'https://sendcutsend.com/',
-  //     icon: '/sponsors/sendcutsend.png'
-  // },
   {
     name: 'Repeat Robotics',
     href: 'https://www.repeat-robotics.com/',
     icon: '/sponsors/repeat-robotics.png',
   },
+]
+
+interface Person {
+  name: string
+  role: string
+}
+
+const generalOfficers: Person[] = [
+  {
+    name: 'Om Davra',
+    role: 'President'
+  },
+  {
+    name: 'Jaime Contreras',
+    role: 'Vice President'
+  },
+  {
+    name: 'Mason Thomas',
+    role: 'Director of Marketing'
+  },
+  {
+    name: 'Jason Antwi-Appah',
+    role: 'Director of Events'
+  },
+  {
+    name: 'Blessy Kim',
+    role: 'Director of Finance'
+  },
+  {
+    name: 'Alyssa Su',
+    role: 'Director of Outreach'
+  },
+]
+const projectOfficers: Person[] = [
+  {
+    name: 'Natalie Stromberg',
+    role: 'Director of Combat Robotics'
+  },
+  {
+    name: 'Neil Blatzheim',
+    role: 'Director of Combat Robotics'
+  },
+  {
+    name: 'Colin Wong',
+    role: 'Director of Competitive Robotics'
+  },
+  {
+    name: 'Ryan Hirasaki',
+    role: 'Director of Competitive Robotics'
+  }
+]
+
+const projectManagers: Person[] = [
+  {
+    name: 'David von Paumgartten',
+    role: 'Solis Rover Project',
+  },
+  {
+    name: 'David Brock',
+    role: 'Blended Donut, Misc. Combat Projects'
+  },
+  {
+    name: 'Jude Onyenze',
+    role: 'VEX U'
+  },
+  {
+    name: 'Evan Wu',
+    role: 'Sumo Bots'
+  },
+  {
+    name: 'Dylan Brose',
+    role: 'Chess Bots'
+  }
 ]
 
 const clubEmail = 'cometrobotics@utdallas.edu'
@@ -150,4 +213,4 @@ const combatTeams = [
   },
 ]
 
-export { mainNavLinks, HOME_LINK, footerLinks, socialLinks, clubEmail, sponsorLinks, discordInvite, makerspaceMap, websiteRepo, linksPageLinks, instagramURL, competitiveTeams, combatTeams }
+export { mainNavLinks, HOME_LINK, footerLinks, socialLinks, clubEmail, sponsorLinks, discordInvite, makerspaceMap, websiteRepo, linksPageLinks, instagramURL, competitiveTeams, combatTeams, generalOfficers, projectManagers, projectOfficers }

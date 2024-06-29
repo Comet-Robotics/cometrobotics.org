@@ -1,6 +1,6 @@
 import { Bars3Icon } from '@heroicons/react/24/solid'
 import { useEffect, useRef } from 'react'
-import { HOME_LINK, discordInvite, instagramURL, mainNavLinks } from '../data'
+import { HOME_LINK, discordInvite, mainNavLinks } from '../data'
 import useMedia from '../utils/useMediaQuery'
 
 const menuBg = 'var(--text-dark)'
@@ -8,6 +8,7 @@ const gradBg = 'linear-gradient(180deg, rgba(0, 0, 0, 0.67) 0%, rgba(0, 0, 0, 0.
 const styles = `
   .nav-links > a:any-link {
     color: var(--text);
+    filter: drop-shadow(0 10px 8px rgb(0 0 0 / 0.3)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.4));
   }
   
   .menubar {
@@ -31,8 +32,10 @@ const styles = `
     display: none;
   }`
 function Navbar() {
-  const mobile = useMedia('(max-width: 800px)', true)
+  const mobile = useMedia('(max-width: 900px)', true)
   const detailsRef = useRef<HTMLDetailsElement>(null)
+
+  // this effect handles closing the navbar overlay when switching between pages
   useEffect(() => {
     const listener = () => {
       if (!mobile || !detailsRef.current) {
@@ -55,40 +58,6 @@ function Navbar() {
         zIndex: 100,
       }}
     >
-      <div
-        style={{
-          backgroundColor: 'var(--primary)',
-          textAlign: 'center',
-          padding: '1rem',
-        }}
-      >
-        <p>
-          This site is currently in progress! Feel free to browse around, and
-          check out our
-          <a
-            style={{ fontWeight: 700 }}
-            href={discordInvite}
-            target="_blank"
-            rel="noreferrer"
-          >
-            {' '}
-            Discord
-          </a>
-          {' '}
-          and
-          <a
-            style={{ fontWeight: 700 }}
-            href={instagramURL}
-            target="_blank"
-            rel="noreferrer"
-          >
-            {' '}
-            Instagram
-          </a>
-          {' '}
-          for club updates!
-        </p>
-      </div>
       <style dangerouslySetInnerHTML={{__html: styles}}/>
       <div
         className="menubar"
@@ -100,7 +69,7 @@ function Navbar() {
           padding: '2rem 4rem',
         }}
       >
-        <a href={HOME_LINK.href}>
+        <a href={HOME_LINK.href} className="no-decoration">
           <img
             src="/wordmark.png"
             style={{
@@ -110,14 +79,14 @@ function Navbar() {
         </a>
         {mobile
           ? (
-            <details ref={detailsRef}>
-              {/* TODO: hamburger icon */}
-              <summary style={{ cursor: 'pointer' }}>
-                <Bars3Icon/>
-              </summary>
-              <NavLinks mobile={mobile} />
-            </details>
-            ) : (
+              <details ref={detailsRef}>
+                <summary style={{ cursor: 'pointer' }}>
+                  <Bars3Icon />
+                </summary>
+                <NavLinks mobile={mobile} />
+              </details>
+            )
+          : (
               <NavLinks mobile={mobile} />
             )}
       </div>
@@ -130,28 +99,29 @@ function NavLinks(props: { mobile: boolean }) {
   const { mobile } = props
   return (
     <nav
-      className='nav-links'
+      className="nav-links"
       style={{
         display: 'flex',
         flexDirection: mobile ? 'column' : 'row',
         gap: '2rem',
         backgroundColor: mobile ? menuBg : 'transparent',
         position: mobile ? 'absolute' : 'inherit',
-        top: mobile ? 200 : 'inherit',
+        top: mobile ? 100 : 'inherit',
         left: mobile ? 0 : 'inherit',
         zIndex: mobile ? 90 : 'inherit',
         width: mobile ? '100vw' : 'min-content',
-        height: mobile ? 'calc(100vh - 200px)' : 'inherit',
+        height: mobile ? 'calc(100vh - 100px)' : 'inherit',
         alignItems: 'center',
         fontFamily: '\'Mashine\', sans-serif',
       }}
     >
       {mainNavLinks.map(link => (
-        <a key={`nav-${link.name}`} href={link.href}>
+        <a className="no-decoration" key={`nav-${link.name}`} href={link.href}>
           {link.name}
         </a>
       ))}
       <a
+        className="no-decoration"
         style={{
           backgroundColor: 'var(--primary)',
           padding: '0.5rem 1rem',

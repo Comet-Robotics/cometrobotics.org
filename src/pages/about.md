@@ -3,42 +3,63 @@ layout: ../layouts/markdown.astro
 title: About
 subtitle: More about the club and its history
 ---
+# Who we are
 
+Comet Robotics at UT Dallas is a student organization with the goal of promoting robotics at UT Dallas and in the surrounding area through outreach, projects and workshops. We compete with colleges and universities across the globe in combat robotics competitions, and programs like VEX U and University Rover Challenge.
 
-# Our Mission
-Comet Robotics, a student-led organization at the University of Texas at Dallas, is a group of students who are passionate about robotics and engineering. We design, build, and compete with robots in various competitions. Our goal is to provide students with the opportunity to learn and apply engineering concepts in a hands-on environment. We welcome students from all backgrounds and experience levels to join us in our mission to promote STEM education and robotics in our community.
+With membership open to all students regardless of major or prior experience in robotics, we provide students with the opportunity to collaborate and compete with like-minded individuals to gain experience and refine their knowledge of designing, building, and programming robots. As an organization, we aim to build and sustain an engaged body of students hoping to expand upon their coursework and gain real-world experience, developing skills in project management, leadership, teamwork, and much more.
 
-<!-- TODO: need to work copy. sort of struggling to find the right words
-https://www.nhrl.io/about
-https://www.purduehackers.com/
-https://stripe.com/guides/atlas/landing-page-copy
-https://unbounce.com/landing-page-copywriting/
--->
+# History
+
+Originally started with ‘The Blender’, our 120-pound, world-championship-winning BattleBot, combat robotics at UT Dallas has history going back to 2004. This club was founded in 2021 as a rebirth of the now-defunct UT Dallas Combat Robotics club, during which time we focused on antweight and beetleweight combat robots. Since then, we have expanded to dozens of 1lb, 3lb, and 12lb weight class combat robots, rebranding the org as Comet Robotics in summer 2023 to reflect our expanded focus with our competitive robotics division.
+
+# Organization Structure
+
+Projects are the heart of Comet Robotics, and consist of teams that work together to develop their project, helping each other and learning new skills along the way. While each project is led by one Project Manager, a project may optionally have a number of Team Leads focused on specific goals or needs of their project, like a software lead.
+
+Each project falls under one of 2 divisions, Combat Robotics and Competitive Robotics, both of which have directors overseeing the projects and helping to address their needs. Combat Robotics encompasses our combat robot projects, while Competitive Robotics holds all remaining projects which don't fall under the Combat Robotics roster.
+
+The organization is led as a whole by the President, Vice President and other supporting officers, who work together to keep Comet Robotics moving and support the goals of the organization. Officers and project managers are elected positions with 1-year terms.
+
+## Leadership
+
+TODO: include officers and project managers here
+
+### General Officers
+### Project Officers
+### Project Managers
+
+# Past Achievements
+
+## 2023-2024
+
+- building a bulletproof, 1000-pound, 8 ft x 8 ft x 8 ft battlebox for safely fighting combat robots up to 3lbs in mass
+- competing at 10 public combat robotics competitions with 6 podium finishes
+- being invited to and competing at an official BattleBots event at SXSW in March 2024 with our 15-pound combat robot, Desserts
+- significant progress on prototyping/R&D for a Mars rover to compete in the University Rover Challenge
+- starting a VEX U competition team, which received an invitation to compete at the VEX Robotics World Championship in its first year based on performance
+- hosting 3 outreach events in collaboration with local schools, introducing over 150 middle and high schoolers to robotics and the engineering design process through our custom 3D-printed combat robotics kit, Combat Blocks
 
 <!--
-Comet Robotics is a student-led organization at the University of Texas at
-Dallas. This club was founded in 2021, as a rebirth of the now-defunct UT Dallas Combat Robotics club and rebranded to Comet Robotics in summer 2023 to represent our expanded focus to include our competitive robotics division.
+brainstorming 
 
-Originally started with ‘The Blender’, our 120lb world championship winning BattleBot, combat robotics at UT Dallas has history going back to 2004. Since the clubs' revival in 2021, we have expanded to dozens of 1lb, 3lb, and 12lb weight class combat robots and grown to include more competitive robotics projects.
+who is this site for?
+- students - whose goal is to learn about the club and decide whether to join. is it worth my time, will i fit in, etc.
+- potential sponsors - see what we do and why to consider supporting the club
 
-we are group of students who are passionate about all things robots, from software, to mechanical, and all the things in between . 
+i think as long as we do a good job of tailoring copy to students we'll achieve the goal of communicating what we do to other stakeholders as well.
 
-Computer science students, as well as engineering and non-STEM majors alike come together
-united by our passion for all things robotics
+pages i like copy on
+- https://www.nhrl.io/ 
+  - does a good job of explaining what nhrl/combat is without taking themselves too seriously. we shouldn't come across as overly professional/business-like in our copy, because we aren't :)
+- https://www.purduehackers.com/
+  - like how the copy is addressing the viewer specifically. i'd also say purdue hackers has a similar goal to us in that we're both very project focused orgs and agree that building stuff outside of class is a very rewarding experience
+- https://acm.cs.purdue.edu
+  - does a good job of balancing a professional but semi informal tone. makes it easy to understand what exactly they do as an org and why you should join \[a SIG\]. org has a similar structure to us in that being in a SIG is how you are a part of the org
+- https://hackclub.com/clubs/, https://hackclub.com/
+  - explains clearly what a hack club is and what you do in a hack club.
 
-
-Who we are
-Comet Robotics at UT Dallas is a student organization with the goal of promoting robotics at UT Dallas and in the surrounding area through outreach, projects and workshops. We're building a world-class robotics program, competing with colleges and universities across the globe in combat robotics competitions, and programs like VEX U and University Rover Challenge.
-
-With membership open to all students regardless of major or prior experience in robotics, we provide students with the opportunity to collaborate and compete with like-minded individuals to gain experience and refine their knowledge of designing, building, and programming robots. As an organization, we aim to build and sustain an engaged body of students hoping to expand upon their coursework and gain real-world experience, developing skills in project management, leadership, teamwork, and much more. 
-
-
-
-Achievements
-This academic year alone, we've achieved significant milestones as a club, including but not limited to:
-building a bulletproof, 1000-pound, 8 ft x 8 ft x 8 ft battlebox for safely fighting combat robots up to 3lbs in mass
-competing at 10 public combat robotics competitions with 6 podium finishes
-being invited to and competing at an official BattleBots event at SXSW in March 2024 with a 15-pound combat robot
-significant progress on prototyping/R&D for a Mars rover to compete in the University Rover Challenge
-starting a VEX U competition team, which received an invitation to compete at the VEX Robotics World Championship in its first year based on performance
-hosting 3 outreach events in collaboration with local schools, introducing over 150 middle and high schoolers to robotics and the engineering design process through our custom 3D-printed combat robotics kit, Combat Blocks -->
+guides to copy writing (more business oriented but still has some good principles)
+- https://stripe.com/guides/atlas/landing-page-copy
+- https://unbounce.com/landing-page-copywriting/
+-->

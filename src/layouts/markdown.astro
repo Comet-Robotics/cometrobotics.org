@@ -8,43 +8,78 @@ import Join from '../components/join.astro'
 import type { MarkdownLayoutProps } from 'astro';
 
 type Props = MarkdownLayoutProps<{
-  // Define frontmatter props here
   title: string;
   subtitle: string;
 }>;
 
-const { title, subtitle } = Astro.props.frontmatter || Astro.props;
----
 
+const { title, subtitle } = Astro.props.frontmatter || Astro.props;
+
+const toc = Astro.props.headings.filter(h=>h.depth == 1)
+const renderTOC = toc.length > 1
+---
 <BaseLayout title={title}>
   <div
     class="main-container"
-    style="padding-top: 120px; display: flex; background: linear-gradient(#230508 70%, var(--text-dark)); flex-direction: column;"
+    style="padding: 120px 2rem; display: flex; background: linear-gradient(#230508 70%, var(--text-dark)); flex-direction: column; text-align: center;"
   >
     <div
-      style="display: flex; flex-direction:column; margin: auto; align-items: center;"
+      style="display: flex; flex-direction:column; margin: auto; gap: 0.5rem; align-items: center;"
     >
       <h1 class="font-unbounded">{title}</h1>
-      <h3 class="font-unbounded" style="opacity: 80%;">
+      <h3 class="font-unbounded" style="font-weight: 400; color: #E1AAAF;">
         {subtitle}
       </h3>
     </div>
-    <div
-      class="md-container"
-      style="margin: auto; margin-top: 5em;max-width: 100em; width: 100%; display: flex; flex-direction: column; gap: 2em; padding: 2em 2em; background-color: white; border-radius: 1em;"
+    <div class="md-container"
     >
-    <style is:global>
-      .md-container > h1 {
-        color: var(--primary); 
-        font-family: 'Mashine', sans-serif;
-      }
-      
-      .md-container > p, .md-container > h2, .md-container > h3, .md-container > h4, .md-container > h5, .md-container > h6 {
-        color: var(--text-dark);
-      }
-    </style>
+      <style is:global>
+        .md-container {
+          text-align: left;
+          background-color: var(--text);
+          margin: auto; 
+          margin-top: 5em; 
+          min-width: 10rem; 
+          max-width: 75rem; 
+          width: 100%; 
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+          padding: 3.5em;
+          background-color: white;
+          border-radius: 1em;
+        }
+        
+        .md-container > h1 {
+          color: var(--primary); 
+          padding-top: 1rem;
+          font-family: 'Mashine', sans-serif;
+        }
+        
+        .md-container > p, .md-container > h2, .md-container > h3, .md-container > h4, .md-container > h5, .md-container > h6, .md-container > ol, .md-container > ul {
+          color: var(--text-dark);
+        }
+        
+        .md-container > p, .md-container > ol, .md-container > ul { 
+          font-size: 1.33rem;
+          line-height: 1.5;
+        }
+        
+        .md-container > h2, .md-container > h3, .md-container > h4, .md-container > h5, .md-container > h6 {
+          font-family: 'Unbounded Variable', sans-serif;
+          font-weight: 500;
+        }
+        
+        .end {
+          margin: 2rem 0;
+          background-color: var(--primary);
+          width: 2rem;
+          height: 0.5rem;
+        }
+      </style>
       <slot />
+      <span class="end"/>
     </div>
-    <Join theme="dark" />
   </div>
+  <Join theme="dark" />
 </BaseLayout>
