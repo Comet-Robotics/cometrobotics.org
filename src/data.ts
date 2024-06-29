@@ -42,73 +42,74 @@ interface Person {
   role: string
 }
 
-const generalOfficers: Person[] = [
-  {
-    name: 'Om Davra',
-    role: 'President'
-  },
-  {
-    name: 'Jaime Contreras',
-    role: 'Vice President'
-  },
-  {
-    name: 'Mason Thomas',
-    role: 'Director of Marketing'
-  },
-  {
-    name: 'Jason Antwi-Appah',
-    role: 'Director of Events'
-  },
-  {
-    name: 'Blessy Kim',
-    role: 'Director of Finance'
-  },
-  {
-    name: 'Alyssa Su',
-    role: 'Director of Outreach'
-  },
-]
-const projectOfficers: Person[] = [
-  {
-    name: 'Natalie Stromberg',
-    role: 'Director of Combat Robotics'
-  },
-  {
-    name: 'Neil Blatzheim',
-    role: 'Director of Combat Robotics'
-  },
-  {
-    name: 'Colin Wong',
-    role: 'Director of Competitive Robotics'
-  },
-  {
-    name: 'Ryan Hirasaki',
-    role: 'Director of Competitive Robotics'
-  }
-]
-
-const projectManagers: Person[] = [
-  {
-    name: 'David von Paumgartten',
-    role: 'Solis Rover Project',
-  },
-  {
-    name: 'David Brock',
-    role: 'Blended Donut, Misc. Combat Projects'
-  },
-  {
-    name: 'Jude Onyenze',
-    role: 'VEX U'
-  },
-  {
-    name: 'Evan Wu',
-    role: 'Sumo Bots'
-  },
-  {
-    name: 'Dylan Brose',
-    role: 'Chess Bots'
-  }
-]
+const leadership: Record<string, Person[]> = {
+  'General Officers': [
+    {
+      name: 'Om Davra',
+      role: 'President'
+    },
+    {
+      name: 'Jaime Contreras',
+      role: 'Vice President'
+    },
+    {
+      name: 'Mason Thomas',
+      role: 'Director of Marketing'
+    },
+    {
+      name: 'Jason Antwi-Appah',
+      role: 'Director of Events'
+    },
+    {
+      name: 'Blessy Kim',
+      role: 'Director of Finance'
+    },
+    {
+      name: 'Alyssa Su',
+      role: 'Director of Outreach'
+    },
+  ],
+  'Project Officers': [
+    {
+      name: 'Natalie Stromberg',
+      role: 'Director of Combat Robotics'
+    },
+    {
+      name: 'Neil Blatzheim',
+      role: 'Director of Combat Robotics'
+    },
+    {
+      name: 'Colin Wong',
+      role: 'Director of Competitive Robotics'
+    },
+    {
+      name: 'Ryan Hirasaki',
+      role: 'Director of Competitive Robotics'
+    }
+  ],
+  'Project Managers': [
+    {
+      name: 'David Brock',
+      role: 'Blended Donut, Misc. Combat Projects'
+    },
+    {
+      name: 'Evan Wu',
+      role: 'Sumo Bots'
+    },
+    {
+      name: 'David von Paumgartten',
+      role: 'Solis Rover Project',
+    },
+    {
+      name: 'Jude Onyenze',
+      role: 'VEX U'
+    },
+    {
+      name: 'Dylan Brose',
+      role: 'Chess Bots'
+    }
+  ]
+}
 
 const clubEmail = 'cometrobotics@utdallas.edu'
 const discordInvite = 'https://discord.gg/dTGwav3PVM'
@@ -213,4 +214,4 @@ const combatTeams = [
   },
 ]
 
-export { mainNavLinks, HOME_LINK, footerLinks, socialLinks, clubEmail, sponsorLinks, discordInvite, makerspaceMap, websiteRepo, linksPageLinks, instagramURL, competitiveTeams, combatTeams, generalOfficers, projectManagers, projectOfficers }
+export { mainNavLinks, HOME_LINK, footerLinks, socialLinks, clubEmail, sponsorLinks, discordInvite, makerspaceMap, websiteRepo, linksPageLinks, instagramURL, competitiveTeams, combatTeams, leadership }

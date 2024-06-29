@@ -17,6 +17,7 @@ const { title, subtitle } = Astro.props.frontmatter || Astro.props;
 
 const toc = Astro.props.headings.filter(h=>h.depth == 1)
 const renderTOC = toc.length > 1
+// TODO: TOC
 ---
 <BaseLayout title={title}>
   <div
@@ -56,16 +57,16 @@ const renderTOC = toc.length > 1
           font-family: 'Mashine', sans-serif;
         }
         
-        .md-container > p, .md-container > h2, .md-container > h3, .md-container > h4, .md-container > h5, .md-container > h6, .md-container > ol, .md-container > ul {
+        .md-container p, .md-container h2, .md-container h3, .md-container h4, .md-container h5, .md-container h6, .md-container ol, .md-container ul {
           color: var(--text-dark);
         }
         
-        .md-container > p, .md-container > ol, .md-container > ul { 
+        .md-container p, .md-container ol, .md-container ul { 
           font-size: 1.33rem;
           line-height: 1.5;
         }
         
-        .md-container > h2, .md-container > h3, .md-container > h4, .md-container > h5, .md-container > h6 {
+        .md-container h2, .md-container h3, .md-container h4, .md-container h5, .md-container h6 {
           font-family: 'Unbounded Variable', sans-serif;
           font-weight: 500;
         }
