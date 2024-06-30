@@ -1,5 +1,5 @@
 ---
-import { Image } from 'astro:assets';
+import { Picture } from 'astro:assets';
 import LogoLight from '../assets/logo-light.png';
 
 import {
@@ -51,12 +51,12 @@ const hash = childProcess
     }
 
   </style>
-  <Image src={LogoLight} alt="" style="width: 5rem;"/>
+  <Picture densities={[1.5, 2]} formats={['avif', 'webp']} src={LogoLight} alt="" width={96} />
 
   <div style="display: flex; gap: 2rem; padding: 1rem;">
     {socialLinks.map((link) => (
-      <a href={link.href} class="social">
-        <Image src={link.icon} alt={link.name + ' logo'} />
+      <a style={{alignSelf: 'center', width: 'max-content'}} href={link.href} class="social">
+        <Picture densities={[1.5, 2]} formats={['avif', 'webp']} src={link.icon} alt={link.name + ' logo'} />
       </a>
     ))}
   </div>
@@ -69,8 +69,8 @@ const hash = childProcess
   <div style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; justify-content: center;">
     {
       sponsorLinks.map((link) => (
-        <a href={link.href} class="sponsor">
-          <Image loading="lazy" src={link.icon} alt={link.name + ' logo'} />
+        <a style={{alignSelf: 'center', width: 'max-content'}} href={link.href} class="sponsor">
+          <Picture densities={[1.5, 2]} formats={['avif', 'webp']} width={100} src={link.icon} alt={link.name + ' logo'} />
         </a>
       ))
     }

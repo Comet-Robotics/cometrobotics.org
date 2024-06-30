@@ -1,8 +1,18 @@
 import { Bars3Icon } from '@heroicons/react/24/solid'
-import Wordmark from "../assets/wordmark.png"
+import { getImage } from 'astro:assets'
+
 import { useEffect, useRef } from 'react'
 import { HOME_LINK, discordInvite, mainNavLinks } from '../data'
 import useMedia from '../utils/useMediaQuery'
+
+// TODO: do this for the vex poster image on hero, and for CSS background images on division component
+const Wordmark = await getImage({
+  width: 150,
+  src: import('../assets/wordmark.png'),
+  densities: [1.5, 2],
+  quality: 'max',
+  formats: ['avif', 'webp'],
+})
 
 const menuBg = 'var(--text-dark)'
 const gradBg = 'linear-gradient(180deg, rgba(0, 0, 0, 0.67) 0%, rgba(0, 0, 0, 0.00) 100%)'
@@ -73,7 +83,8 @@ function Navbar() {
         <a href={HOME_LINK.href} className="no-decoration">
           <img
             src={Wordmark.src}
-            width={150}
+            srcSet={Wordmark.srcSet.attribute}
+            {...Wordmark.attributes}
           />
         </a>
         {mobile
