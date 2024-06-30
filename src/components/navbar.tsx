@@ -1,4 +1,5 @@
 import { Bars3Icon } from '@heroicons/react/24/solid'
+import Wordmark from "../assets/wordmark.png"
 import { useEffect, useRef } from 'react'
 import { HOME_LINK, discordInvite, mainNavLinks } from '../data'
 import useMedia from '../utils/useMediaQuery'
@@ -71,10 +72,8 @@ function Navbar() {
       >
         <a href={HOME_LINK.href} className="no-decoration">
           <img
-            src="/wordmark.png"
-            style={{
-              width: '150px',
-            }}
+            src={Wordmark.src}
+            width={150}
           />
         </a>
         {mobile

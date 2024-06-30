@@ -1,11 +1,19 @@
 ---
+import type { ImageMetadata } from 'astro'
+import { Image } from 'astro:assets'
+
+type _Image = {
+  src: ImageMetadata
+  alt: string
+}
+
 interface Props {
   backgroundImg: string
   backgroundPosition: string
   divisionName: string
   divisionDescription: string
   divisionOverview: string
-  images: [string, string, string]
+  images: [_Image, _Image, _Image]
 }
 const {
   backgroundImg,
@@ -25,7 +33,7 @@ const {
 <div
   style={{
     position: 'relative',
-    backgroundImage: backgroundImg,
+    backgroundImage: `url('${backgroundImg}')`,
     height: '80vh',
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
@@ -47,7 +55,7 @@ const {
     }}
   >
     <h4 class="font-unbounded">{divisionName}</h4>
-    <p>
+    <p style="text-wrap: pretty;">
       {divisionDescription}
     </p>
   </div>
@@ -58,7 +66,8 @@ const {
     margin: '5rem 0',
     flexDirection: 'column',
     display: 'flex',
-    gap: '2rem'
+    gap: '2rem',
+    textWrap: 'pretty',
   }}
 >
 
@@ -82,8 +91,9 @@ const {
   >
     {
       images.map((img) => (
-        <img
-          src={img}
+        <Image
+          src={img.src}
+          alt={img.alt}
           style={{
             objectFit: 'cover',
             width: '100%',
@@ -98,6 +108,7 @@ const {
   <h2 style={{
     fontWeight: '400',
     color: '#D9D9D9',
+    textWrap: 'pretty',
   }}>
     Learn more about projects from the {divisionName} division on our <a href="/projects">Projects</a> page!
   </h2>

@@ -1,3 +1,7 @@
+---
+import { Image } from "astro:assets";
+import IMG_4798 from "../../assets/home/IMG_4798.jpg";
+---
 <div
   style="width: 100%; padding: 4rem 3rem; background-color: var(--primary);" class="font-unbounded"
 >
@@ -24,8 +28,9 @@
       </p>
       <br />
     </div>
-    <img
-      src="/home/IMG_4798.jpg"
+    <Image
+      alt="The University Rover Challenge team engages in a discussion whilst working on laptops and tablets at the Makerspace."
+      src={IMG_4798}
     />
   </div>
 </div>

@@ -1,5 +1,14 @@
+import SolidworksLogo from "./assets/sponsors/solidworks.png"
+import BetterCNCLogo from "./assets/sponsors/bettercnc.png"
+import RepeatRoboticsLogo from "./assets/sponsors/repeat-robotics.png"
+
+import GitHubIcon from "./assets/socials/github.png"
+import InstagramIcon from "./assets/socials/instagram.png"
+import LinkedInIcon from "./assets/socials/linkedin.png"
+import YouTubeIcon from "./assets/socials/youtube.png"
+
 interface LinkType { name: string, href: string }
-type LinkWithIconType = LinkType & { icon: string }
+type LinkWithIconType = LinkType & { icon: ImageMetadata }
 const HOME_LINK: LinkType = { name: 'Home', href: '/' }
 
 const mainNavLinks: LinkType[] = [
@@ -12,28 +21,28 @@ const mainNavLinks: LinkType[] = [
 const instagramURL = 'https://www.instagram.com/comet_robotics_utd/'
 
 const socialLinks: LinkWithIconType[] = [
-  { name: 'GitHub', href: 'https://github.com/Comet-Robotics', icon: '/socials/github.png' },
-  { name: 'Instagram', href: instagramURL, icon: '/socials/instagram.png' },
+  { name: 'GitHub', href: 'https://github.com/Comet-Robotics', icon: GitHubIcon },
+  { name: 'Instagram', href: instagramURL, icon: InstagramIcon },
   // { name: "Facebook", href: 'https://www.facebook.com/utdcombatrobotics', icon: '/socials/facebook.png' },
-  { name: 'LinkedIn', href: 'https://www.linkedin.com/company/comet-robotics-utd/', icon: '/socials/linkedin.png' },
-  { name: 'YouTube', href: 'https://www.youtube.com/@CometRoboticsUTD', icon: '/socials/youtube.png' },
+  { name: 'LinkedIn', href: 'https://www.linkedin.com/company/comet-robotics-utd/', icon: LinkedInIcon },
+  { name: 'YouTube', href: 'https://www.youtube.com/@CometRoboticsUTD', icon: YouTubeIcon },
 ]
 
 const sponsorLinks: LinkWithIconType[] = [
   {
     name: 'SolidWorks',
     href: 'https://www.solidworks.com/',
-    icon: '/sponsors/solidworks.png',
+    icon: SolidworksLogo,
   },
   {
     name: 'BetterCNC',
     href: 'https://www.bettercnc.com/',
-    icon: '/sponsors/bettercnc.png',
+    icon: BetterCNCLogo,
   },
   {
     name: 'Repeat Robotics',
     href: 'https://www.repeat-robotics.com/',
-    icon: '/sponsors/repeat-robotics.png',
+    icon: RepeatRoboticsLogo,
   },
 ]
 

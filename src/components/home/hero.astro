@@ -1,5 +1,8 @@
+---
+import VexGroup from '../../assets/home/vexgroup.png'
+---
 <div style={{ position: 'relative', width: '100vw', height: '100dvh', top: 0 }}>
-  <video autoplay loop muted id="heroVideo" poster="/home/vexgroup.png">
+<video autoplay loop muted id="heroVideo" poster={VexGroup.src}>
     <source src="/home/hero.mp4" type="video/mp4" />
   </video>
   <div
@@ -13,6 +16,7 @@
     }}
   >
     <h1>
+      <!-- TODO: i don't like this, should discuss or figure smth else out -->
       We are Comet Robotics,<br /> the leading robotics club at UT Dallas.
     </h1>
     <a style={{ fontWeight: 500 }} id="to-summary" href="#to-summary">
