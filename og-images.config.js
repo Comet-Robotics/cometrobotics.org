@@ -125,10 +125,10 @@ function template({ page }) {
 
   return html` <!--  -->
     <div style=${styles.container}>
-      <img src="https://github.com/Comet-Robotics/cometrobotics.org/blob/c16375ca9033971919e0d6f36727377d1fdc1cc4/public/DSC02011.jpg" style="width: 100%; height: 100%; object-fit: cover;"/>
+      <img src="https://github.com/Comet-Robotics/cometrobotics.org/raw/c16375ca9033971919e0d6f36727377d1fdc1cc4/public/DSC02011.jpg" style="width: 100%; height: 100%; object-fit: cover;"/>
       </div>
       <div style=${styles.wrap}>
-      <img style=${wordmarkStyles} src="https://github.com/Comet-Robotics/cometrobotics.org/blob/c16375ca9033971919e0d6f36727377d1fdc1cc4/public/wordmark.png"/>
+      <img style=${wordmarkStyles} src="https://github.com/Comet-Robotics/cometrobotics.org/raw/c16375ca9033971919e0d6f36727377d1fdc1cc4/public/wordmark.png"/>
     ${title ? html`<div style=${styles.title}>${title.trim()}</div>` : ''}
     </div>
     `
