@@ -15,14 +15,13 @@ type Props = MarkdownLayoutProps<{
 
 const { title, subtitle } = Astro.props.frontmatter || Astro.props;
 
-const toc = Astro.props.headings.filter(h=>h.depth == 1)
+const toc = Astro.props.headings.filter(h=>h.depth <= 2)
 const renderTOC = toc.length > 1
-// TODO: TOC
 ---
 <BaseLayout title={title}>
   <div
     class="main-container"
-    style="padding: 120px 2rem; display: flex; background: linear-gradient(#230508 70%, var(--text-dark)); flex-direction: column; text-align: center;"
+    style="padding: 120px 1rem; display: flex; background: linear-gradient(#230508 70%, var(--text-dark)); flex-direction: column; text-align: center;"
   >
     <div
       style="display: flex; flex-direction:column; margin: auto; gap: 0.5rem; align-items: center;"
@@ -32,55 +31,84 @@ const renderTOC = toc.length > 1
         {subtitle}
       </h3>
     </div>
-    <div class="md-container"
-    >
-      <style is:global>
-        .md-container {
-          text-align: left;
-          background-color: var(--text);
-          margin: auto; 
-          margin-top: 5em; 
-          min-width: 10rem; 
-          max-width: 75rem; 
-          width: 100%; 
-          display: flex;
-          flex-direction: column;
-          gap: 1rem;
-          padding: 3.5em;
-          background-color: white;
-          border-radius: 1em;
+    {renderTOC && <style>
+      #content-container {
+        display: grid;
+        column-gap: 1rem;
+        row-gap: 4rem;
+      }
+    
+    @media (min-width: 900px) {
+        #content-container {
+            grid-template-columns: 1fr minmax(0, 3fr);
         }
         
-        .md-container > h1 {
-          color: var(--primary); 
-          padding-top: 1rem;
-          font-family: 'Mashine', sans-serif;
+        #content-container > ol {
+          position: sticky; 
+          top: 130px;
+          height: min-content;
+          max-height: calc(100vh - 130px);
+          overflow: scroll;
         }
-        
-        .md-container p, .md-container h2, .md-container h3, .md-container h4, .md-container h5, .md-container h6, .md-container ol, .md-container ul {
-          color: var(--text-dark);
-        }
-        
-        .md-container p, .md-container ol, .md-container ul { 
-          font-size: 1.33rem;
-          line-height: 1.5;
-        }
-        
-        .md-container h2, .md-container h3, .md-container h4, .md-container h5, .md-container h6 {
-          font-family: 'Unbounded Variable', sans-serif;
-          font-weight: 500;
-        }
-        
-        .end {
-          margin: 2rem 0;
-          background-color: var(--primary);
-          width: 2rem;
-          height: 0.5rem;
-        }
-      </style>
-      <slot />
-      <span class="end"/>
-    </div>
+    }
+    </style>}
+    
+    <div id="content-container" style="margin: 5em auto;">
+      {renderTOC && <ol class="font-unbounded" style="padding: 0; text-align: left; display: flex; gap: 0.35rem; flex-direction: column; padding-left: 2rem;">
+          {toc.map(entry=>(
+            <li style={`font-weight: ${entry.depth === 1 ? 600 : 400}; list-style-type: none;`}>
+              <a class="font-unbounded no-decoration" href={`#${entry.slug}`} style="color: #E1AAAF; ">
+                {entry.text}
+              </a>
+            </li>
+          ))}
+        </ol>}
+      <article class="markdown">
+        <style is:global>
+          .markdown {
+            text-align: left;
+            max-width: 75rem;
+            background-color: var(--text);
+            width: 100%; 
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            padding: 3.5em;
+            background-color: white;
+            border-radius: 1em;
+          }
+          
+          .markdown > h1 {
+            color: var(--primary); 
+            padding-top: 1rem;
+            font-family: 'Mashine', sans-serif;
+          }
+          
+          .markdown p, .markdown h2, .markdown h3, .markdown h4, .markdown h5, .markdown h6, .markdown ol, .markdown ul {
+            color: var(--text-dark);
+          }
+          
+          .markdown p, .markdown ol, .markdown ul { 
+            font-size: 1.33rem;
+            line-height: 1.5;
+          }
+          
+          .markdown h2, .markdown h3, .markdown h4, .markdown h5, .markdown h6 {
+            font-family: 'Unbounded Variable', sans-serif;
+            font-weight: 500;
+          }
+          
+          .end {
+            margin: 2rem 0;
+            background-color: var(--primary);
+            width: 2rem;
+            height: 0.5rem;
+          }
+        </style>
+        <slot />
+        <span class="end"/>
+      </article>
+    </div >
   </div>
   <Join theme="dark" />
 </BaseLayout>
