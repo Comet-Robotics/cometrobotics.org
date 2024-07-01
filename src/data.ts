@@ -130,22 +130,18 @@ const footerLinks: LinkType[] = [
     name: 'Discord',
     href: discordInvite,
   },
-  {
-    name: 'Wiki',
-    href: '#',
-  },
+  // {
+  //   name: 'Wiki',
+  //   href: '#',
+  // },
   {
     name: 'Source Code',
     href: websiteRepo,
   },
-  {
-    name: 'SharePoint',
-    href: '#',
-  },
-  {
-    name: 'Sponsorship',
-    href: '#',
-  },
+  // {
+  //   name: 'Sponsorship',
+  //   href: '/sponsor',
+  // },
 ]
 
 const linksPageLinks: LinkType[] = [

@@ -1,6 +1,6 @@
 ---
 import type { ImageMetadata } from 'astro'
-import { Image } from 'astro:assets'
+import { Image, getImage } from 'astro:assets'
 
 type _Image = {
   src: ImageMetadata
@@ -8,7 +8,7 @@ type _Image = {
 }
 
 interface Props {
-  backgroundImg: string
+  backgroundImg: ImageMetadata
   backgroundPosition: string
   divisionName: string
   divisionDescription: string
@@ -23,6 +23,13 @@ const {
   images,
   divisionOverview,
 } = Astro.props
+
+const bg = await getImage({
+  src: backgroundImg,
+  formats: ['webp'],
+  quality: 'high',
+  width: 1920,
+})
 ---
 
 <style>
@@ -33,7 +40,7 @@ const {
 <div
   style={{
     position: 'relative',
-    backgroundImage: `url('${backgroundImg}')`,
+    backgroundImage: `url('${bg.src}')`,
     height: '80vh',
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
@@ -94,6 +101,7 @@ const {
         <Image
           src={img.src}
           alt={img.alt}
+          width={600}
           style={{
             objectFit: 'cover',
             width: '100%',

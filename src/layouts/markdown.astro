@@ -15,9 +15,11 @@ type Props = MarkdownLayoutProps<{
 
 const { title, subtitle } = Astro.props.frontmatter || Astro.props;
 
-const toc = Astro.props.headings.filter(h=>h.depth <= 2)
+const toc = Astro.props.headings.filter(h => h.depth <= 2)
 const renderTOC = toc.length > 1
 ---
+<!-- TODO: figure out text wrapping on mobile -->
+
 <BaseLayout title={title}>
   <div
     class="main-container"
@@ -48,7 +50,6 @@ const renderTOC = toc.length > 1
           top: 130px;
           height: min-content;
           max-height: calc(100vh - 130px);
-          overflow: scroll;
         }
     }
     </style>}
@@ -76,9 +77,10 @@ const renderTOC = toc.length > 1
             padding: 3.5em;
             background-color: white;
             border-radius: 1em;
+            text-wrap: pretty;
           }
           
-          .markdown > h1 {
+          .markdown h1 {
             color: var(--primary); 
             padding-top: 1rem;
             font-family: 'Mashine', sans-serif;

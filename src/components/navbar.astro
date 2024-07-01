@@ -1,0 +1,9 @@
+---
+import { Picture } from 'astro:assets'
+
+import WordmarkImage from '../assets/wordmark.png'
+import InnerNavbar from './inner-navbar'
+---
+<InnerNavbar client:load>
+    <Picture loading="eager" src={WordmarkImage} alt="Comet Robotics wordmark" width={150} densities={[1.5, 2]} quality="mid" formats={['avif', 'webp']} />
+</InnerNavbar>

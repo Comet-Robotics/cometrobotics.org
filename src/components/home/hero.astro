@@ -1,8 +1,16 @@
 ---
-import VexGroup from '../../assets/home/vexgroup.png'
+import { getImage } from 'astro:assets'
+
+const VexGroup = await getImage({
+  src: import('../../assets/home/vexgroup.png'),
+  formats: ['webp'],
+  quality: 'mid',
+  width: 950,
+})
 ---
 <div style={{ position: 'relative', width: '100vw', height: '100dvh', top: 0 }}>
-<video autoplay loop muted id="heroVideo" poster={VexGroup.src}>
+  <video autoplay loop muted id="heroVideo" poster={VexGroup.src}>
+    <!-- TODO: redo video, add src sets for fmts like AV1 OR switch to embedding yt/vimeo video? -->
     <source src="/home/hero.mp4" type="video/mp4" />
   </video>
   <div
