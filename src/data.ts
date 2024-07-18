@@ -1,11 +1,11 @@
-import SolidworksLogo from "./assets/sponsors/solidworks.png"
-import BetterCNCLogo from "./assets/sponsors/bettercnc.png"
-import RepeatRoboticsLogo from "./assets/sponsors/repeat-robotics.png"
+import SolidworksLogo from './assets/sponsors/solidworks.png'
+import BetterCNCLogo from './assets/sponsors/bettercnc.png'
+import RepeatRoboticsLogo from './assets/sponsors/repeat-robotics.png'
 
-import GitHubIcon from "./assets/socials/github.png"
-import InstagramIcon from "./assets/socials/instagram.png"
-import LinkedInIcon from "./assets/socials/linkedin.png"
-import YouTubeIcon from "./assets/socials/youtube.png"
+import GitHubIcon from './assets/socials/github.png'
+import InstagramIcon from './assets/socials/instagram.png'
+import LinkedInIcon from './assets/socials/linkedin.png'
+import YouTubeIcon from './assets/socials/youtube.png'
 
 interface LinkType { name: string, href: string }
 type LinkWithIconType = LinkType & { icon: ImageMetadata }
@@ -55,55 +55,55 @@ const leadership: Record<string, Person[]> = {
   'General Officers': [
     {
       name: 'Om Davra',
-      role: 'President'
+      role: 'President',
     },
     {
       name: 'Jaime Contreras',
-      role: 'Vice President'
+      role: 'Vice President',
     },
     {
       name: 'Mason Thomas',
-      role: 'Director of Marketing'
+      role: 'Director of Marketing',
     },
     {
       name: 'Jason Antwi-Appah',
-      role: 'Director of Events'
+      role: 'Director of Events',
     },
     {
       name: 'Blessy Kim',
-      role: 'Director of Finance'
+      role: 'Director of Finance',
     },
     {
       name: 'Alyssa Su',
-      role: 'Director of Outreach'
+      role: 'Director of Outreach',
     },
   ],
   'Project Officers': [
     {
       name: 'Natalie Stromberg',
-      role: 'Director of Combat Robotics'
+      role: 'Director of Combat Robotics',
     },
     {
       name: 'Neil Blatzheim',
-      role: 'Director of Combat Robotics'
+      role: 'Director of Combat Robotics',
     },
     {
       name: 'Colin Wong',
-      role: 'Director of Competitive Robotics'
+      role: 'Director of Competitive Robotics',
     },
     {
       name: 'Ryan Hirasaki',
-      role: 'Director of Competitive Robotics'
-    }
+      role: 'Director of Competitive Robotics',
+    },
   ],
   'Project Managers': [
     {
       name: 'David Brock',
-      role: 'Blended Donut, Misc. Combat Projects'
+      role: 'Blended Donut, Misc. Combat Projects',
     },
     {
       name: 'Evan Wu',
-      role: 'Sumo Bots'
+      role: 'Sumo Bots',
     },
     {
       name: 'David von Paumgartten',
@@ -111,13 +111,13 @@ const leadership: Record<string, Person[]> = {
     },
     {
       name: 'Jude Onyenze',
-      role: 'VEX U'
+      role: 'VEX U',
     },
     {
       name: 'Dylan Brose',
-      role: 'Chess Bots'
-    }
-  ]
+      role: 'Chess Bots',
+    },
+  ],
 }
 
 const clubEmail = 'cometrobotics@utdallas.edu'
@@ -145,6 +145,10 @@ const footerLinks: LinkType[] = [
 ]
 
 const linksPageLinks: LinkType[] = [
+  {
+    name: 'VexU Robot Explanation Vid',
+    href: 'https://www.youtube.com/watch?v=XDoTtk7_TBw',
+  },
   {
     name: 'Discord',
     href: discordInvite,
