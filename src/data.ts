@@ -99,11 +99,11 @@ const leadership: Record<string, Person[]> = {
   'Project Managers': [
     {
       name: 'David Brock',
-      role: 'Blended Donut, Misc. Combat Projects',
+      role: 'Combat Events',
     },
     {
       name: 'Evan Wu',
-      role: 'Sumo Bots',
+      role: 'SumoBots',
     },
     {
       name: 'David von Paumgartten',
@@ -115,7 +115,7 @@ const leadership: Record<string, Person[]> = {
     },
     {
       name: 'Dylan Brose',
-      role: 'Chess Bots',
+      role: 'ChessBots',
     },
   ],
 }
