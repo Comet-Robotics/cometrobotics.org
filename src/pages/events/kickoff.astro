@@ -1,0 +1,82 @@
+---
+import '../../styles/project.css'
+import BaseLayout from '../../layouts/base.astro'
+import Join from '../../components/join.astro'
+
+interface Stat {
+  name: string
+  value: string
+  icon: string
+}
+
+let projectTitle: string = 'Fall Kickoff'
+let shortDescription: string =
+  'Comet Robotics invites all students to learn about Comet Robotics, the leading robotics club at UTD!'
+let headerImage: string = '/events/24FKickoff/combatshow.JPG'
+let images: string[] = [
+  '/events/24FKickoff/vexchat.JPG',
+  '/events/24FKickoff/dylfight.JPG',
+  '/events/24FKickoff/biggroup.JPG',
+]
+let stats: Stat[] = [
+  {
+    name: 'When',
+    value: 'August 27th, 2024, 7:30PM',
+    icon: '/statsGraphics/date-cal.svg',
+  },
+  {
+    name: 'Where',
+    value: 'Sciences Building: SCI 1.220',
+    icon: '/statsGraphics/location.svg',
+  },
+]
+---
+
+<BaseLayout title={projectTitle}>
+  <div class="main-container">
+    <div class="content-container">
+      <div class="description">
+        <h1 class="title">{projectTitle}</h1>
+        <br />
+        <span class="short-description">
+          {shortDescription}
+        </span>
+        <div class="stats">
+          {
+            stats.map((stat) => (
+              <div>
+                <img src={stat.icon} alt={stat.name} class="stat-icon" />
+                <h2 class="stat-name">{stat.name}</h2>
+                <span class="stat-value">{stat.value}</span>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+      <div class="image-container">
+        <img
+          src={headerImage}
+          alt="Students viewing comabat robot"
+          class="main-image"
+        />
+      </div>
+    </div>
+    <div class="history-section">
+      <h1 class="history-title">Kickoff Details</h1>
+      <p class="history-text">
+        Kickoff will be hosted at the Sciences Building, where students will
+        find our Outdoor Activites, Combat Robotics Fight, Project Displays, and
+        our Kickoff Presentation
+      </p>
+      <p class="history-text">
+        At Kickoff, you'll be able to get Food, Redbull, T-Shirts, Merch, and
+        more all for free! You must be an active UTD student to receive items.
+      </p>
+      <div class="image-grid">
+        {images.map((img) => <img src={img} class="history-image" />)}
+      </div>
+      <p class="history-text">Blah blah blah we need more here!</p>
+    </div>
+  </div>
+  <Join theme="dark" />
+</BaseLayout>

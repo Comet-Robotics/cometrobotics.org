@@ -52,6 +52,7 @@
 }
 
 .image-container {
+  padding: 1em;
   flex: 1;
   display: flex;
   justify-content: center;
