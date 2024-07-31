@@ -12,13 +12,14 @@ import { ViewTransitions } from 'astro:transitions';
 
 interface Props {
   title: string
+  description?: string
 }
 
 const {url} = Astro
 let ogImage = (url.origin + '/og' + (url.pathname === '/' ? '/index' : url.pathname)).replace(/\/$/, '') + '.png'
 
 const site = 'Comet Robotics at UT Dallas'
-const { title } = Astro.props
+const { title, description } = Astro.props
 ---
 <!DOCTYPE html>
 <html lang="en" transition:animate="none">
@@ -30,7 +31,7 @@ const { title } = Astro.props
     <SEOMetadata
       siteName={site}
       title={title ?? site}
-      description={'We are a group of robot enthusiasts with the goal of promoting robotics at UT Dallas and in the surrounding area through outreach, projects and workshops.'}
+      description={description ?? 'We are a group of robot enthusiasts with the goal of promoting robotics at UT Dallas and in the surrounding area through outreach, projects and workshops.'}
       favicon={'/favicon.svg'}
       author={site}
       astroSitemap={true}
