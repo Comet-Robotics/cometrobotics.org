@@ -31,7 +31,7 @@ let stats: Stat[] = [
   },
 ]
 
-const url = "#"
+const url = ""
 ---
 
 <BaseLayout title={projectTitle} description={shortDescription}>
@@ -54,7 +54,7 @@ const url = "#"
             ))
           }
         </div>
-        <a
+        {url && <a
           style={{
             backgroundColor: 'white',
             color: 'var(--primary)',
@@ -68,7 +68,7 @@ const url = "#"
           target="_blank"
         >
           RSVP
-        </a>
+        </a>}
       </div>
       <div class="image-container">
         <img
@@ -95,10 +95,10 @@ const url = "#"
       </p>
       <h2 class="history-title">Wait, Free Stuff?</h1>
       <p class="history-text">
-        Of course! You'll be able to get free Red Bull at Kickoff, and more to be announced at the event :) Register below to let us know you'll be there, and help us make sure we have enough product to give out!
+        Of course! You'll be able to get free Red Bull at Kickoff, and more to be announced at the event :) {url && "Register below to let us know you'll be there, and help us make sure we have enough product to give out!"}
       </p>
       <br>
-      <a
+      {url && <a
         style={{
           backgroundColor: 'var(--primary)',
           padding: '0.5rem 1rem',
@@ -112,7 +112,7 @@ const url = "#"
         target="_blank"
       >
         RSVP
-      </a>
+      </a>}
       <div class="image-grid">
         {images.map((img) => <img src={img} class="history-image" />)}
       </div>
