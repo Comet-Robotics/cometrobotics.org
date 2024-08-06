@@ -11,7 +11,7 @@ interface Stat {
 
 let projectTitle: string = 'Fall Kickoff'
 let shortDescription: string =
-  'Comet Robotics invites all students to learn about Comet Robotics, the leading robotics club at UTD!'
+  'Calling all UT Dallas students: come learn about opportunities for you to get involved in Comet Robotics!'
 let headerImage: string = '/events/24FKickoff/combatshow.JPG'
 let images: string[] = [
   '/events/24FKickoff/vexchat.JPG',
@@ -30,6 +30,8 @@ let stats: Stat[] = [
     icon: '/statsGraphics/location.svg',
   },
 ]
+
+const url = "#"
 ---
 
 <BaseLayout title={projectTitle} description={shortDescription}>
@@ -52,30 +54,68 @@ let stats: Stat[] = [
             ))
           }
         </div>
+        <a
+          style={{
+            backgroundColor: 'white',
+            color: 'var(--primary)',
+            padding: '0.5rem 1rem',
+            borderRadius: '999px',
+            fontFamily: '\'Mashine\', sans-serif',
+            textDecoration: 'none',
+            fontSize: '1.25rem'
+          }}
+          href={url}
+          target="_blank"
+        >
+          RSVP
+        </a>
       </div>
       <div class="image-container">
         <img
           src={headerImage}
-          alt="Students viewing comabat robot"
+          alt="Students viewing combat robot"
           class="main-image"
         />
       </div>
     </div>
     <div class="history-section">
-      <h1 class="history-title">Kickoff Details</h1>
+      <h1 class="history-title">What's Kickoff?</h1>
       <p class="history-text">
-        Kickoff will be hosted at the Sciences Building, where students will
-        find our Outdoor Activites, Combat Robotics Fight, Project Displays, and
-        our Kickoff Presentation
+        Kickoff marks our official start to the school year, and is the best place to be if you're interested in being a part of Comet Robotics. From writing software and building mechanisms for robots, to creating content for socials and helping with club logistics, there's a place for you here! 
       </p>
+      <h2 class="history-title">Why should I come?</h1>
       <p class="history-text">
-        At Kickoff, you'll be able to get Food, Redbull, T-Shirts, Merch, and
-        more all for free! You must be an active UTD student to receive items.
+        During Kickoff, you'll...
+        <ul>
+          <li>learn about the club's projects and how you can get involved
+          <li>meet current club members and leadership</li>
+          <li>watch some awesome robots in action</li>
+          <li>get free stuff, thanks to our partners at Red Bull! (You must be an active UTD student to receive items.)</li>
+        </ul>
       </p>
+      <h2 class="history-title">Wait, Free Stuff?</h1>
+      <p class="history-text">
+        Of course! You'll be able to get free Red Bull at Kickoff, and more to be announced at the event :) Register below to let us know you'll be there, and help us make sure we have enough product to give out!
+      </p>
+      <br>
+      <a
+        style={{
+          backgroundColor: 'var(--primary)',
+          padding: '0.5rem 1rem',
+          borderRadius: '999px',
+          fontFamily: '\'Mashine\', sans-serif',
+          textDecoration: 'none',
+          fontSize: '1.25rem',
+          color: '#d9d9d9'
+        }}
+        href={url}
+        target="_blank"
+      >
+        RSVP
+      </a>
       <div class="image-grid">
         {images.map((img) => <img src={img} class="history-image" />)}
       </div>
-      <p class="history-text">Blah blah blah we need more here!</p>
     </div>
   </div>
   <Join theme="dark" />

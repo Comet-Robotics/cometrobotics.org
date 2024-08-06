@@ -16,7 +16,13 @@ if (theme === 'dark') {
   txtColor = 'white'
 }
 
-const options: {title: string, description: string, url: string}[] = [
+const options: {title: string, description: string, url: string, emphasis?: boolean}[] = [
+  {
+    title: 'Attend the Fall Kickoff',
+    description: 'Kickoff is our official start to the year. This event is a great way to learn about all the projects and how to get involved!',
+    url: '/events/kickoff',
+    emphasis: true
+  },
   {
     title: 'Join the Discord',
     description: 'Our Discord is the primary communication method for the club - join for updates on meeting times, projects, and more.',
@@ -58,20 +64,20 @@ const options: {title: string, description: string, url: string}[] = [
       > at the <strong>UTDesign Makerspace.</strong>
     </p>
     <div class="join-content" style={{ display: 'flex', gap: '2rem' }}>
-      {options.map(({url, title, description}) => (
+      {options.map(({url, title, description, emphasis}) => (
        <a
         class="no-decoration"
         href={url}
         target="_blank"
         rel="noreferrer"
         style={{
-          backgroundColor: '#1e1e1e',
+          backgroundColor: emphasis ? 'var(--primary)' : '#1e1e1e',
           color: 'white',
           padding: '1.5rem',
           borderStyle: 'solid',
           borderRadius: '1.33rem',
           borderColor: txtColor,
-          boxShadow: '0px 4px 4px 0px rgba(0, 0, 0, 0.25)'
+          boxShadow: '0px 8px 8px 0px rgba(0, 0, 0, 0.25)'
         }}
       >
         <h3 class="font-unbounded">{title} &rarr;</h3>
