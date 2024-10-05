@@ -6,7 +6,7 @@ import { html, styled } from 'og-images-generator'
 /**
  * Get the TTF font for the specified family and axes values. Adapted from [this GitHub issue comment](https://github.com/vercel/satori/issues/162#issuecomment-2058182646).
  *
- * TL;DR: satori, the library which generates the image, doesn't support variable fonts, so we do some shenanigans to get Google Fonts to serve a non-variable font and then use that.
+ * NOTE: satori, the library which generates the image, doesn't support variable fonts, so we do some shenanigans to get Google Fonts to serve a non-variable font and then use that.
  * @param {string} family The font family
  * @param {string[]} axes The axes of the font
  * @param {number[]} value The values of the axes
@@ -18,13 +18,13 @@ async function getTtfFont(family, axes, value) {
   const familyParam = `${axes.join(',')}@${value.join(',')}`
 
   // Get css style sheet with user agent Mozilla/5.0 Firefox/1.0 to ensure non-variable TTF is returned
-  const cssCall = await fetch(`https://fonts.googleapis.com/css2?family=${family}:${familyParam}&display=swap`, {
+  const cssRes = await fetch(`https://fonts.googleapis.com/css2?family=${family}:${familyParam}&display=swap`, {
     headers: {
       'User-Agent': 'Mozilla/5.0 Firefox/1.0',
     },
   })
 
-  const css = await cssCall.text()
+  const css = await cssRes.text()
   const ttfUrl = css.match(/url\(([^)]+)\)/)?.[1]
 
   return await fetch(ttfUrl).then(res => res.arrayBuffer())

@@ -104,3 +104,19 @@ html {
 .no-decoration {
   text-decoration: none;
 }
+
+.scale-hover:hover {
+  transform: scale(1);
+}
+
+.scale-hover:active {
+  transform: scale(0.98);
+}
+
+.scale-hover {
+  transition-duration: 0.1s;
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transform: scale(0.97);
+  transform-origin: left;
+}

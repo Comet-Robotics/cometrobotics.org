@@ -130,10 +130,10 @@ const footerLinks: LinkType[] = [
     name: 'Discord',
     href: discordInvite,
   },
-  // {
-  //   name: 'Wiki',
-  //   href: '#',
-  // },
+  {
+    name: 'Wiki',
+    href: 'https://wiki.cometrobotics.org',
+  },
   {
     name: 'Source Code',
     href: websiteRepo,
