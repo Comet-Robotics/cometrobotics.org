@@ -1,6 +1,7 @@
 import SolidworksLogo from './assets/sponsors/solidworks.png'
 import BetterCNCLogo from './assets/sponsors/bettercnc.png'
 import RepeatRoboticsLogo from './assets/sponsors/repeat-robotics.png'
+import IgusLogo from './assets/sponsors/igus.png'
 
 import GitHubIcon from './assets/socials/github.png'
 import InstagramIcon from './assets/socials/instagram.png'
@@ -43,6 +44,11 @@ const sponsorLinks: LinkWithIconType[] = [
     name: 'Repeat Robotics',
     href: 'https://www.repeat-robotics.com/',
     icon: RepeatRoboticsLogo,
+  },
+  {
+    name: 'Igus',
+    href: 'https://www.igus.com',
+    icon: IgusLogo,
   },
 ]
 
