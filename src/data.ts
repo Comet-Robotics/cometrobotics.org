@@ -2,6 +2,7 @@ import SolidworksLogo from './assets/sponsors/solidworks.png'
 import BetterCNCLogo from './assets/sponsors/bettercnc.png'
 import RepeatRoboticsLogo from './assets/sponsors/repeat-robotics.png'
 import IgusLogo from './assets/sponsors/igus.png'
+import PolymakerLogo from './assets/sponsors/polymaker.png'
 
 import GitHubIcon from './assets/socials/github.png'
 import InstagramIcon from './assets/socials/instagram.png'
@@ -49,6 +50,11 @@ const sponsorLinks: LinkWithIconType[] = [
     name: 'Igus',
     href: 'https://www.igus.com',
     icon: IgusLogo,
+  },
+  {
+    name: 'Polymaker',
+    href: 'https://www.polymaker.com',
+    icon: PolymakerLogo,
   },
 ]
 
