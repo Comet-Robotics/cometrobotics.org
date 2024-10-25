@@ -3,6 +3,7 @@ import BetterCNCLogo from './assets/sponsors/bettercnc.png'
 import RepeatRoboticsLogo from './assets/sponsors/repeat-robotics.png'
 import IgusLogo from './assets/sponsors/igus.png'
 import PolymakerLogo from './assets/sponsors/polymaker.png'
+import ElegooLogo from './assets/sponsors/elegoo.png'
 
 import GitHubIcon from './assets/socials/github.png'
 import InstagramIcon from './assets/socials/instagram.png'
@@ -56,6 +57,11 @@ const sponsorLinks: LinkWithIconType[] = [
     href: 'https://www.polymaker.com',
     icon: PolymakerLogo,
   },
+  {
+    name: 'Elegoo',
+    href: 'https://www.elegoo.com',
+    icon: ElegooLogo,
+  }
 ]
 
 interface Person {
