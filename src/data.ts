@@ -88,11 +88,11 @@ const leadership: Record<string, Person[]> = {
       role: 'Director of Events',
     },
     {
-      name: 'Blessy Kim',
+      name: 'Vacant',
       role: 'Director of Finance',
     },
     {
-      name: 'Alyssa Su',
+      name: 'Vacant',
       role: 'Director of Outreach',
     },
   ],
