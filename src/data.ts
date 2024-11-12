@@ -164,10 +164,6 @@ const footerLinks: LinkType[] = [
 
 const linksPageLinks: LinkType[] = [
   {
-    name: 'VexU Robot Explanation Vid',
-    href: 'https://www.youtube.com/watch?v=XDoTtk7_TBw',
-  },
-  {
     name: 'Discord',
     href: discordInvite,
   },
