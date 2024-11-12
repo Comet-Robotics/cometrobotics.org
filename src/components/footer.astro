@@ -29,10 +29,10 @@ const hash = childProcess
     }
     
     .sponsor:hover {
-      opacity: 100%;
+      opacity: 75%;
     }
     .sponsor {
-      opacity: 75%;
+      opacity: 100%;
       width: 100px;
       transition-duration: 0.1s;
       transition-property: opacity;
@@ -65,7 +65,7 @@ const hash = childProcess
   </div>
 
   <a href={`mailto:${clubEmail}`}>{clubEmail}</a>
-  <p>Supported by</p>
+  <p style="margin-top: 1.5rem;" class="font-mashine">Supported by</p>
   <div style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; justify-content: center;">
     {
       sponsorLinks.map((link) => (
