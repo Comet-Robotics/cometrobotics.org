@@ -9,19 +9,19 @@ interface Stat {
   icon: string
 }
 
-let projectTitle: string = 'Fall Kickoff'
+let projectTitle: string = 'Spring Kickoff'
 let shortDescription: string =
   'Calling all UT Dallas students: come learn about opportunities for you to get involved in Comet Robotics!'
-let headerImage: string = '/events/24FKickoff/combatshow.JPG'
+let headerImage: string = '/events/24FKickoff/audience.JPG'
 let images: string[] = [
-  '/events/24FKickoff/vexchat.JPG',
-  '/events/24FKickoff/dylfight.JPG',
+  '/events/24FKickoff/pre_presentation_leadership_00029.JPG',
+  '/events/24FKickoff/pre_presentation_audience_00025.JPG',
   '/events/24FKickoff/biggroup.JPG',
 ]
 let stats: Stat[] = [
   {
     name: 'When',
-    value: 'August 27th, 2024, 7:30PM',
+    value: 'January 29th, 2025, 7:00PM',
     icon: '/statsGraphics/date-cal.svg',
   },
   {
@@ -31,7 +31,7 @@ let stats: Stat[] = [
   },
 ]
 
-const url = "https://portal.cometrobotics.org/events/1/rsvp"
+const url = 'https://portal.cometrobotics.org/events/91/rsvp/'
 ---
 
 <BaseLayout title={projectTitle} description={shortDescription}>
@@ -54,69 +54,79 @@ const url = "https://portal.cometrobotics.org/events/1/rsvp"
             ))
           }
         </div>
-        {url && <a
-          style={{
-            backgroundColor: 'white',
-            color: 'var(--primary)',
-            padding: '1rem 2rem',
-            borderRadius: '999px',
-            fontFamily: '\'Mashine\', sans-serif',
-            textDecoration: 'none',
-            fontSize: '1.25rem'
-          }}
-          href={url}
-          target="_blank"
-        >
-          RSVP NOW
-        </a>}
+        {
+          url && (
+            <a
+              style={{
+                backgroundColor: 'white',
+                color: 'var(--primary)',
+                padding: '1rem 2rem',
+                borderRadius: '999px',
+                fontFamily: "'Mashine', sans-serif",
+                textDecoration: 'none',
+                fontSize: '1.25rem',
+              }}
+              href={url}
+              target="_blank"
+            >
+              RSVP NOW
+            </a>
+          )
+        }
       </div>
       <div class="image-container">
-        <img
-          src={headerImage}
-          alt="Students viewing combat robot"
-          class="main-image"
-        />
+        <img src={headerImage} alt="Students viewing combat robot" class="main-image" />
       </div>
     </div>
     <div class="history-section">
       <h1 class="history-title">What's Kickoff?</h1>
       <p class="history-text">
-        Kickoff marks our official start to the school year, and is the best place to be if you're interested in being a part of Comet Robotics. From writing software and building mechanisms for robots, to creating content for socials and helping with club logistics, there's a place for you here! 
+        Kickoff marks our official start to the school year, and is the best place to be if you're interested in being a
+        part of Comet Robotics. From writing software and building mechanisms for robots, to creating content for
+        socials and helping with club logistics, there's a place for you here!
       </p>
-      <h2 class="history-title">Why should I come?</h1>
+      <h2 class="history-title">Why should I come?</h2>
       <p class="history-text">
         During Kickoff, you'll...
         <ul>
-          <li>learn about the club's projects and how you can get involved
-          <li>meet current club members and leadership</li>
-          <li>watch some awesome robots in action</li>
-          <li>get free stuff, thanks to our partners at Red Bull! (You must be an active UTD student to receive items.)</li>
+          <li>
+            learn about the club's projects and how you can get involved
+            <li>meet current club members and leadership</li>
+            <li>watch some awesome robots in action</li>
+          </li>
         </ul>
+        <h2 class="history-title">Wait, Free Stuff?</h2>
+        <p class="history-text">
+          Of course! You'll be able to get free pizza at Kickoff, and more to be announced at the event :) {
+            url &&
+              "Register below to let us know you'll be there, and help us make sure we have enough product to give out!"
+          }
+        </p>
+        <br />
+        {
+          url && (
+            <a
+              style={{
+                backgroundColor: 'var(--primary)',
+                padding: '1rem 2rem',
+                borderRadius: '999px',
+                fontFamily: "'Mashine', sans-serif",
+                textDecoration: 'none',
+                fontSize: '1.25rem',
+                color: '#d9d9d9',
+              }}
+              href={url}
+              target="_blank"
+            >
+              RSVP NOW
+            </a>
+          )
+        }
+        <div class="image-grid">
+          {images.map((img) => <img src={img} class="history-image" />)}
+        </div>
       </p>
-      <h2 class="history-title">Wait, Free Stuff?</h1>
-      <p class="history-text">
-        Of course! You'll be able to get free Red Bull at Kickoff, and more to be announced at the event :) {url && "Register below to let us know you'll be there, and help us make sure we have enough product to give out!"}
-      </p>
-      <br>
-      {url && <a
-        style={{
-          backgroundColor: 'var(--primary)',
-          padding: '1rem 2rem',
-          borderRadius: '999px',
-          fontFamily: '\'Mashine\', sans-serif',
-          textDecoration: 'none',
-          fontSize: '1.25rem',
-          color: '#d9d9d9'
-        }}
-        href={url}
-        target="_blank"
-      >
-        RSVP NOW
-      </a>}
-      <div class="image-grid">
-        {images.map((img) => <img src={img} class="history-image" />)}
-      </div>
     </div>
+    <Join theme="dark" />
   </div>
-  <Join theme="dark" />
 </BaseLayout>
