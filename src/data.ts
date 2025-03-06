@@ -76,15 +76,15 @@ const leadership: Record<string, Person[]> = {
       role: 'President',
     },
     {
-      name: 'Jaime Contreras',
+      name: 'Colin Wong',
       role: 'Vice President',
     },
     {
-      name: 'Mason Thomas',
+      name: 'Tian Wang',
       role: 'Director of Marketing',
     },
     {
-      name: 'Jason Antwi-Appah',
+      name: 'Vacant',
       role: 'Director of Events',
     },
     {
@@ -92,13 +92,13 @@ const leadership: Record<string, Person[]> = {
       role: 'Director of Finance',
     },
     {
-      name: 'Vacant',
+      name: 'Ana Wise',
       role: 'Director of Outreach',
     },
   ],
   'Project Officers': [
     {
-      name: 'Natalie Stromberg',
+      name: 'Vacant',
       role: 'Director of Combat Robotics',
     },
     {
@@ -106,11 +106,11 @@ const leadership: Record<string, Person[]> = {
       role: 'Director of Combat Robotics',
     },
     {
-      name: 'Colin Wong',
+      name: 'Vacant',
       role: 'Director of Competitive Robotics',
     },
     {
-      name: 'Ryan Hirasaki',
+      name: 'Vacant',
       role: 'Director of Competitive Robotics',
     },
   ],
