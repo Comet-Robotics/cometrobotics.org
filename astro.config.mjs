@@ -10,6 +10,7 @@ export default defineConfig({
   site: 'https://cometrobotics.org',
   integrations: [react(), sitemap(), mdx(), astroOgImagesGenerator()],
   redirects: {
-    '/give': 'https://givingday.utdallas.edu/amb/robot'
+    '/give': 'https://givingday.utdallas.edu/amb/robot',
+    '/banquet': 'https://lu.ma/q6d4ofxd'
   }
 });
