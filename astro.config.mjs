@@ -15,8 +15,8 @@ export default defineConfig({
     // general student rsvp for spring 2025 banquet
     '/banquet-s25': 'https://lu.ma/q6d4ofxd',
     // faculty/staff rsvp for spring 2025 banquet
-    '/banquet-s25-f': 'https://lu.ma/q6d4ofxd',
+    '/banquet-s25-f': 'https://lu.ma/q6d4ofxd?coupon=JEW6KT',
     // supporters rsvp for spring 2025 banquet
-    '/banquet-s25-s': 'https://lu.ma/q6d4ofxd',
+    '/banquet-s25-s': 'https://lu.ma/q6d4ofxd?coupon=V09001',
   }
 });
