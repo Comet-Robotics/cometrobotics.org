@@ -9,29 +9,29 @@ interface Stat {
   icon: string
 }
 
-let projectTitle: string = 'Spring Kickoff'
-let shortDescription: string =
+const projectTitle: string = 'Fall 2025 Kickoff'
+const shortDescription: string =
   'Calling all UT Dallas students: come learn about opportunities for you to get involved in Comet Robotics!'
-let headerImage: string = '/events/24FKickoff/audience.JPG'
-let images: string[] = [
+const headerImage: string = '/events/24FKickoff/audience.JPG'
+const images: string[] = [
   '/events/24FKickoff/pre_presentation_leadership_00029.JPG',
   '/events/24FKickoff/pre_presentation_audience_00025.JPG',
   '/events/24FKickoff/biggroup.JPG',
 ]
-let stats: Stat[] = [
+const stats: Stat[] = [
   {
     name: 'When',
-    value: 'January 29th, 2025, 7:00PM',
+    value: 'TBA',
     icon: '/statsGraphics/date-cal.svg',
   },
   {
     name: 'Where',
-    value: 'Sciences Building: SCI 1.220',
+    value: 'TBA',
     icon: '/statsGraphics/location.svg',
   },
 ]
 
-const url = 'https://portal.cometrobotics.org/events/91/rsvp/'
+const url = null
 ---
 
 <BaseLayout title={projectTitle} description={shortDescription}>
@@ -95,13 +95,13 @@ const url = 'https://portal.cometrobotics.org/events/91/rsvp/'
             <li>watch some awesome robots in action</li>
           </li>
         </ul>
-        <h2 class="history-title">Wait, Free Stuff?</h2>
+        <!-- <h2 class="history-title">Wait, Free Stuff?</h2>
         <p class="history-text">
           Of course! You'll be able to get free pizza at Kickoff, and more to be announced at the event :) {
             url &&
               "Register below to let us know you'll be there, and help us make sure we have enough product to give out!"
           }
-        </p>
+        </p> -->
         <br />
         {
           url && (
