@@ -84,11 +84,11 @@ const leadership: Record<string, Person[]> = {
       role: 'Director of Marketing',
     },
     {
-      name: 'Vacant',
+      name: 'Nathan Wignall',
       role: 'Director of Events',
     },
     {
-      name: 'Vacant',
+      name: 'Jason Antwi-Appah',
       role: 'Director of Finance',
     },
     {
@@ -98,7 +98,7 @@ const leadership: Record<string, Person[]> = {
   ],
   'Project Officers': [
     {
-      name: 'Vacant',
+      name: 'Deklen Nates',
       role: 'Director of Combat Robotics',
     },
     {
@@ -106,29 +106,25 @@ const leadership: Record<string, Person[]> = {
       role: 'Director of Combat Robotics',
     },
     {
-      name: 'Vacant',
+      name: 'Lucas Igl',
       role: 'Director of Competitive Robotics',
     },
     {
-      name: 'Vacant',
+      name: 'Mudit Upadhyay',
       role: 'Director of Competitive Robotics',
     },
   ],
   'Project Managers': [
     {
-      name: 'David Brock',
-      role: 'Combat Events',
-    },
-    {
-      name: 'Evan Wu',
+      name: 'David Dale',
       role: 'SumoBots',
     },
     {
-      name: 'David von Paumgartten',
+      name: 'Pablo Strickland Jaramillo',
       role: 'Solis Rover Project',
     },
     {
-      name: 'Jude Onyenze',
+      name: 'Jess Huffine',
       role: 'VEX U',
     },
     {
@@ -156,10 +152,10 @@ const footerLinks: LinkType[] = [
     name: 'Source Code',
     href: websiteRepo,
   },
-  // {
-  //   name: 'Sponsorship',
-  //   href: '/sponsor',
-  // },
+  {
+    name: 'Sponsorship',
+    href: '/sponsor',
+  }
 ]
 
 const linksPageLinks: LinkType[] = [

@@ -8,7 +8,7 @@ import '../styles/App.css'
 
 import Navbar from '../components/navbar.astro'
 import Footer from '../components/footer.astro'
-import { ViewTransitions } from 'astro:transitions';
+import { ClientRouter } from 'astro:transitions';
 
 interface Props {
   title: string
@@ -16,7 +16,7 @@ interface Props {
 }
 
 const {url} = Astro
-let ogImage = (url.origin + '/og' + (url.pathname === '/' ? '/index' : url.pathname)).replace(/\/$/, '') + '.png'
+const ogImage = (url.origin + '/og' + (url.pathname === '/' ? '/index' : url.pathname)).replace(/\/$/, '') + '.png'
 
 const site = 'Comet Robotics at UT Dallas'
 const { title, description } = Astro.props
@@ -31,20 +31,18 @@ const { title, description } = Astro.props
     <SEOMetadata
       siteName={site}
       title={title ?? site}
-      description={description ?? 'We are a group of robot enthusiasts with the goal of promoting robotics at UT Dallas and in the surrounding area through outreach, projects and workshops.'}
-      favicon={'/favicon.svg'}
+      description={description ?? 'Comet Robotics is a group of robot enthusiasts with the goal of promoting robotics at UT Dallas and in the surrounding area through outreach, projects and workshops.'}
+      favicon="/favicon.svg"
       author={site}
-      astroSitemap={true}
+      astroSitemap
       canonicalUrl={Astro.url.toString()}
-      type={'website'}
       image={ogImage}
-      astroGenerator={true}
     />
-    <ViewTransitions />
+    <ClientRouter />
   </head>
   <Navbar transition:persist />
   <main>
     <slot />
-    <Footer />
+    <Footer transition:persist/>
   </main>
 </html>
