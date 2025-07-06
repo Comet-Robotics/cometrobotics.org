@@ -2,7 +2,8 @@
 import '../../styles/project.css'
 import BaseLayout from '../../layouts/base.astro'
 import Join from '../../components/join.astro'
-import { getCollection } from 'astro:content'
+import MarkdownContent from '../../components/markdown-content.astro'
+import { getCollection, render } from 'astro:content'
 
 export async function getStaticPaths() {
   const projectEntries = await getCollection('projects', ({ data }) => {
@@ -10,12 +11,12 @@ export async function getStaticPaths() {
   })
 
   return projectEntries.map((entry) => ({
-    params: { slug: entry.slug },
+    params: { slug: entry.id },
     props: { entry },
   }))
 }
 const { entry } = Astro.props
-const { Content } = await entry.render()
+const { Content } = await render(entry)
 ---
 
 <BaseLayout title={entry.data.projectTitle}>
@@ -40,11 +41,15 @@ const { Content } = await entry.render()
         </div>
       </div>
       <div class="image-container">
-        <img src={entry.data.mainImage.src} alt={entry.data.mainImage.alt} class="main-image" />
+        <img
+          src={entry.data.mainImage.src}
+          alt={entry.data.mainImage.alt}
+          class="main-image"
+        />
       </div>
-    </div>
-    <div class="history-section">
-      <Content />
+      <MarkdownContent>
+        <Content />
+      </MarkdownContent>
     </div>
   </div>
   <Join theme="dark" />

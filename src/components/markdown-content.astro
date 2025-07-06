@@ -1,0 +1,65 @@
+---
+// Reusable markdown content component
+---
+
+<article class="markdown">
+  <style is:global>
+    .markdown {
+      text-align: left;
+      background-color: var(--text);
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      padding: 3.5em;
+      border-radius: 1em;
+      text-wrap: pretty;
+    }
+    
+    article {
+      display: contents;
+    }
+
+    .markdown h1 {
+      color: var(--primary);
+      padding-top: 1rem;
+      font-family: 'Mashine', sans-serif;
+    }
+
+    .markdown p,
+    .markdown h2,
+    .markdown h3,
+    .markdown h4,
+    .markdown h5,
+    .markdown h6,
+    .markdown ol,
+    .markdown ul {
+      color: var(--text-dark);
+    }
+
+    .markdown p,
+    .markdown ol,
+    .markdown ul {
+      font-size: 1.33rem;
+      line-height: 1.5;
+    }
+
+    .markdown h2,
+    .markdown h3,
+    .markdown h4,
+    .markdown h5,
+    .markdown h6 {
+      font-family: 'Unbounded Variable', sans-serif;
+      font-weight: 500;
+    }
+
+    .end {
+      margin: 2rem 0;
+      background-color: var(--primary);
+      width: 2rem;
+      height: 0.5rem;
+    }
+  </style>
+  <slot />
+  <span class="end"></span>
+</article>

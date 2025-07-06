@@ -6,8 +6,6 @@ This is Comet Robotics' website. It's written with [Astro](https://astro.build) 
 
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/Comet-Robotics/cometrobotics.org?quickstart=1)
 
-<!-- TODO: set up dev container to run npm run dev on start -->
-
 ## 🚀 Project Structure
 
 Inside of your Astro project, you'll see the following folders and files:
