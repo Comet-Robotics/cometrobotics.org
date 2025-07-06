@@ -69,7 +69,7 @@ export default config({
           {
             label: 'Statistics',
             itemLabel: item =>
-`${item.fields.name.value}: ${item.fields.value.value ?? '<empty>'}`,
+              `${item.fields.name.value}: ${item.fields.value.value ?? '<empty>'}`,
             description:
 'A statistic/fun fact about the project. Could be numerical like \'Top Speed\', \'Total Commits\', or text like \'Software Stack\', or \'Weapon Material\'.',
           },

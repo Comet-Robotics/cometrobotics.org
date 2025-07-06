@@ -1,6 +1,6 @@
-import fsPromises from 'node:fs/promises'
-import fs from 'node:fs'
 import { Buffer } from 'node:buffer'
+import fs from 'node:fs'
+import fsPromises from 'node:fs/promises'
 
 import { html, styled } from 'og-images-generator'
 /**

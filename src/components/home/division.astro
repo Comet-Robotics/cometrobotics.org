@@ -15,14 +15,7 @@ interface Props {
   divisionOverview: string
   images: [_Image, _Image, _Image]
 }
-const {
-  backgroundImg,
-  backgroundPosition,
-  divisionName,
-  divisionDescription,
-  images,
-  divisionOverview,
-} = Astro.props
+const { backgroundImg, backgroundPosition, divisionName, divisionDescription, images, divisionOverview } = Astro.props
 
 const bg = await getImage({
   src: backgroundImg,
@@ -122,8 +115,6 @@ const bg = await getImage({
       textWrap: 'pretty',
     }}
   >
-    Learn more about projects from the {divisionName} division on our <a
-      href="/projects">Projects</a
-    > page!
+    Learn more about projects from the {divisionName} division on our <a href="/projects">Projects</a> page!
   </h2>
 </div>

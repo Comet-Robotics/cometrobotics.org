@@ -27,11 +27,7 @@ import ProjectCard from '../components/projectCard.astro'
           class="grid-container"
           style="display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(2, 1fr); gap: 20px;"
         >
-          {
-            competitiveTeams.map((team) => (
-              <ProjectCard imagesrc={team.image} headerText={team.name} />
-            ))
-          }
+          {competitiveTeams.map((team) => <ProjectCard imagesrc={team.image} headerText={team.name} />)}
         </div>
       </div>
 
@@ -41,11 +37,7 @@ import ProjectCard from '../components/projectCard.astro'
           class="grid-container"
           style="display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(2, 1fr); gap: 20px;"
         >
-          {
-            combatTeams.map((team) => (
-              <ProjectCard imagesrc={team.image} headerText={team.name} />
-            ))
-          }
+          {combatTeams.map((team) => <ProjectCard imagesrc={team.image} headerText={team.name} />)}
         </div>
       </div>
     </div>

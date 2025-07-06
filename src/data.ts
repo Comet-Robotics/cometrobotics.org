@@ -1,16 +1,16 @@
 // TODO: consider migrating these constants into keystatic so they can easily be managed by non-developers
 
-import SolidworksLogo from './assets/sponsors/solidworks.png'
-import BetterCNCLogo from './assets/sponsors/bettercnc.png'
-import RepeatRoboticsLogo from './assets/sponsors/repeat-robotics.png'
-import IgusLogo from './assets/sponsors/igus.png'
-import PolymakerLogo from './assets/sponsors/polymaker.png'
-import ElegooLogo from './assets/sponsors/elegoo.png'
-
 import GitHubIcon from './assets/socials/github.png'
 import InstagramIcon from './assets/socials/instagram.png'
 import LinkedInIcon from './assets/socials/linkedin.png'
 import YouTubeIcon from './assets/socials/youtube.png'
+import BetterCNCLogo from './assets/sponsors/bettercnc.png'
+import ElegooLogo from './assets/sponsors/elegoo.png'
+
+import IgusLogo from './assets/sponsors/igus.png'
+import PolymakerLogo from './assets/sponsors/polymaker.png'
+import RepeatRoboticsLogo from './assets/sponsors/repeat-robotics.png'
+import SolidworksLogo from './assets/sponsors/solidworks.png'
 
 interface LinkType { name: string, href: string }
 type LinkWithIconType = LinkType & { icon: ImageMetadata }
@@ -235,4 +235,4 @@ const combatTeams = [
   },
 ]
 
-export { mainNavLinks, HOME_LINK, footerLinks, socialLinks, clubEmail, sponsorLinks, discordInvite, makerspaceMap, websiteRepo, linksPageLinks, instagramURL, competitiveTeams, combatTeams, leadership }
+export { clubEmail, combatTeams, competitiveTeams, discordInvite, footerLinks, HOME_LINK, instagramURL, leadership, linksPageLinks, mainNavLinks, makerspaceMap, socialLinks, sponsorLinks, websiteRepo }
