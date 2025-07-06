@@ -22,14 +22,13 @@
   font-family: 'Unbounded Variable', sans-serif;
 }
 
-
 .font-mashine {
   font-family: 'Mashine', sans-serif;
 }
 @media (max-width: 480px) {
-.mobile-column {
-  flex-direction: column;
-}
+  .mobile-column {
+    flex-direction: column;
+  }
 }
 main {
   display: flex;
@@ -85,15 +84,14 @@ main {
   border-color: var(--text);
 }
 
-
-a:visited, a:-any-link {
+a:visited,
+a:-any-link {
   color: inherit;
 }
 
 html {
   scroll-behavior: smooth;
 }
-
 
 @media (max-width: 800px) {
   html {

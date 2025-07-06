@@ -63,7 +63,7 @@ const sponsorLinks: LinkWithIconType[] = [
     name: 'Elegoo',
     href: 'https://www.elegoo.com',
     icon: ElegooLogo,
-  }
+  },
 ]
 
 interface Person {
@@ -157,7 +157,7 @@ const footerLinks: LinkType[] = [
   {
     name: 'Sponsorship',
     href: '/sponsor',
-  }
+  },
 ]
 
 const linksPageLinks: LinkType[] = [

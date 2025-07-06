@@ -16,19 +16,19 @@ import { clubEmail, linksPageLinks } from '../data'
       class="links-container"
       style="margin: auto; max-width: 30em; width: 100%; display: flex; flex-direction: column; gap: 2em; padding: 4em 2em;"
     >
-    <a class="no-decoration" href={`mailto:${clubEmail}`}>
-      <div
-        style="width: 100%; padding: 20px; border-radius: 25px; border-style: solid; border-color: #380D0D; background-color: #250F0F; color: white;"
-      >
-        <h2 class="font-unbounded">Email &rarr;</h2>
-        <p>
-          For general inquiries, reach out to our leadership team via email.
-        </p>
-        <p style="text-decoration: underline;">
-          {clubEmail}
-        </p>
-      </div>
-      </a >
+      <a class="no-decoration" href={`mailto:${clubEmail}`}>
+        <div
+          style="width: 100%; padding: 20px; border-radius: 25px; border-style: solid; border-color: #380D0D; background-color: #250F0F; color: white;"
+        >
+          <h2 class="font-unbounded">Email &rarr;</h2>
+          <p>
+            For general inquiries, reach out to our leadership team via email.
+          </p>
+          <p style="text-decoration: underline;">
+            {clubEmail}
+          </p>
+        </div>
+      </a>
       {
         linksPageLinks.map((link) => (
           <a class="no-decoration" target="_blank" href={link.href}>

@@ -5,7 +5,7 @@ const projectCollection = defineCollection({
   loader: glob({
     pattern: '**/*.mdoc',
     base: 'src/content/projects',
-  })
+  }),
 })
 
 export const collections = {

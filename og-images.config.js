@@ -54,44 +54,42 @@ export const renderOptions = {
     height: 1170,
   },
   resvg: {
-    loadSystemFonts: false
-  }
+    loadSystemFonts: false,
+  },
 }
-
 
 const styles = {
   container: styled.div`
-		height: 100%;
-		width: 100%;
-		display: flex;
-		filter: contrast(1.7) saturate(0);
-	`,
+height: 100%;
+width: 100%;
+display: flex;
+filter: contrast(1.7) saturate(0);
+`,
   wrap: styled.div`
-		position: absolute;
-		top: 0;
-		background: rgba(191, 30, 46, 0.75);
-		left: 0;
-		padding: 97px 170px 97px 170px;
-		height: 100%;
-		width: 100%;
-		display: flex;
-		flex-direction: column;
-		color: #ffffff;
-		display: flex;
-		align-items: center;
+position: absolute;
+top: 0;
+background: rgba(191, 30, 46, 0.75);
+left: 0;
+padding: 97px 170px 97px 170px;
+height: 100%;
+width: 100%;
+display: flex;
+flex-direction: column;
+color: #ffffff;
+display: flex;
+align-items: center;
     justify-content: center;
-		font-size: 120px;
-		font-family: 'Unbounded Variable', sans-serif;
-	`,
+font-size: 120px;
+font-family: 'Unbounded Variable', sans-serif;
+`,
   title: styled.div`
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-  `
+  `,
 }
-
 
 /*
   * @param {string} imagePath
@@ -105,9 +103,8 @@ function getImageDataURLFromAstroPublicDir(imagePath) {
   // update: did some more testing, looks like its not even an issue with satori, something between the generated html string and whatever intermediate processing og image gen library does to it is causing satori-html to hang when converting the html to a VNode tree for satori. specifically, it uses ultrahtml to parse? the html, and that is hanging... so we aren't even getting to the point of generating the image...
   // might just leave this like this for now. its not the end of the world that we have to fetch these images from the live site. its definitely slower than reading images locally, but since we just take the hit once at build time its not a big deal and i have more important things to do lol
 
-
   const fileExt = imagePath.split('.').pop()
-  console.log({fileExt})
+  console.log({ fileExt })
   const file = fs.readFileSync(`./public/${imagePath}`)
   const base64 = Buffer.from(file).toString('base64')
   return `data:image/${fileExt};base64,${base64}`
@@ -132,7 +129,7 @@ function template({ page }) {
     ${title ? html`<div style=${styles.title}>${title.trim()}</div>` : ''}
     </div>
     `
-  };
+};
 // <img style=${wordmarkStyles} src="${getImageDataURLFromAstroPublicDir('wordmark.png')}"/>
 // <img src="${getImageDataURLFromAstroPublicDir('DSC02011.jpg')}" style="width: 100%; height: 100%; object-fit: cover;"/>
 

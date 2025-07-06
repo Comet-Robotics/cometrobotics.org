@@ -15,11 +15,16 @@ if (theme === 'dark') {
   txtColor = 'white'
 }
 
-const options: { title: string; description: string; url: string; emphasis?: boolean }[] = [
+const options: {
+  title: string
+  description: string
+  url: string
+  emphasis?: boolean
+}[] = [
   {
     title: 'Join the Discord',
     description:
-    'Our Discord is the primary communication method for the club - join for updates on meeting times, projects, and more.',
+      'Our Discord is the primary communication method for the club - join for updates on meeting times, projects, and more.',
     url: discordInvite,
     emphasis: true,
   },
@@ -66,14 +71,19 @@ const options: { title: string; description: string; url: string; emphasis?: boo
     flexDirection: 'column',
   }}
 >
-  <h2 style="font-family: Mashine, sans-serif; color: var(--primary); font-size: 3rem; line-height: 1;">Join</h2>
+  <h2
+    style="font-family: Mashine, sans-serif; color: var(--primary); font-size: 3rem; line-height: 1;"
+  >
+    Join
+  </h2>
   <p
     style={{
       fontSize: '1.25rem',
     }}
   >
-    Interested in getting involved in a project team? Come to a meeting and talk to a project manager or officer about
-    how you can join. Our general meetings are on <strong>Mondays at 7pm<sup>*</sup></strong> at the <strong
+    Interested in getting involved in a project team? Come to a meeting and talk
+    to a project manager or officer about how you can join. Our general meetings
+    are on <strong>Mondays at 7pm<sup>*</sup></strong> at the <strong
       >UTDesign Makerspace.</strong
     >
   </p>
@@ -102,9 +112,12 @@ const options: { title: string; description: string; url: string; emphasis?: boo
     }
   </div>
 
-  <small id="meeting-footnote" style="font-family: 'Open Sans Variable', sans-serif; font-size: 1rem;"
-    >* We only officially meet when UT Dallas is in session during the fall and spring semesters, but many of us
-    frequently meet at the Makerspace during breaks as well - join the <a
+  <small
+    id="meeting-footnote"
+    style="font-family: 'Open Sans Variable', sans-serif; font-size: 1rem;"
+    >* We only officially meet when UT Dallas is in session during the fall and
+    spring semesters, but many of us frequently meet at the Makerspace during
+    breaks as well - join the <a
       style="color: inherit"
       href={discordInvite}
       rel="noreferrer"

@@ -1,5 +1,5 @@
 import { Bars3Icon } from '@heroicons/react/24/solid'
-import { useEffect, useRef, type PropsWithChildren } from 'react'
+import { type PropsWithChildren, useEffect, useRef } from 'react'
 import { HOME_LINK, discordInvite, mainNavLinks } from '../data'
 import useMedia from '../utils/useMediaQuery'
 
@@ -31,7 +31,7 @@ const styles = `
   .menubar > details > summary::-webkit-details-marker {
     display: none;
   }`
-function Navbar({children}: PropsWithChildren<unknown>) {
+function Navbar({ children }: PropsWithChildren<unknown>) {
   const mobile = useMedia('(max-width: 900px)', true)
   const detailsRef = useRef<HTMLDetailsElement>(null)
 
@@ -47,7 +47,7 @@ function Navbar({children}: PropsWithChildren<unknown>) {
     return () => {
       document.removeEventListener('astro:page-load', listener)
     }
-  }, [detailsRef, mobile])
+  }, [mobile])
   return (
     <div
       style={{
@@ -58,7 +58,7 @@ function Navbar({children}: PropsWithChildren<unknown>) {
         zIndex: 100,
       }}
     >
-      <style dangerouslySetInnerHTML={{__html: styles}}/>
+      <style dangerouslySetInnerHTML={{ __html: styles }} />
       <div
         className="menubar"
         style={{
@@ -125,6 +125,7 @@ function NavLinks(props: { mobile: boolean }) {
         }}
         href={discordInvite}
         target="_blank"
+        rel="noreferrer"
       >
         Join
       </a>

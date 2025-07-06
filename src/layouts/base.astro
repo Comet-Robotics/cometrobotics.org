@@ -8,30 +8,37 @@ import '../styles/App.css'
 
 import Navbar from '../components/navbar.astro'
 import Footer from '../components/footer.astro'
-import { ClientRouter } from 'astro:transitions';
+import { ClientRouter } from 'astro:transitions'
 
 interface Props {
   title: string
   description?: string
 }
 
-const {url} = Astro
-const ogImage = (url.origin + '/og' + (url.pathname === '/' ? '/index' : url.pathname)).replace(/\/$/, '') + '.png'
+const { url } = Astro
+const ogImage =
+  (
+    url.origin +
+    '/og' +
+    (url.pathname === '/' ? '/index' : url.pathname)
+  ).replace(/\/$/, '') + '.png'
 
 const site = 'Comet Robotics at UT Dallas'
 const { title, description } = Astro.props
 ---
-<!DOCTYPE html>
+
+<!doctype html>
 <html lang="en" transition:animate="none">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#bf1e2e" />
-    <meta name="color-scheme" content="dark">
+    <meta name="color-scheme" content="dark" />
     <SEOMetadata
       siteName={site}
       title={title ?? site}
-      description={description ?? 'Comet Robotics is a group of robot enthusiasts with the goal of promoting robotics at UT Dallas and in the surrounding area through outreach, projects and workshops.'}
+      description={description ??
+        'Comet Robotics is a group of robot enthusiasts with the goal of promoting robotics at UT Dallas and in the surrounding area through outreach, projects and workshops.'}
       favicon="/favicon.svg"
       author={site}
       astroSitemap
@@ -43,6 +50,6 @@ const { title, description } = Astro.props
   <Navbar transition:persist />
   <main>
     <slot />
-    <Footer transition:persist/>
+    <Footer transition:persist />
   </main>
 </html>

@@ -39,21 +39,21 @@ const renderTOC = toc.length > 1
         column-gap: 1rem;
         row-gap: 4rem;
       }
-    
+
     @media (min-width: 900px) {
         #content-container {
             grid-template-columns: 1fr minmax(0, 3fr);
         }
-        
+
         #content-container > ol {
-          position: sticky; 
+          position: sticky;
           top: 130px;
           height: min-content;
           max-height: calc(100vh - 130px);
         }
     }
     </style>}
-    
+
     <div id="content-container" style="margin: 5em auto;">
       {renderTOC && <ol class="font-unbounded" style="padding: 0; text-align: left; display: flex; gap: 0.35rem; flex-direction: column; padding-left: 2rem;">
           {toc.map(entry=>(
@@ -70,7 +70,7 @@ const renderTOC = toc.length > 1
             text-align: left;
             max-width: 75rem;
             background-color: var(--text);
-            width: 100%; 
+            width: 100%;
             display: flex;
             flex-direction: column;
             gap: 1rem;
@@ -79,27 +79,27 @@ const renderTOC = toc.length > 1
             border-radius: 1em;
             text-wrap: pretty;
           }
-          
+
           .markdown h1 {
-            color: var(--primary); 
+            color: var(--primary);
             padding-top: 1rem;
             font-family: 'Mashine', sans-serif;
           }
-          
+
           .markdown p, .markdown h2, .markdown h3, .markdown h4, .markdown h5, .markdown h6, .markdown ol, .markdown ul {
             color: var(--text-dark);
           }
-          
-          .markdown p, .markdown ol, .markdown ul { 
+
+          .markdown p, .markdown ol, .markdown ul {
             font-size: 1.33rem;
             line-height: 1.5;
           }
-          
+
           .markdown h2, .markdown h3, .markdown h4, .markdown h5, .markdown h6 {
             font-family: 'Unbounded Variable', sans-serif;
             font-weight: 500;
           }
-          
+
           .end {
             margin: 2rem 0;
             background-color: var(--primary);
