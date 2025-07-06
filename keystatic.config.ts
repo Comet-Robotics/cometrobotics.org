@@ -1,3 +1,5 @@
+// TODO: add banner in dev linking to keystatic route
+
 import { collection, config, fields } from '@keystatic/core'
 
 function ImageWithAlt(imageConfig: Parameters<typeof fields.image>[0]) {
@@ -112,6 +114,7 @@ export default config({
             ),
           },
         ),
+		// TODO: custom component for image grid
         content: fields.markdoc({ label: 'Content' }),
       },
     }),

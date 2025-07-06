@@ -1,0 +1,17 @@
+{
+  "name": "Comet Robotics Website",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:1-22-bullseye",
+  "features": {
+    "ghcr.io/devcontainers/features/github-cli:1": {}
+  },
+  "forwardPorts": [4321],
+  "portsAttributes": {
+    "4321": {
+      "label": "Astro Dev Server",
+      "onAutoForward": "notify"
+    }
+  },
+  "postCreateCommand": "npm install",
+  "postStartCommand": "npm run dev",
+  "remoteUser": "node"
+}

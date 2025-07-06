@@ -1,14 +1,12 @@
-# Astro Starter Kit: Minimal
+# cometrobotics.org
 
-```sh
-npm create astro@latest -- --template minimal
-```
+This is Comet Robotics' website. It's written with [Astro](https://astro.build) and deployed on GitHub Pages.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/minimal)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/minimal/devcontainer.json)
+**Need to make an edit?** The quickest way to get up and running will be to open this repo in GitHub Codespaces using the button below. This will open a web-based code editor which will have all Node.js and all the needed dependencies installed.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/Comet-Robotics/cometrobotics.org?quickstart=1)
+
+<!-- TODO: set up dev container to run npm run dev on start -->
 
 ## 🚀 Project Structure
 
