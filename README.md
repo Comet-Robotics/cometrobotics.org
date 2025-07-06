@@ -29,6 +29,16 @@ There's nothing special about `src/components/`, but that's where we like to put
 
 Any static assets, like images, can be placed in the `public/` directory.
 
+## 🚀 Quick Start with GitHub Codespaces
+
+The fastest way to get started is using GitHub Codespaces:
+
+1. Click the "Code" button on the GitHub repository
+2. Select "Create codespace on main"
+3. Wait for the container to build (dependencies will install automatically)
+4. The dev server will start automatically on port 4321
+5. Click the notification to open the preview in your browser
+
 ## 🧞 Commands
 
 All commands are run from the root of the project, from a terminal:
