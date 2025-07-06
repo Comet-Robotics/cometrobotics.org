@@ -11,7 +11,13 @@ import markdoc from '@astrojs/markdoc';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://cometrobotics.org',
-  integrations: [react(), sitemap(), mdx(), astroOgImagesGenerator(), markdoc(), keystatic()],
+  integrations: [react(), sitemap(), mdx(), astroOgImagesGenerator(), markdoc(),
+  // NOTE: currently the site is deployed statically on github pages, so we don't have the ability to use keystatic in production, so we
+  // only include the keystatic integration when running Vite in dev mode. it won't be included in the production build.
+  // TODO: in the future, we should consider deploying somewhere (robopc? cloudflare?) that would allow us to run keystatic in production 
+  // so future editors of site content can access keystatic on prod site, without having to run dev server locally.
+  import.meta.env.MODE === 'development' ? keystatic() : null
+  ],
   redirects: {
     // comets giving day 2025
     '/give': 'https://givingday.utdallas.edu/giving-day/99039/department/99132',

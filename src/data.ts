@@ -1,3 +1,5 @@
+// TODO: consider migrating these constants into keystatic so they can easily be managed by non-developers
+
 import SolidworksLogo from './assets/sponsors/solidworks.png'
 import BetterCNCLogo from './assets/sponsors/bettercnc.png'
 import RepeatRoboticsLogo from './assets/sponsors/repeat-robotics.png'
