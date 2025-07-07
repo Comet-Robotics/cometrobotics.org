@@ -14,7 +14,7 @@ export default defineConfig({
   // only include the keystatic integration when running Vite in dev mode. it won't be included in the production build.
   // TODO: in the future, we should consider deploying somewhere (robopc? cloudflare?) that would allow us to run keystatic in production
   // so future editors of site content can access keystatic on prod site, without having to run dev server locally.
-    import.meta.env.MODE === 'development' ? keystatic() : null],
+    import.meta.env.DEV ? keystatic() : null],
   redirects: {
     // comets giving day 2025
     '/give': 'https://givingday.utdallas.edu/giving-day/99039/department/99132',

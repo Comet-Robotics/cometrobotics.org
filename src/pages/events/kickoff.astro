@@ -2,6 +2,7 @@
 import '../../styles/project.css'
 import BaseLayout from '../../layouts/base.astro'
 import Join from '../../components/join.astro'
+import ImageGrid from '../../components/image-grid.astro'
 
 interface Stat {
   name: string
@@ -122,9 +123,9 @@ const url = null
             </a>
           )
         }
-        <div class="image-grid">
+        <ImageGrid>
           {images.map((img) => <img src={img} class="history-image" />)}
-        </div>
+        </ImageGrid>
       </p>
     </div>
     <Join theme="dark" />
