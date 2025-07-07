@@ -26,7 +26,10 @@ export default config({
       format: { contentField: 'content' },
       entryLayout: 'content',
       schema: {
-        projectTitle: fields.slug({ name: { label: 'Title' } }),
+        projectTitle: fields.slug({ name: { label: 'Title' }, slug: {
+          label: 'SEO-friendly slug',
+          description: 'This will define the file/folder name for this entry',
+        } }),
         shortDescription: fields.text({ label: 'Subtitle' }),
         deprecated: fields.checkbox({
           label: 'Deprecated',
@@ -114,7 +117,7 @@ export default config({
             ),
           },
         ),
-		// TODO: custom component for image grid
+        // TODO: custom component for image grid
         content: fields.markdoc({ label: 'Content' }),
       },
     }),
