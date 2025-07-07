@@ -4,16 +4,25 @@ import BaseLayout from '../../layouts/base.astro'
 import Join from '../../components/join.astro'
 import MarkdownContent from '../../components/markdown-content.astro'
 import { getCollection, render } from 'astro:content'
+import type keystaticConfig from '../../../keystatic.config'
+import type { Entry } from '@keystatic/core/reader'
+
+type Replace<T, K extends keyof T, V> = Omit<T, K> & {
+  [key in K]: V
+}
 
 export async function getStaticPaths() {
   const projectEntries = await getCollection('projects', ({ data }) => {
     return import.meta.env.PROD ? data.draft !== true : true
   })
 
-  return projectEntries.map((entry) => ({
-    params: { slug: entry.id },
-    props: { entry },
-  }))
+  return projectEntries.map((e) => {
+    const entry: Replace<typeof e, 'data', Entry<typeof keystaticConfig['collections']['projects']>> = e
+    return {
+      params: { slug: entry.id },
+      props: { entry },
+    }
+  })
 }
 const { entry } = Astro.props
 const { Content } = await render(entry)
