@@ -93,9 +93,6 @@
   font-size: 1.2em;
 }
 
-
-
-
 /* Media Queries */
 @media (max-width: 1200px) {
   .content-container {
@@ -108,7 +105,6 @@
     width: 100%;
     margin-bottom: 20px;
   }
-
 
   .short-description {
     font-size: 1.8em;
@@ -145,7 +141,6 @@
     width: 100%;
   }
 
-
   .history-section {
     width: 100%;
     border-radius: 0px;
@@ -153,7 +148,6 @@
 }
 
 @media (max-width: 480px) {
-
   .main-container {
     padding: 0px;
     padding-top: 120px;
@@ -170,7 +164,6 @@
   .stats div {
     width: 100%;
   }
-
 
   .history-section {
     width: 100%;

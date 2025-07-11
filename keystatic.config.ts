@@ -3,7 +3,6 @@
 import { collection, config, fields } from '@keystatic/core'
 import { wrapper } from '@keystatic/core/content-components'
 
-
 function ImageWithAlt(imageConfig: Parameters<typeof fields.image>[0]) {
   return fields.object({
     src: fields.image(imageConfig),
@@ -121,12 +120,12 @@ export default config({
         ),
         // TODO: custom component for image grid
         content: fields.markdoc({ label: 'Content', components: {
-			ImageGrid: wrapper({
-				label: 'Image Grid',
-				description: 'A grid of images.',
-				schema: {},
-			})
-		} }),
+          ImageGrid: wrapper({
+            label: 'Image Grid',
+            description: 'A grid of images.',
+            schema: {},
+          }),
+        } }),
       },
     }),
   },

@@ -17,7 +17,7 @@ export async function getStaticPaths() {
   })
 
   return projectEntries.map((e) => {
-    const entry: Replace<typeof e, 'data', Entry<typeof keystaticConfig['collections']['projects']>> = e
+    const entry: Replace<typeof e, 'data', Entry<(typeof keystaticConfig)['collections']['projects']>> = e
     return {
       params: { slug: entry.id },
       props: { entry },
