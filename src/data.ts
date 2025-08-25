@@ -192,7 +192,7 @@ const competitiveTeams = [
   {
     name: 'Solis Rover Project',
     href: '#',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/NASA_Mars_Rover.jpg/1200px-NASA_Mars_Rover.jpg',
+    image: 'https://cdn.discordapp.com/attachments/1153482298579238935/1409599441706418268/thumbnail.png?ex=68adf747&is=68aca5c7&hm=2c85f62e8add622d3aecb79bfddb5161757844f77d3d155e5f86fd518d8ba1a4&',
   },
   {
     name: 'VexU',
@@ -211,7 +211,7 @@ const competitiveTeams = [
 const combatTeams = [
   {
     name: 'Blender',
-    href: '#',
+    href: '/projects/blender',
     image: 'https://www.sparkchess.com/cms/media/articles/air-hockey-and-chess-5.jpg',
 
   },

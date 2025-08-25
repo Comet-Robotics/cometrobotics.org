@@ -2,6 +2,7 @@
 import '../styles/reset.css'
 import '../styles/index.css'
 import '../styles/App.css'
+import '../styles/project.css'
 import BaseLayout from '../layouts/base.astro'
 import Join from '../components/join.astro'
 import { competitiveTeams, combatTeams } from '../data'
@@ -9,39 +10,44 @@ import ProjectCard from '../components/projectCard.astro'
 ---
 
 <BaseLayout title="Projects">
-  <div
-    class="main-container"
-    style="padding-top: 200px; display: flex; background: linear-gradient(#230508 70%, var(--text-dark));"
-  >
-    <div
-      class="projects-container"
-      style="margin: auto; max-width: 50em; width: 100%; display: flex; flex-direction: column; gap: 2em; padding: 0 2em;"
-    >
-      <div class="projects-header" style="margin: auto; justify-content:center">
-        <h1>Projects</h1>
-        <h2>Subtitle here</h2>
-      </div>
-      <div class="comp-robotics">
-        <h2>Competitive Robotics</h2>
-        <div
-          class="grid-container"
-          style="display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(2, 1fr); gap: 20px;"
-        >
-          {competitiveTeams.map((team) => <ProjectCard imagesrc={team.image} headerText={team.name} />)}
-        </div>
-      </div>
-
-      <div class="comb-robotics">
-        <h2>Combat Robotics</h2>
-        <div
-          class="grid-container"
-          style="display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(2, 1fr); gap: 20px;"
-        >
-          {combatTeams.map((team) => <ProjectCard imagesrc={team.image} headerText={team.name} />)}
-        </div>
+  <div class="projects-page">
+    <div class="projects-hero">
+      <div class="hero-content">
+        <h1 class="hero-title">Our Projects</h1>
+        <p class="hero-subtitle">Discover the innovative robotics projects we're building at Comet Robotics</p>
       </div>
     </div>
-    <div></div>
+
+    <div class="projects-content">
+      <section class="project-section">
+        <div class="section-header">
+          <h2 class="section-title">Competitive Robotics</h2>
+          <p class="section-description">
+            Our teams compete in various robotics competitions, pushing the boundaries of autonomous systems and
+            engineering innovation.
+          </p>
+        </div>
+        <div class="projects-grid">
+          {
+            competitiveTeams.map((team) => (
+              <ProjectCard imagesrc={team.image} headerText={team.name} href={team.href} />
+            ))
+          }
+        </div>
+      </section>
+
+      <section class="project-section">
+        <div class="section-header">
+          <h2 class="section-title">Combat Robotics</h2>
+          <p class="section-description">
+            Experience the thrill of battle bots as our teams design and build competitive fighting robots.
+          </p>
+        </div>
+        <div class="projects-grid">
+          {combatTeams.map((team) => <ProjectCard imagesrc={team.image} headerText={team.name} href={team.href} />)}
+        </div>
+      </section>
+    </div>
   </div>
   <Join theme="light" />
 </BaseLayout>
