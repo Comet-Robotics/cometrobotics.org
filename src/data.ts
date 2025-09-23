@@ -4,9 +4,11 @@ import GitHubIcon from './assets/socials/github.png'
 import InstagramIcon from './assets/socials/instagram.png'
 import LinkedInIcon from './assets/socials/linkedin.png'
 import YouTubeIcon from './assets/socials/youtube.png'
+import AltiumLogo from './assets/sponsors/altium.png'
 import BetterCNCLogo from './assets/sponsors/bettercnc.png'
 import ElegooLogo from './assets/sponsors/elegoo.png'
 
+import GHFLogo from './assets/sponsors/genehaas.png'
 import IgusLogo from './assets/sponsors/igus.png'
 import PolymakerLogo from './assets/sponsors/polymaker.png'
 import RepeatRoboticsLogo from './assets/sponsors/repeat-robotics.png'
@@ -50,6 +52,11 @@ const sponsorLinks: LinkWithIconType[] = [
     icon: RepeatRoboticsLogo,
   },
   {
+    name: 'Gene Haas Foundation',
+    href: 'https://www.ghaasfoundation.org',
+    icon: GHFLogo,
+  },
+  {
     name: 'Igus',
     href: 'https://www.igus.com',
     icon: IgusLogo,
@@ -63,6 +70,11 @@ const sponsorLinks: LinkWithIconType[] = [
     name: 'Elegoo',
     href: 'https://www.elegoo.com',
     icon: ElegooLogo,
+  },
+  {
+    name: 'Altium',
+    href: 'https://www.altium.com',
+    icon: AltiumLogo,
   },
 ]
 

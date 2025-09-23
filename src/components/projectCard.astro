@@ -25,7 +25,7 @@ const { imagesrc, headerText, href } = Astro.props
     transition: 'transform 0.3s ease, box-shadow 0.3s ease',
     cursor: href ? 'pointer' : 'default',
   }}
-  {...(href && { 'data-href': href })}
+  {...href && { 'data-href': href }}
 >
   <div class="project-card-overlay">
     <h3 class="project-card-title">{headerText}</h3>
@@ -35,12 +35,12 @@ const { imagesrc, headerText, href } = Astro.props
 
 <script>
   // Add click handler for cards with href
-  document.querySelectorAll('.project-card[data-href]').forEach(card => {
+  document.querySelectorAll('.project-card[data-href]').forEach((card) => {
     card.addEventListener('click', () => {
-      const href = card.getAttribute('data-href');
+      const href = card.getAttribute('data-href')
       if (href && href !== '#') {
-        window.location.href = href;
+        window.location.href = href
       }
-    });
-  });
+    })
+  })
 </script>

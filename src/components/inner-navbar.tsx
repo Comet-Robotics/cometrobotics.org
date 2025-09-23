@@ -1,7 +1,7 @@
 import type { PropsWithChildren } from 'react'
 import { Bars3Icon } from '@heroicons/react/24/solid'
 import { useEffect, useRef } from 'react'
-import { HOME_LINK, discordInvite, mainNavLinks } from '../data'
+import { discordInvite, HOME_LINK, mainNavLinks } from '../data'
 import useMedia from '../utils/useMediaQuery'
 
 const menuBg = 'var(--text-dark)'
