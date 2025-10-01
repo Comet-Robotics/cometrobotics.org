@@ -7,12 +7,12 @@ import YouTubeIcon from './assets/socials/youtube.png'
 import AltiumLogo from './assets/sponsors/altium.png'
 import BetterCNCLogo from './assets/sponsors/bettercnc.png'
 import ElegooLogo from './assets/sponsors/elegoo.png'
-
 import GHFLogo from './assets/sponsors/genehaas.png'
 import IgusLogo from './assets/sponsors/igus.png'
 import PolymakerLogo from './assets/sponsors/polymaker.png'
 import RepeatRoboticsLogo from './assets/sponsors/repeat-robotics.png'
 import SolidworksLogo from './assets/sponsors/solidworks.png'
+import SurfacePrepLogo from './assets/sponsors/surfaceprep.png'
 
 interface LinkType { name: string, href: string }
 type LinkWithIconType = LinkType & { icon: ImageMetadata }
@@ -75,6 +75,11 @@ const sponsorLinks: LinkWithIconType[] = [
     name: 'Altium',
     href: 'https://www.altium.com',
     icon: AltiumLogo,
+  },
+  {
+    name: 'SurfacePrep',
+    href: 'https://www.surfaceprep.com',
+    icon: SurfacePrepLogo,
   },
 ]
 
