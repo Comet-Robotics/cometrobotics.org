@@ -158,6 +158,9 @@ const discordInvite = 'https://discord.gg/dTGwav3PVM'
 
 const makerspaceMap = 'https://g.page/utdesign-makerspace?share'
 const websiteRepo = 'https://github.com/Comet-Robotics/cometrobotics.org'
+const constitutionPublicLink = 'https://docs.google.com/document/d/e/2PACX-1vTnubb0Wm1t4l-P3Gnke43ZHeZfKCeEXv5TGthu8uZZo4IYKOWJVr3DWYRQN0_SkjAH5vNldMvIBnGw/pub'
+const nonprofitEIN = '93-3183820'
+
 const footerLinks: LinkType[] = [
   {
     name: 'Discord',
@@ -175,6 +178,10 @@ const footerLinks: LinkType[] = [
     name: 'Sponsorship',
     href: '/sponsor',
   },
+  {
+    name: 'Constitution',
+    href: constitutionPublicLink,
+  }
 ]
 
 const linksPageLinks: LinkType[] = [
@@ -252,4 +259,4 @@ const combatTeams = [
   },
 ]
 
-export { clubEmail, combatTeams, competitiveTeams, discordInvite, footerLinks, HOME_LINK, instagramURL, leadership, linksPageLinks, mainNavLinks, makerspaceMap, socialLinks, sponsorLinks, websiteRepo }
+export { clubEmail, combatTeams, competitiveTeams, discordInvite, footerLinks, HOME_LINK, instagramURL, leadership, linksPageLinks, mainNavLinks, makerspaceMap, socialLinks, sponsorLinks, constitutionPublicLink, websiteRepo, nonprofitEIN }

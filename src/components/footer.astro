@@ -2,7 +2,7 @@
 import { Picture } from 'astro:assets'
 import LogoLight from '../assets/logo-light.png'
 
-import { socialLinks, clubEmail, footerLinks, sponsorLinks, websiteRepo } from '../data'
+import { socialLinks, clubEmail, footerLinks, sponsorLinks, websiteRepo, nonprofitEIN } from '../data'
 
 import childProcess from 'child_process'
 
@@ -75,7 +75,7 @@ const hash = childProcess.execSync('git rev-parse --short HEAD').toString().trim
     }
   </div>
   <p>
-    Comet Robotics is a registered 501(c)3 nonprofit (EIN: 93-3183820). The Altium Corporate Logo is a trademark of
+    Comet Robotics is a registered 501(c)3 nonprofit (EIN: {nonprofitEIN}). The Altium Corporate Logo is a trademark of
     Altium LLC and is used here with permission.
   </p>
   <p>
