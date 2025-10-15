@@ -181,7 +181,7 @@ const footerLinks: LinkType[] = [
   {
     name: 'Constitution',
     href: constitutionPublicLink,
-  }
+  },
 ]
 
 const linksPageLinks: LinkType[] = [
@@ -259,4 +259,4 @@ const combatTeams = [
   },
 ]
 
-export { clubEmail, combatTeams, competitiveTeams, discordInvite, footerLinks, HOME_LINK, instagramURL, leadership, linksPageLinks, mainNavLinks, makerspaceMap, socialLinks, sponsorLinks, constitutionPublicLink, websiteRepo, nonprofitEIN }
+export { clubEmail, combatTeams, competitiveTeams, constitutionPublicLink, discordInvite, footerLinks, HOME_LINK, instagramURL, leadership, linksPageLinks, mainNavLinks, makerspaceMap, nonprofitEIN, socialLinks, sponsorLinks, websiteRepo }
