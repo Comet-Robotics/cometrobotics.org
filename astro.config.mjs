@@ -25,6 +25,6 @@ export default defineConfig({
     // supporters rsvp for spring 2025 banquet
     '/banquet-s25-s': 'https://lu.ma/q6d4ofxd?coupon=V09001',
     // sponsorship packet
-    '/sponsor': 'https://static.cometrobotics.org/Comet%20Robotics%20Sponsorship%20Packet%20June%2018%202025.pdf',
+    '/sponsor': 'https://static.cometrobotics.org/Comet%20Robotics%20Sponsorship%20Packet%20October%2015%202025.pdf',
   },
 })
