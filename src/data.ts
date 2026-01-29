@@ -14,7 +14,10 @@ import RepeatRoboticsLogo from './assets/sponsors/repeat-robotics.png'
 import SolidworksLogo from './assets/sponsors/solidworks.png'
 import SurfacePrepLogo from './assets/sponsors/surfaceprep.png'
 
-interface LinkType { name: string, href: string }
+interface LinkType {
+  name: string
+  href: string
+}
 type LinkWithIconType = LinkType & { icon: ImageMetadata }
 const HOME_LINK: LinkType = { name: 'Home', href: '/' }
 
@@ -28,11 +31,23 @@ const mainNavLinks: LinkType[] = [
 const instagramURL = 'https://www.instagram.com/comet_robotics_utd/'
 
 const socialLinks: LinkWithIconType[] = [
-  { name: 'GitHub', href: 'https://github.com/Comet-Robotics', icon: GitHubIcon },
+  {
+    name: 'GitHub',
+    href: 'https://github.com/Comet-Robotics',
+    icon: GitHubIcon,
+  },
   { name: 'Instagram', href: instagramURL, icon: InstagramIcon },
   // { name: "Facebook", href: 'https://www.facebook.com/utdcombatrobotics', icon: '/socials/facebook.png' },
-  { name: 'LinkedIn', href: 'https://www.linkedin.com/company/comet-robotics-utd/', icon: LinkedInIcon },
-  { name: 'YouTube', href: 'https://www.youtube.com/@CometRoboticsUTD', icon: YouTubeIcon },
+  {
+    name: 'LinkedIn',
+    href: 'https://www.linkedin.com/company/comet-robotics-utd/',
+    icon: LinkedInIcon,
+  },
+  {
+    name: 'YouTube',
+    href: 'https://www.youtube.com/@CometRoboticsUTD',
+    icon: YouTubeIcon,
+  },
 ]
 
 const sponsorLinks: LinkWithIconType[] = [
@@ -158,7 +173,8 @@ const discordInvite = 'https://discord.gg/dTGwav3PVM'
 
 const makerspaceMap = 'https://g.page/utdesign-makerspace?share'
 const websiteRepo = 'https://github.com/Comet-Robotics/cometrobotics.org'
-const constitutionPublicLink = 'https://docs.google.com/document/d/e/2PACX-1vTnubb0Wm1t4l-P3Gnke43ZHeZfKCeEXv5TGthu8uZZo4IYKOWJVr3DWYRQN0_SkjAH5vNldMvIBnGw/pub'
+const constitutionPublicLink
+  = 'https://docs.google.com/document/d/e/2PACX-1vTnugaSTI1ftvgj72tR-4c3_JOzP_SK8mW1a-gr2stc27UVFPIi82_uNJ31FEJyQnBIS_CgcaQpyRDh/pub'
 const nonprofitEIN = '93-3183820'
 
 const footerLinks: LinkType[] = [
@@ -181,6 +197,10 @@ const footerLinks: LinkType[] = [
   {
     name: 'Constitution',
     href: constitutionPublicLink,
+  },
+  {
+    name: 'Code of Conduct',
+    href: 'https://docs.google.com/document/d/e/2PACX-1vSVK-LMaXAeaiDAj1h3ikxQ9BKTOwbAsus4sPU_DHbWtYwNI7_PmEe4L4jXoRNeRXJBFlK3yKzLBQ6f/pub',
   },
 ]
 
@@ -211,24 +231,25 @@ const competitiveTeams = [
   {
     name: 'ChessBots',
     href: '#',
-    image: 'https://www.sparkchess.com/cms/media/articles/air-hockey-and-chess-5.jpg',
+    image:
+      'https://www.sparkchess.com/cms/media/articles/air-hockey-and-chess-5.jpg',
   },
   {
     name: 'Solis Rover Project',
     href: '#',
-    image: 'https://cdn.discordapp.com/attachments/1153482298579238935/1409599441706418268/thumbnail.png?ex=68adf747&is=68aca5c7&hm=2c85f62e8add622d3aecb79bfddb5161757844f77d3d155e5f86fd518d8ba1a4&',
+    image:
+      'https://cdn.discordapp.com/attachments/1153482298579238935/1409599441706418268/thumbnail.png?ex=68adf747&is=68aca5c7&hm=2c85f62e8add622d3aecb79bfddb5161757844f77d3d155e5f86fd518d8ba1a4&',
   },
   {
     name: 'VexU',
     href: '#',
     image: 'https://cdn.rit.edu/images/news/2021-04/MMET-RIT.jpg',
-
   },
   {
     name: 'SumoBots',
     href: '#',
-    image: 'https://miro.medium.com/v2/resize:fit:1142/1*2K3r7ymva8yJDwkvtU1LLg.png',
-
+    image:
+      'https://miro.medium.com/v2/resize:fit:1142/1*2K3r7ymva8yJDwkvtU1LLg.png',
   },
 ]
 
@@ -236,27 +257,44 @@ const combatTeams = [
   {
     name: 'Blender',
     href: '/projects/blender',
-    image: 'https://www.sparkchess.com/cms/media/articles/air-hockey-and-chess-5.jpg',
-
+    image:
+      'https://www.sparkchess.com/cms/media/articles/air-hockey-and-chess-5.jpg',
   },
   {
     name: '3lb Impulse',
     href: '#',
-    image: 'https://www.sparkchess.com/cms/media/articles/air-hockey-and-chess-5.jpg',
-
+    image:
+      'https://www.sparkchess.com/cms/media/articles/air-hockey-and-chess-5.jpg',
   },
   {
     name: 'Blended Donut',
     href: '#',
-    image: 'https://www.sparkchess.com/cms/media/articles/air-hockey-and-chess-5.jpg',
-
+    image:
+      'https://www.sparkchess.com/cms/media/articles/air-hockey-and-chess-5.jpg',
   },
   {
     name: 'Proxima Centauri',
     href: '#',
-    image: 'https://www.sparkchess.com/cms/media/articles/air-hockey-and-chess-5.jpg',
-
+    image:
+      'https://www.sparkchess.com/cms/media/articles/air-hockey-and-chess-5.jpg',
   },
 ]
 
-export { clubEmail, combatTeams, competitiveTeams, constitutionPublicLink, discordInvite, footerLinks, HOME_LINK, instagramURL, leadership, linksPageLinks, mainNavLinks, makerspaceMap, nonprofitEIN, socialLinks, sponsorLinks, websiteRepo }
+export {
+  clubEmail,
+  combatTeams,
+  competitiveTeams,
+  constitutionPublicLink,
+  discordInvite,
+  footerLinks,
+  HOME_LINK,
+  instagramURL,
+  leadership,
+  linksPageLinks,
+  mainNavLinks,
+  makerspaceMap,
+  nonprofitEIN,
+  socialLinks,
+  sponsorLinks,
+  websiteRepo,
+}
