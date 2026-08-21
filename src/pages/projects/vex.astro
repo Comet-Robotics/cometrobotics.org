@@ -1,0 +1,283 @@
+---
+import BaseLayout from '../../layouts/base.astro'
+import Join from '../../components/join.astro'
+
+import '../../styles/reset.css'
+import '../../styles/index.css'
+import '../../styles/App.css'
+import '../../styles/project.css'
+
+const heroImage = "/projects/vex/hero.jpg"
+---
+
+<BaseLayout title="VEX U - COMET">
+  <style>
+    .vex-container {
+      background-color: var(--text-dark);
+      color: var(--text);
+    }
+    
+    /* Raw / Brutalist Hero matching the site's Division style */
+    .hero-banner {
+      position: relative;
+      height: 80vh;
+      background-image: url('/projects/vex/hero.jpg');
+      background-size: cover;
+      background-position: center 25%;
+    }
+    .hero-red-box {
+      position: absolute;
+      bottom: 0;
+      left: 0; /* Left side to contrast with index.astro's right side boxes */
+      background-color: var(--primary);
+      padding: 3rem;
+      width: 100%;
+      max-width: 40rem;
+    }
+    .hero-red-box h1 {
+      font-family: 'Mashine', sans-serif;
+      font-size: clamp(3rem, 6vw, 5rem);
+      margin: 0;
+      color: white;
+      line-height: 1;
+      text-transform: uppercase;
+    }
+    .hero-red-box p {
+      font-family: 'Open Sans Variable', sans-serif;
+      font-size: clamp(1rem, 2vw, 1.25rem);
+      color: white;
+      margin-top: 1rem;
+      line-height: 1.5;
+      text-wrap: pretty;
+    }
+
+    /* Giant text section */
+    .giant-text-section {
+      padding: 6rem 5rem;
+    }
+    .giant-text {
+      font-family: 'Unbounded Variable', sans-serif;
+      font-size: clamp(1.5rem, 4vw, 3rem);
+      color: #D9D9D9;
+      line-height: 1.3;
+      font-weight: 400;
+      text-wrap: pretty;
+    }
+
+    /* Swerve Section */
+    .swerve-section {
+      display: flex;
+      flex-direction: row;
+      align-items: stretch;
+      gap: 5rem;
+      padding: 4rem 5rem 6rem;
+    }
+    .swerve-video {
+      width: 100%;
+      max-width: 360px;
+      aspect-ratio: 9 / 16;
+      height: auto;
+      border: 6px solid var(--primary);
+      background-color: #000;
+      flex-shrink: 0;
+    }
+    
+    /* History Rows */
+    .history-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 3rem;
+      padding: 3rem 5rem;
+      border-top: 2px solid #333;
+      align-items: center;
+    }
+    .history-year {
+      flex: 1;
+      min-width: 200px;
+      font-family: 'Mashine', sans-serif;
+      font-size: clamp(3rem, 6vw, 5rem);
+      color: var(--primary);
+      line-height: 1;
+    }
+    .history-info {
+      flex: 2;
+      min-width: 250px;
+    }
+    .history-info h3 {
+      font-family: 'Unbounded Variable', sans-serif;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: white;
+    }
+    .history-info p {
+      font-size: 1.25rem;
+      line-height: 1.6;
+    }
+    .history-image-wrapper {
+      flex: 1.5;
+      min-width: 300px;
+      overflow: hidden;
+      border: 4px solid var(--primary);
+      height: 350px;
+    }
+    .history-image-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Subteams layout */
+    .subteams-section {
+      padding: 6rem 5rem;
+      background-color: #111;
+    }
+    .subteams-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 4rem 3rem;
+      margin-top: 4rem;
+    }
+    .subteam-block {
+      border-left: 8px solid var(--primary);
+      padding-left: 1.5rem;
+    }
+    .subteam-block img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      margin-bottom: 1.5rem;
+      border: 4px solid var(--primary);
+    }
+    .subteam-block h3 {
+      font-family: 'Mashine', sans-serif;
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      color: white;
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+      word-break: break-word;
+    }
+    .subteam-block p {
+      font-size: 1.1rem;
+      color: #ccc;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 900px) {
+      .swerve-section {
+        flex-direction: column;
+        gap: 3rem;
+      }
+      .giant-text-section, .swerve-section, .history-row, .subteams-section {
+        padding-left: 2rem;
+        padding-right: 2rem;
+      }
+      .hero-red-box {
+        padding: 2rem;
+      }
+      .history-row {
+        gap: 1rem;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+      }
+    }
+  </style>
+
+  <div class="vex-container">
+    
+    <!-- Hero identical in spirit to the Division components -->
+    <div class="hero-banner">
+      <div class="hero-red-box">
+        <h1>COMET</h1>
+        <p>Our collegiate VEX U robotics team. Two robots. A new game every year. Infinite ways to engineer a solution.</p>
+      </div>
+    </div>
+
+    <!-- Giant Text Intro -->
+    <div class="giant-text-section">
+      <h2 class="giant-text">
+        Every year brings a completely new game challenge. We design, fabricate, and program two robots from the ground up to compete against universities worldwide.
+      </h2>
+    </div>
+
+    <!-- Swerve Section -->
+    <div id="swerve" class="swerve-section">
+      <div style="flex: 1;">
+        <h2 style="font-family: 'Mashine', sans-serif; font-size: clamp(2.5rem, 5vw, 4rem); color: var(--primary); text-transform: uppercase; margin-bottom: 1rem; line-height: 1;">Differential Swerve</h2>
+        <p style="font-size: 2.1rem; line-height: 1.3; margin-bottom: 1rem; color: white;">
+          One of our biggest engineering accomplishments.
+        </p>
+        <p style="font-size: 1.25rem; line-height: 1.6;">
+          Unlike a standard holonomic drive, a differential swerve system steers and drives each module using two motors working differentially. This enables full omnidirectional movement without traditional strafing wheels, providing a massive advantage in pushing power on the field.
+        </p>
+        <img src="/projects/vex/swerve.jpg" alt="Differential Swerve Detail" style="width: 100%; height: 380px; object-fit: cover; border: 6px solid var(--primary); margin-top: 3rem;" />
+      </div>
+      <iframe class="swerve-video" src="https://www.youtube.com/embed/HV5Hd9gt8F0" title="Differential Swerve Drive" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+
+    <!-- History -->
+    <div>
+      <div class="history-row">
+        <div class="history-year">23 / 24</div>
+        <div class="history-info">
+          <h3>Over Under</h3>
+          <p>Our first competition season in VEX U. This year, we went to the Texas VEX U Competition and ranked 5th in skills and tournament! On the worldwide skills leaderboard, we placed 82nd with a score of 80 (37 in auto, 43 in drivers).</p>
+        </div>
+        <div class="history-image-wrapper">
+          <img src="/projects/vex/over-under.png" alt="Over Under" style="transform: scale(1.15) translateY(6%);" />
+        </div>
+      </div>
+      
+      <div class="history-row">
+        <div class="history-year">24 / 25</div>
+        <div class="history-info">
+          <h3>High Stakes</h3>
+          <p>The second year we competed in the VEX U Robotics Competition. We went back to the Texas VEX U Competition where we ranked 5th in skills and 9th in tournament! On the world skills leaderboard, we placed 59th with a score of 73 (27 in auto, 46 in drivers).</p>
+        </div>
+        <div class="history-image-wrapper">
+          <img src="/projects/vex/high-stakes.jpg" alt="High Stakes" style="transform: scale(1.1) translateY(4%);" />
+        </div>
+      </div>
+
+      <div class="history-row">
+        <div class="history-year">25 / 26</div>
+        <div class="history-info">
+          <h3>Push Back</h3>
+          <p>Our most recent year of competition. This year, we ran skills at a local event. On the worldwide leaderboard we placed 134th with a score of 71 (35 in auto, 36 in drivers). We qualified for the World Championships in St. Louis, MO. Here, we placed 26th in our division with a win-loss ratio of 4-6. We showed up with a special robot showing off our <a href="#swerve" style="color: var(--primary); text-decoration: underline; font-weight: bold;">Differential Swerve</a> drivetrain!</p>
+        </div>
+        <div class="history-image-wrapper">
+          <img src="/projects/vex/push-back.jpg" alt="Push Back" style="transform: scale(1.1) translateY(5%);" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Subteams -->
+    <div class="subteams-section">
+      <h2 style="font-family: 'Unbounded Variable', sans-serif; font-size: clamp(2.5rem, 5vw, 4rem); margin-bottom: 1rem; color: white;">Our Subteams</h2>      
+      <div class="subteams-grid">
+        <div class="subteam-block">
+          <img src="/projects/vex/mechanical.jpg" alt="Mechanical Team" />
+          <h3>Mechanical</h3>
+          <p>The Mechanical subteam designs and fabricates the physical robot.</p>
+        </div>
+        <div class="subteam-block">
+          <img src="/projects/vex/software.jpg" alt="Software Team" />
+          <h3>Software</h3>
+          <p>The Software subteam programs the robot's autonomous routines and driver-control behaviors.</p>
+        </div>
+        <div class="subteam-block">
+          <img src="/projects/vex/business.png" alt="Business Team" />
+          <h3>Business</h3>
+          <p>The Business subteam handles sponsorship outreach and budget management.</p>
+        </div>
+        <div class="subteam-block">
+          <img src="/projects/vex/marketing.jpg" alt="Marketing Team" />
+          <h3>Marketing</h3>
+          <p>The Marketing subteam manages social media, photography, and branding.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <Join theme="dark" />
+</BaseLayout>
