@@ -7,7 +7,6 @@ import { defineConfig } from 'astro/config'
 import { astroOgImagesGenerator } from 'og-images-generator/astro'
 
 // https://astro.build/config
-// Force reload
 export default defineConfig({
   site: 'https://cometrobotics.org',
   integrations: [react(), sitemap(), mdx(), astroOgImagesGenerator(), markdoc(),
