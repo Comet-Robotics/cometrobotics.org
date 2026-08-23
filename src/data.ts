@@ -241,9 +241,9 @@ const competitiveTeams = [
       'https://cdn.discordapp.com/attachments/1153482298579238935/1409599441706418268/thumbnail.png?ex=68adf747&is=68aca5c7&hm=2c85f62e8add622d3aecb79bfddb5161757844f77d3d155e5f86fd518d8ba1a4&',
   },
   {
-    name: 'VexU',
-    href: '#',
-    image: 'https://cdn.rit.edu/images/news/2021-04/MMET-RIT.jpg',
+    name: 'VEX U',
+    href: '/projects/vex',
+    image: '/projects/vex/cover.png',
   },
   {
     name: 'SumoBots',
