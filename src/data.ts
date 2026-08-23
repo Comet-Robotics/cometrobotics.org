@@ -243,7 +243,7 @@ const competitiveTeams = [
   {
     name: 'VEX U',
     href: '/projects/vex',
-    image: 'https://cdn.rit.edu/images/news/2021-04/MMET-RIT.jpg',
+    image: '/projects/vex/cover.png',
   },
   {
     name: 'SumoBots',
