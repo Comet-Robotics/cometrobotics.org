@@ -3,71 +3,76 @@ import BaseLayout from '../layouts/base.astro'
 import Join from '../components/join.astro'
 import MarkdownContent from '../components/markdown-content.astro'
 
-import type { MarkdownLayoutProps } from 'astro';
+import type { MarkdownLayoutProps } from 'astro'
 
 type Props = MarkdownLayoutProps<{
-  title: string;
-  subtitle: string;
-}>;
+  title: string
+  subtitle: string
+}>
 
+const { title, subtitle } = Astro.props.frontmatter || Astro.props
 
-const { title, subtitle } = Astro.props.frontmatter || Astro.props;
-
-const toc = Astro.props.headings.filter(h => h.depth <= 2)
+const toc = Astro.props.headings.filter((h) => h.depth <= 2)
 const renderTOC = toc.length > 1
 ---
-<!-- TODO: figure out text wrapping on mobile -->
 
+<!-- TODO: figure out text wrapping on mobile -->
 <BaseLayout title={title}>
   <div
     class="main-container"
     style="padding: 120px 1rem; display: flex; background: linear-gradient(#230508 70%, var(--text-dark)); flex-direction: column; text-align: center;"
   >
-    <div
-      style="display: flex; flex-direction:column; margin: auto; gap: 0.5rem; align-items: center;"
-    >
+    <div style="display: flex; flex-direction:column; margin: auto; gap: 0.5rem; align-items: center;">
       <h1 class="font-unbounded">{title}</h1>
       <h3 class="font-unbounded" style="font-weight: 400; color: #E1AAAF;">
         {subtitle}
       </h3>
     </div>
-    {renderTOC && <style>
-      #content-container {
-        display: grid;
-        column-gap: 1rem;
-        row-gap: 4rem;
+
+    <div id="content-container" class:list={[{ 'has-toc': renderTOC }]} style="margin: 5em auto;">
+      {
+        renderTOC && (
+          <ol
+            class="font-unbounded"
+            style="padding: 0; text-align: left; display: flex; gap: 0.35rem; flex-direction: column; padding-left: 2rem;"
+          >
+            {toc.map((entry) => (
+              <li style={`font-weight: ${entry.depth === 1 ? 600 : 400}; list-style-type: none;`}>
+                <a class="font-unbounded no-decoration" href={`#${entry.slug}`} style="color: #E1AAAF; ">
+                  {entry.text}
+                </a>
+              </li>
+            ))}
+          </ol>
+        )
       }
-
-    @media (min-width: 900px) {
-        #content-container {
-            grid-template-columns: 1fr minmax(0, 3fr);
-        }
-
-        #content-container > ol {
-          position: sticky;
-          top: 130px;
-          height: min-content;
-          max-height: calc(100vh - 130px);
-        }
-    }
-    </style>}
-
-    <div id="content-container" style="margin: 5em auto;">
-      {renderTOC && <ol class="font-unbounded" style="padding: 0; text-align: left; display: flex; gap: 0.35rem; flex-direction: column; padding-left: 2rem;">
-          {toc.map(entry=>(
-            <li style={`font-weight: ${entry.depth === 1 ? 600 : 400}; list-style-type: none;`}>
-              <a class="font-unbounded no-decoration" href={`#${entry.slug}`} style="color: #E1AAAF; ">
-                {entry.text}
-              </a>
-            </li>
-          ))}
-        </ol>}
-        <div style="max-width: 75rem;">
-          <MarkdownContent>
-            <slot />
-          </MarkdownContent>
-        </div>
-    </div >
+      <div style="max-width: 75rem;">
+        <MarkdownContent>
+          <slot />
+        </MarkdownContent>
+      </div>
+    </div>
   </div>
   <Join theme="dark" />
 </BaseLayout>
+
+<style>
+  #content-container.has-toc {
+    display: grid;
+    column-gap: 1rem;
+    row-gap: 4rem;
+  }
+
+  @media (min-width: 900px) {
+    #content-container.has-toc {
+      grid-template-columns: 1fr minmax(0, 3fr);
+    }
+
+    #content-container.has-toc > ol {
+      position: sticky;
+      top: 130px;
+      height: min-content;
+      max-height: calc(100vh - 130px);
+    }
+  }
+</style>

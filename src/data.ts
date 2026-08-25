@@ -106,46 +106,50 @@ interface Person {
 const leadership: Record<string, Person[]> = {
   'General Officers': [
     {
-      name: 'Om Davra',
+      name: 'Colin Wong',
       role: 'President',
     },
     {
-      name: 'Colin Wong',
+      name: 'Nathan Wignall',
       role: 'Vice President',
     },
     {
-      name: 'Tian Wang',
+      name: 'CJ Terrell',
       role: 'Director of Marketing',
     },
     {
-      name: 'Nathan Wignall',
-      role: 'Director of Events',
-    },
-    {
-      name: 'Jason Antwi-Appah',
+      name: 'Joshua Hernandez',
       role: 'Director of Finance',
     },
     {
-      name: 'Ana Wise',
+      name: 'Riya Dhuri',
       role: 'Director of Outreach',
+    },
+    {
+      name: 'VACANT',
+      role: 'Director of Events',
     },
   ],
   'Project Officers': [
     {
-      name: 'Deklen Nates',
+      name: 'Diego Zaragoza',
       role: 'Director of Combat Robotics',
     },
     {
-      name: 'Neil Blatzheim',
+      name: 'VACANT',
       role: 'Director of Combat Robotics',
+    },
+    {
+      name: 'Surjaditya Sarkar',
+      role: 'Director of Competitive Robotics',
+    },
+    {
+      name: 'Peder Johnson',
+      role: 'Director of Competitive Robotics',
     },
     {
       name: 'Lucas Igl',
-      role: 'Director of Competitive Robotics',
-    },
-    {
-      name: 'Mudit Upadhyay',
-      role: 'Director of Competitive Robotics',
+      role: 'Director of Corporate Robotics',
     },
   ],
   'Project Managers': [
@@ -154,7 +158,7 @@ const leadership: Record<string, Person[]> = {
       role: 'SumoBots',
     },
     {
-      name: 'Pablo Strickland Jaramillo',
+      name: 'Jakob Aleman',
       role: 'Solis Rover Project',
     },
     {
@@ -162,7 +166,7 @@ const leadership: Record<string, Person[]> = {
       role: 'VEX U',
     },
     {
-      name: 'Dylan Brose',
+      name: 'Tommy Reitz',
       role: 'ChessBots',
     },
   ],
@@ -232,51 +236,43 @@ const competitiveTeams = [
     name: 'ChessBots',
     href: '#',
     image:
-      'https://www.sparkchess.com/cms/media/articles/air-hockey-and-chess-5.jpg',
+      '/projects/chessbots/chessplaza.jpg',
   },
   {
     name: 'Solis Rover Project',
     href: '#',
     image:
-      'https://cdn.discordapp.com/attachments/1153482298579238935/1409599441706418268/thumbnail.png?ex=68adf747&is=68aca5c7&hm=2c85f62e8add622d3aecb79bfddb5161757844f77d3d155e5f86fd518d8ba1a4&',
+      '/projects/vex/laprincesa.jpg',
   },
   {
     name: 'VEX U',
     href: '/projects/vex',
     image: '/projects/vex/cover.png',
   },
-  {
-    name: 'SumoBots',
-    href: '#',
-    image:
-      'https://miro.medium.com/v2/resize:fit:1142/1*2K3r7ymva8yJDwkvtU1LLg.png',
-  },
 ]
 
 const combatTeams = [
   {
+    name: '1lb Plastic Antweights',
+    href: '#',
+    image: '/projects/plants/nhrl_oct26_assembly.JPG',
+  },
+  {
+    name: 'Full Combat',
+    href: '#',
+    image: '/projects/fullcombat/nhrl_apr25_sparks.jpg',
+  },
+  {
+    name: 'SumoBots',
+    href: '#',
+    image:
+      '/projects/sumo/kickoff_s26_sumocloseup.jpeg',
+  },
+  {
     name: 'Blender',
     href: '/projects/blender',
     image:
-      'https://www.sparkchess.com/cms/media/articles/air-hockey-and-chess-5.jpg',
-  },
-  {
-    name: '3lb Impulse',
-    href: '#',
-    image:
-      'https://www.sparkchess.com/cms/media/articles/air-hockey-and-chess-5.jpg',
-  },
-  {
-    name: 'Blended Donut',
-    href: '#',
-    image:
-      'https://www.sparkchess.com/cms/media/articles/air-hockey-and-chess-5.jpg',
-  },
-  {
-    name: 'Proxima Centauri',
-    href: '#',
-    image:
-      'https://www.sparkchess.com/cms/media/articles/air-hockey-and-chess-5.jpg',
+      '/projects/blender/mainImage/src.webp',
   },
 ]
 
