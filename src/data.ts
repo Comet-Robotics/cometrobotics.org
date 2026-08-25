@@ -24,7 +24,7 @@ const HOME_LINK: LinkType = { name: 'Home', href: '/' }
 const mainNavLinks: LinkType[] = [
   HOME_LINK,
   { name: 'About', href: '/about' },
-  // { name: "Projects", href: "/projects" },
+  { name: 'Projects', href: '/projects' },
   { name: 'Contact', href: '/links' },
 ]
 
@@ -179,6 +179,7 @@ const makerspaceMap = 'https://g.page/utdesign-makerspace?share'
 const websiteRepo = 'https://github.com/Comet-Robotics/cometrobotics.org'
 const constitutionPublicLink
   = 'https://docs.google.com/document/d/e/2PACX-1vTnugaSTI1ftvgj72tR-4c3_JOzP_SK8mW1a-gr2stc27UVFPIi82_uNJ31FEJyQnBIS_CgcaQpyRDh/pub'
+const codeOfConductLink = 'https://docs.google.com/document/d/e/2PACX-1vSVK-LMaXAeaiDAj1h3ikxQ9BKTOwbAsus4sPU_DHbWtYwNI7_PmEe4L4jXoRNeRXJBFlK3yKzLBQ6f/pub'
 const nonprofitEIN = '93-3183820'
 
 const footerLinks: LinkType[] = [
@@ -204,7 +205,7 @@ const footerLinks: LinkType[] = [
   },
   {
     name: 'Code of Conduct',
-    href: 'https://docs.google.com/document/d/e/2PACX-1vSVK-LMaXAeaiDAj1h3ikxQ9BKTOwbAsus4sPU_DHbWtYwNI7_PmEe4L4jXoRNeRXJBFlK3yKzLBQ6f/pub',
+    href: codeOfConductLink,
   },
 ]
 
@@ -242,7 +243,7 @@ const competitiveTeams = [
     name: 'Solis Rover Project',
     href: '#',
     image:
-      '/projects/vex/laprincesa.jpg',
+      '/projects/srp/laprincesa.jpg',
   },
   {
     name: 'VEX U',
@@ -270,7 +271,7 @@ const combatTeams = [
   },
   {
     name: 'Blender',
-    href: '/projects/blender',
+    href: '#',
     image:
       '/projects/blender/mainImage/src.webp',
   },
