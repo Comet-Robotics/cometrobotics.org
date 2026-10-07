@@ -29,9 +29,15 @@ import ProjectCard from '../components/projectCard.astro'
         </div>
         <div class="projects-grid">
           {
-            competitiveTeams.map((team) => (
-              team.href ? <a href={team.href}><ProjectCard imagesrc={team.image} headerText={team.name} href={team.href} /></a> : <ProjectCard imagesrc={team.image} headerText={team.name} href={team.href} />
-            ))
+            competitiveTeams.map((team) =>
+              team.href ? (
+                <a href={team.href}>
+                  <ProjectCard imagesrc={team.image} headerText={team.name} href={team.href} />
+                </a>
+              ) : (
+                <ProjectCard imagesrc={team.image} headerText={team.name} href={team.href} />
+              ),
+            )
           }
         </div>
       </section>
@@ -44,9 +50,17 @@ import ProjectCard from '../components/projectCard.astro'
           </p>
         </div>
         <div class="projects-grid">
-          {combatTeams.map((team) => (
-            team.href ? <a href={team.href}><ProjectCard imagesrc={team.image} headerText={team.name} href={team.href} /></a> : <ProjectCard imagesrc={team.image} headerText={team.name} href={team.href} />
-          ))}
+          {
+            combatTeams.map((team) =>
+              team.href ? (
+                <a href={team.href}>
+                  <ProjectCard imagesrc={team.image} headerText={team.name} href={team.href} />
+                </a>
+              ) : (
+                <ProjectCard imagesrc={team.image} headerText={team.name} href={team.href} />
+              ),
+            )
+          }
         </div>
       </section>
     </div>

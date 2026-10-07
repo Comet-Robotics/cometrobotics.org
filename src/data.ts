@@ -232,7 +232,7 @@ const linksPageLinks: LinkType[] = [
   },
 ]
 
-type Team = {
+interface Team {
   name: string
   image: string
   href?: string
