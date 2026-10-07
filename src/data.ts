@@ -232,16 +232,20 @@ const linksPageLinks: LinkType[] = [
   },
 ]
 
-const competitiveTeams = [
+type Team = {
+  name: string
+  image: string
+  href?: string
+}
+
+const competitiveTeams: Team[] = [
   {
     name: 'ChessBots',
-    href: '#',
     image:
       '/projects/chessbots/chessplaza.jpg',
   },
   {
     name: 'Solis Rover Project',
-    href: '#',
     image:
       '/projects/srp/laprincesa.jpg',
   },
@@ -252,26 +256,22 @@ const competitiveTeams = [
   },
 ]
 
-const combatTeams = [
+const combatTeams: Team[] = [
   {
     name: '1lb Plastic Antweights',
-    href: '#',
     image: '/projects/plants/nhrl_oct26_assembly.JPG',
   },
   {
     name: 'Full Combat',
-    href: '#',
     image: '/projects/fullcombat/nhrl_apr25_sparks.jpg',
   },
   {
     name: 'SumoBots',
-    href: '#',
     image:
       '/projects/sumo/kickoff_s26_sumocloseup.jpeg',
   },
   {
     name: 'Blender',
-    href: '#',
     image:
       '/projects/blender/mainImage/src.webp',
   },
