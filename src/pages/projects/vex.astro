@@ -148,7 +148,7 @@ import '../../styles/project.css'
     }
     .subteam-block h3 {
       font-family: 'Mashine', sans-serif;
-      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-size: clamp(1.5rem, 2vw, 2rem);
       color: white;
       margin-bottom: 0.5rem;
       text-transform: uppercase;
@@ -160,6 +160,62 @@ import '../../styles/project.css'
       line-height: 1.6;
     }
 
+    /* Sponsors Section */
+    .sponsors-section {
+      padding: 6rem 5rem;
+      background-color: #141414;
+      border-top: 2px solid #282828;
+    }
+    .sponsors-heading {
+      font-family: 'Unbounded Variable', sans-serif;
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      margin-bottom: 1rem;
+      color: white;
+    }
+    .sponsors-subtitle {
+      font-size: 1.25rem;
+      color: #aaa;
+      margin-bottom: 3.5rem;
+      max-width: 48rem;
+      line-height: 1.6;
+    }
+    .sponsors-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 3rem;
+    }
+    .sponsor-card {
+      background-color: #1c1c1c;
+      border: 2px solid #2e2e2e;
+      border-left: 8px solid var(--primary);
+      padding: 2.5rem 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 190px;
+      text-decoration: none;
+      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .sponsor-card:hover {
+      border-color: var(--primary);
+      background-color: #222;
+      transform: translateY(-4px);
+    }
+    .sponsor-logo {
+      max-width: 85%;
+      max-height: 95px;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      filter: brightness(0.95);
+      transition: filter 0.2s ease, transform 0.2s ease;
+    }
+    .sponsor-card:hover .sponsor-logo {
+      filter: brightness(1);
+      transform: scale(1.04);
+    }
+
     @media (max-width: 900px) {
       .swerve-section {
         flex-direction: column;
@@ -168,7 +224,8 @@ import '../../styles/project.css'
       .giant-text-section,
       .swerve-section,
       .history-row,
-      .subteams-section {
+      .subteams-section,
+      .sponsors-section {
         padding-left: 2rem;
         padding-right: 2rem;
       }
@@ -312,6 +369,52 @@ import '../../styles/project.css'
           <h3>Marketing</h3>
           <p>The Marketing subteam manages social media, photography, and branding.</p>
         </div>
+      </div>
+    </div>
+
+    <!-- Sponsors -->
+    <div class="sponsors-section">
+      <h2 class="sponsors-heading">Our Sponsors</h2>
+      <div class="sponsors-grid">
+        <a
+          href="https://frctees.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="sponsor-card"
+          aria-label="Visit FRCTees"
+        >
+          <img
+            src="/projects/vex/sponsors/frctees.png"
+            alt="FRCTees Logo"
+            class="sponsor-logo"
+          />
+        </a>
+        <a
+          href="https://www.onshape.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="sponsor-card"
+          aria-label="Visit PTC Onshape"
+        >
+          <img
+            src="/projects/vex/sponsors/onshape.png"
+            alt="PTC Onshape Logo"
+            class="sponsor-logo"
+          />
+        </a>
+        <a
+          href="https://www.ghaasfoundation.org/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="sponsor-card"
+          aria-label="Visit Gene Haas Foundation"
+        >
+          <img
+            src="/projects/vex/sponsors/genehaas.png"
+            alt="Gene Haas Foundation Logo"
+            class="sponsor-logo"
+          />
+        </a>
       </div>
     </div>
   </div>

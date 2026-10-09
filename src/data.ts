@@ -7,8 +7,10 @@ import YouTubeIcon from './assets/socials/youtube.png'
 import AltiumLogo from './assets/sponsors/altium.png'
 import BetterCNCLogo from './assets/sponsors/bettercnc.png'
 import ElegooLogo from './assets/sponsors/elegoo.png'
+import FRCTeesLogo from './assets/sponsors/frctees.png'
 import GHFLogo from './assets/sponsors/genehaas.png'
 import IgusLogo from './assets/sponsors/igus.png'
+import OnshapeLogo from './assets/sponsors/onshape.png'
 import PolymakerLogo from './assets/sponsors/polymaker.png'
 import RepeatRoboticsLogo from './assets/sponsors/repeat-robotics.png'
 import SolidworksLogo from './assets/sponsors/solidworks.png'
@@ -95,6 +97,16 @@ const sponsorLinks: LinkWithIconType[] = [
     name: 'SurfacePrep',
     href: 'https://www.surfaceprep.com',
     icon: SurfacePrepLogo,
+  },
+  {
+    name: 'FRCTees',
+    href: 'https://frctees.com/',
+    icon: FRCTeesLogo,
+  },
+  {
+    name: 'Onshape',
+    href: 'https://www.onshape.com/',
+    icon: OnshapeLogo,
   },
 ]
 
